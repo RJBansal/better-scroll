@@ -1,0 +1,50 @@
+[
+  {
+    "reel_id": "reel_20260523_marathon_sleep_recovery",
+    "category": "Goal Motivation",
+    "topic_focus": "Beating sleep deprivation to prevent IT band injury in marathon training",
+    "core_narrative_arc": {
+      "hook_angle": "Your 6.2 hours of sleep is secretly setting up a marathon-ending knee injury.",
+      "body_points": [
+        "Poor sleep increases running injury risk by seventy-eight percent.",
+        "Ditch aggressive static stretching for five-minute glute-strengthening exercises tonight.",
+        "Avoid running on slanted road shoulders during your next training run."
+      ],
+      "call_to_action": "Set a wind-down alarm for 9:30 PM to protect your knees."
+    },
+    "metadata": {
+      "tone": "Urgent, scientific, and empowering",
+      "pacing": "Fast-paced with high-energy cuts",
+      "source_references": [
+        "TCS New York City Marathon",
+        "How Poor Sleep Increases Injury Risk for Runners and Triathletes",
+        "IT Band Syndrome: A Comprehensive Guide - Doctronic"
+      ]
+    },
+    "visual_direction_notes": "A split-screen aesthetic showing a runner struggling on a dark pavement juxtaposed with bright, cinematic close-ups of glute activation exercises. High-contrast cool blue tones shift to warm, soothing amber lighting as the 9:30 PM wind-down is introduced. Crisp, modern typography overlays the data points."
+  },
+  {
+    "reel_id": "reel_20260523_diy_scifi_smart_mirror",
+    "category": "Hobby Tutorial",
+    "topic_focus": "Building a custom hard sci-fi smart mirror with Raspberry Pi 5 and Home Assistant",
+    "core_narrative_arc": {
+      "hook_angle": "How to turn a Raspberry Pi 5 into a custom hard sci-fi smart mirror.",
+      "body_points": [
+        "Craft a custom wood frame with a clean, hidden rabbet joint.",
+        "Chisel a secret recess to flush-mount a motion sensor for auto-wake.",
+        "Deploy modular local dashboards using the latest Home Assistant update."
+      ],
+      "call_to_action": "Stop waiting and build the ultimate sci-fi vanity mirror this weekend."
+    },
+    "metadata": {
+      "tone": "Inspiring, maker-focused, and futuristic",
+      "pacing": "Satisfying, rhythmic cuts matching wood chiseling and coding",
+      "source_references": [
+        "Magic Mirror 2 on Raspberry Pi: Build Your Smart Mirror (Complete 2026 Guide)",
+        "Home Assistant 2026.5 Beta Update - YouTube",
+        "CES 2026: LIFX Introduces Matter-Compatible Smart Mirror - MacRumors"
+      ]
+    },
+    "visual_direction_notes": "A warm, textured woodworking workshop with rich walnut shavings, transitioning to a sleek, dark sci-fi aesthetic. The lighting highlights the crisp mirror reflection waking up to high-resolution, modular orange text on a black background, matching Peter Watts' Blindsight visual style."
+  }
+]

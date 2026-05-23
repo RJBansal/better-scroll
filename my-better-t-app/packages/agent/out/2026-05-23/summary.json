@@ -1,0 +1,88 @@
+{
+  "profile": "Alex",
+  "date": "2026-05-23",
+  "sources": [
+    {
+      "title": "TCS New York City Marathon",
+      "uri": "https://www.nyrr.org/tcsnycmarathon"
+    },
+    {
+      "title": "How Poor Sleep Increases Injury Risk for Runners and Triathletes",
+      "uri": "https://mrsalussportinglab.com/how-poor-sleep-increases-injury-risk-for-endurance-runners-and-triathletes/"
+    },
+    {
+      "title": "IT Band Syndrome: A Comprehensive Guide - Doctronic",
+      "uri": "https://www.doctronic.ai/conditions/it-band-syndrome/"
+    },
+    {
+      "title": "Treatment of Distal Iliotibial Band Syndrome - NIH PMC",
+      "uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4004127/"
+    },
+    {
+      "title": "Magic Mirror 2 on Raspberry Pi: Build Your Smart Mirror (Complete 2026 Guide)",
+      "uri": "https://pcbsync.com/magic-mirror-2-on-raspberry-pi/"
+    },
+    {
+      "title": "Home Assistant 2026.5 Beta Update - YouTube",
+      "uri": "https://www.youtube.com/watch?v=Ob0NlsfgNxc"
+    },
+    {
+      "title": "Paul Sellers Workbench: Mortise Mayhem - Reddit",
+      "uri": "https://www.reddit.com/r/woodworking/comments/1lzfzow/paul_sellers_workbench_mortise_mayhem/"
+    },
+    {
+      "title": "Paul Sellers Workbench: Recap and Final Advice - Reddit",
+      "uri": "https://www.reddit.com/r/woodworking/comments/j5vs4b/another_paul_sellers_workbench_recapfinal/"
+    },
+    {
+      "title": "Fix those Mistakes! Woodworking Short - Paul Sellers YouTube",
+      "uri": "https://www.youtube.com/shorts/dsMhnYDUtvE"
+    },
+    {
+      "title": "Project Hail Mary gets a brand-new story written by Andy Weir and it's not a book",
+      "uri": "https://winteriscoming.net/project-hail-mary-gets-brand-new-story-written-andy-weir-not-book"
+    },
+    {
+      "title": "Project Hail Mary (Deluxe Edition) by Andy Weir",
+      "uri": "https://www.penguinrandomhouse.com/books/828207/project-hail-mary-deluxe-edition-by-andy-weir/"
+    },
+    {
+      "title": "CES 2026: LIFX Introduces Matter-Compatible Smart Mirror - MacRumors",
+      "uri": "https://www.macrumors.com/2026/01/07/lifx-matter-smart-mirror/"
+    },
+    {
+      "title": "TCS New York City Marathon 9+1 Program - NYRR",
+      "uri": "https://www.nyrr.org/run/guaranteed-entry/tcs-new-york-city-marathon-9plus1-program"
+    },
+    {
+      "title": "The Hugo Award Official Site",
+      "uri": "https://www.thehugoawards.org/"
+    }
+  ],
+  "searchQueries": [
+    "\"Andy Weir\" 2026 book",
+    "\"NYC Marathon\" November 2026 training OR registration",
+    "\"Raspberry Pi 5\" \"smart mirror\" 2026",
+    "\"IT band\" tightness recovery running sleep 2026",
+    "\"Home Assistant\" \"smart mirror\" 2026 OR \"2026.4\" OR \"2026.5\"",
+    "\"Paul Sellers\" woodworking bench 2026 OR woodworking joints OR \"mistakes\"",
+    "runners sleep deprivation recovery injury risk 2026 OR 2025",
+    "\"MagicMirror\" \"Raspberry Pi 5\" \"Home Assistant\" 2026",
+    "\"IT band\" \"running form\" OR \"gait\" OR \"biomechanics\" 2026 OR 2025",
+    "\"science fiction books\" 2026 releases OR upcoming OR \"hugo\" 2026 OR \"nebula\" 2026",
+    "\"Paul Sellers\" workbench mistake joinery OR mortise OR apron",
+    "\"home assistant\" \"smart mirror\" tileboard OR dashboard 2026"
+  ],
+  "seeds": [
+    {
+      "reel_id": "reel_20260523_marathon_sleep_recovery",
+      "category": "Goal Motivation",
+      "topic_focus": "Beating sleep deprivation to prevent IT band injury in marathon training"
+    },
+    {
+      "reel_id": "reel_20260523_diy_scifi_smart_mirror",
+      "category": "Hobby Tutorial",
+      "topic_focus": "Building a custom hard sci-fi smart mirror with Raspberry Pi 5 and Home Assistant"
+    }
+  ]
+}

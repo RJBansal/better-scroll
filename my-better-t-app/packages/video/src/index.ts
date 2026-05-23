@@ -1,16 +1,17 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { planReel } from "./planner.js";
+import { planReel, planReelFromSeed } from "./planner.js";
 import { stitch } from "./stitch.js";
 import { generateAllSegments } from "./veo.js";
 
-export type { PlannerResult, VideoPlan, VideoSegment, Source } from "./types.js";
+export type { PlannerResult, VideoPlan, VideoSegment, Source, ReelSeedInput } from "./types.js";
+export { extractJson } from "./types.js";
+export { runManagedAgent } from "./managedAgent.js";
+export type { ManagedAgentRunInput, ManagedAgentResult } from "./managedAgent.js";
 
-export interface GenerateReelOptions {
-  topic: string;
-  /** Absolute or relative path where outputs are written. Defaults to `./out` */
-  baseOutDir?: string;
-}
+export type GenerateReelOptions =
+  | { topic: string; baseOutDir?: string }
+  | { seed: import("./types.js").ReelSeedInput; baseOutDir?: string };
 
 export interface GenerateReelResult {
   planPath: string;
@@ -28,18 +29,26 @@ function slugify(text: string): string {
 }
 
 export async function generateReel(opts: GenerateReelOptions): Promise<GenerateReelResult> {
-  const { topic, baseOutDir = "./out" } = opts;
+  const baseOutDir = opts.baseOutDir ?? "./out";
+
+  const isSeed = "seed" in opts;
+  const label = isSeed
+    ? (opts.seed.reel_id ?? opts.seed.topic_focus)
+    : opts.topic;
 
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-  const outDir = join(baseOutDir, `${slugify(topic)}-${timestamp}`);
+  const outDir = join(baseOutDir, `${slugify(label)}-${timestamp}`);
   await mkdir(outDir, { recursive: true });
 
   console.log(`\n=== Video Reel Pipeline ===`);
-  console.log(`Topic: ${topic}`);
+  console.log(`Label: ${label}`);
   console.log(`Output directory: ${outDir}\n`);
 
   // Step 1: Plan
-  const plannerResult = await planReel(topic);
+  const plannerResult = isSeed
+    ? await planReelFromSeed(opts.seed)
+    : await planReel(opts.topic);
+
   const planPath = join(outDir, "plan.json");
   await writeFile(planPath, JSON.stringify(plannerResult, null, 2), "utf8");
   console.log(`\n[pipeline] Plan saved to ${planPath}`);
@@ -48,8 +57,8 @@ export async function generateReel(opts: GenerateReelOptions): Promise<GenerateR
     console.log(`  - ${s.title}: ${s.uri}`);
   }
 
-  // Step 2: Generate segments in parallel
-  console.log("\n[pipeline] Generating 4 video segments in parallel…");
+  // Step 2: Generate segments in parallel (max 2 at a time)
+  console.log("\n[pipeline] Generating 4 video segments…");
   const segmentPaths = await generateAllSegments(plannerResult.plan, outDir);
   console.log("[pipeline] All segments downloaded.");
 

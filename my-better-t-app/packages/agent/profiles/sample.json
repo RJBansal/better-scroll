@@ -1,0 +1,31 @@
+{
+  "name": "Alex",
+  "goals": [
+    "Run a marathon (42km) in under 4 hours — NYC Marathon November 2026",
+    "Build a smart vanity mirror with Raspberry Pi 5 that shows weather, calendar, and motivational quotes",
+    "Read 24 books in 2026 — currently on book 11"
+  ],
+  "hobbies": [
+    "Distance running (currently training 5 days/week, peak week 60km)",
+    "IoT and maker projects (Raspberry Pi, Arduino, Home Assistant)",
+    "Woodworking (building furniture for home, focus on joinery techniques)",
+    "Science fiction reading (favorites: Project Hail Mary, Three Body Problem, Blindsight)"
+  ],
+  "youtube_history": [
+    "Knee injury recovery exercises for runners — Dr. Brad Neal",
+    "Raspberry Pi 5 vs Zero 2W for smart mirror build 2026",
+    "Woodworking joinery mistakes to avoid — Paul Sellers",
+    "Heart rate zone 2 training for marathon beginners",
+    "MagicMirror2 vs custom PyQt dashboard — which is better in 2026",
+    "Andy Weir interview on his writing process",
+    "5km threshold run workout — running form tips"
+  ],
+  "bookmarks": [
+    "https://hackaday.com/2026/04/diy-smart-mirror-raspberry-pi-5",
+    "https://www.runnerstribe.com/training/preventing-runner-knee-injury/",
+    "https://www.goodreads.com/book/show/54493401-project-hail-mary",
+    "https://home-assistant.io/blog/2026/04/smart-mirror-integration",
+    "https://paulellers.com/woodworking-joints-guide"
+  ],
+  "notes": "Currently in week 8 of a 20-week marathon training plan. Experiencing mild IT band tightness on right knee after long runs. Smart mirror hardware is on order — Pi 5 + 24-inch monitor. Woodworking bench build is 80% complete. Sleep has been inconsistent (averaging 6.2 hours), which is affecting recovery."
+}

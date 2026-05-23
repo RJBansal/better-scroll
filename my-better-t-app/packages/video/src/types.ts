@@ -94,6 +94,27 @@ export function extractJson(text: string): unknown {
 
 export class ValidationError extends Error {}
 
+// ---------------------------------------------------------------------------
+// Reel Seed (consumed by planReelFromSeed — kept standalone so packages/video
+// has no dependency on packages/agent)
+// ---------------------------------------------------------------------------
+
+export interface ReelSeedInput {
+  reel_id?: string;
+  topic_focus: string;
+  core_narrative_arc: {
+    hook_angle: string;
+    body_points: string[];
+    call_to_action: string;
+  };
+  metadata?: {
+    tone?: string;
+    pacing?: string;
+    source_references?: string[];
+  };
+  visual_direction_notes?: string;
+}
+
 export function validatePlan(raw: unknown): VideoPlan {
   if (typeof raw !== "object" || raw === null) {
     throw new ValidationError("Parsed value is not an object");
