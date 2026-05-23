@@ -1,13 +1,11 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
-import { type GenerateReelResult, generateReel } from "@my-better-t-app/video";
+import { type GenerateReelResult, type PlannerResult, generateReel } from "@my-better-t-app/video";
 import { decoupleReels } from "./decoupler";
 import { runResearcher } from "./researcher";
-import type { UserProfile } from "./types";
+import type { ReelSeed, UserProfile } from "./types";
 
 export type { UserProfile, ReelSeed, ResearchResult } from "./types";
-// Re-export for convenience
-export { loadProfile } from "./profile";
 
 export interface DailyAgentOptions {
   profile: UserProfile;
@@ -17,11 +15,17 @@ export interface DailyAgentOptions {
   baseOutDir?: string;
 }
 
+export interface ReelRunResult {
+  generatedReel: GenerateReelResult;
+  seed: ReelSeed;
+  plannerResult: PlannerResult;
+}
+
 export interface DailyAgentResult {
   outDir: string;
   readUpPath: string;
   seedsPath: string;
-  reels: GenerateReelResult[];
+  reels: ReelRunResult[];
 }
 
 export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgentResult> {
@@ -49,7 +53,6 @@ export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgent
   console.log("\n--- Phase 2: Reel Seed Extraction ---");
   const seeds = await decoupleReels(profile, research.readUpMarkdown, clampedReelCount, outDir);
 
-  // Write combined summary before video generation starts
   await writeFile(
     join(outDir, "summary.json"),
     JSON.stringify(
@@ -66,16 +69,34 @@ export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgent
     "utf8",
   );
 
-  // Step 3: Generate one reel per seed (sequential — each reel uses up to 2 parallel Veo calls internally)
+  // Step 3: Generate one reel per seed (sequential — each uses up to 2 parallel Veo calls internally)
   console.log("\n--- Phase 3: Video Generation ---");
   const reelsOutDir = join(outDir, "reels");
   await mkdir(reelsOutDir, { recursive: true });
 
-  const reelResults: GenerateReelResult[] = [];
+  const reelResults: ReelRunResult[] = [];
   for (const [i, seed] of seeds.entries()) {
     console.log(`\n[agent] Generating reel ${i + 1}/${seeds.length}: ${seed.reel_id}`);
-    const result = await generateReel({ seed, baseOutDir: reelsOutDir });
-    reelResults.push(result);
+    try {
+      const result = await generateReel({ seed, baseOutDir: reelsOutDir });
+
+      // Read the saved plan.json to get the plannerResult (sources, etc.)
+      let plannerResult: PlannerResult;
+      try {
+        const { readFile } = await import("node:fs/promises");
+        const raw = await readFile(result.planPath, "utf8");
+        plannerResult = JSON.parse(raw) as PlannerResult;
+      } catch {
+        plannerResult = { topic: seed.topic_focus, plan: result as never, sources: [], searchQueries: [], rawText: "" };
+      }
+
+      reelResults.push({ generatedReel: result, seed, plannerResult });
+    } catch (err) {
+      console.error(
+        `[agent] Reel ${i + 1} (${seed.reel_id}) failed — skipping:`,
+        err instanceof Error ? err.message : err,
+      );
+    }
   }
 
   console.log(`\n${"=".repeat(50)}`);
@@ -83,7 +104,7 @@ export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgent
   console.log(`Read-up: ${join(outDir, "read_up.md")}`);
   console.log(`Seeds:   ${join(outDir, "reel_seeds.json")}`);
   for (const [i, r] of reelResults.entries()) {
-    console.log(`Reel ${i + 1}:  ${r.reelPath}`);
+    console.log(`Reel ${i + 1}:  ${r.generatedReel.reelPath}`);
   }
   console.log(`${"=".repeat(50)}\n`);
 

@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from "@my-better-t-app/ui/components/sheet"
 
-import { SOURCE_LABELS, type Reel } from "@/lib/types"
+import type { Reel } from "@/lib/types"
 
 type ReelInfoSheetProps = {
   reel: Reel
@@ -32,7 +32,7 @@ export function ReelInfoSheet({ reel }: ReelInfoSheetProps) {
       >
         <SheetHeader className="gap-3">
           <div className="text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-            {SOURCE_LABELS[reel.sourceType]}
+            {reel.category}
           </div>
           <SheetTitle className="text-balance text-xl font-semibold leading-tight tracking-tight text-foreground">
             {reel.sourceTitle}

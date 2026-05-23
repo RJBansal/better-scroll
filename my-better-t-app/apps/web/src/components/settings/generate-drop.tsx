@@ -24,7 +24,7 @@ export function GenerateDrop() {
     setResult(null)
 
     try {
-      const next = await client.agent.runDaily({ reels: 2 })
+      const next = await client.agent.runDaily({ reels: 1 })
       setResult(next)
     } catch (err) {
       console.error(err)

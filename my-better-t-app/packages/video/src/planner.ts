@@ -29,6 +29,15 @@ Rules:
 - Do NOT describe real, named, or identifiable individuals — use abstract, symbolic, or generic human silhouettes only.
 - Do NOT embed source URLs inside the JSON.
 - styleGuide must cover: color palette, camera movement, lens style, on-screen text style, and music mood.
+- IMPORTANT: The top-level JSON MUST include all four fields: title, styleGuide, music, and segments. Do not omit any.
+
+Visual field guidance (CRITICAL — read before writing each segment's "visual"):
+- Prefer INFOGRAPHIC-style visuals: animated charts rising, timelines scrolling, data points lighting up, diagrams assembling piece by piece, network graphs pulsing, side-by-side comparisons materialising on screen.
+- When showing a concept or fact, SHOW it — e.g. "a glowing bar chart grows left to right, each bar labelled with a percentage, against a deep navy background" not "a dark room with abstract particles".
+- Backgrounds must be SCENE-SPECIFIC to the topic: a rendered laboratory bench for science topics, a stylised city skyline at dusk for finance/business, a forest canopy time-lapse for ecology, a circuit-board close-up for technology — not a generic gradient or floating orbs.
+- Combine foreground infographic elements with a purposeful background: "a translucent pie chart floats over a slow-motion aerial shot of farmland, slice labels fade in one by one".
+- Use motion to carry information: numbers counting up, arrows animating, icons assembling, maps zooming.
+- Reserve pure abstract visuals only when the topic is genuinely abstract (philosophy, emotion). For every factual claim, use a visual that could appear in a well-designed explainer video.
 
 Respond with TWO fenced code blocks in this exact order and nothing else:
 
@@ -73,6 +82,15 @@ Additional rules:
 - transitionOutCue of segment N must match transitionInCue of segment N+1.
 - Do NOT describe real, named, or identifiable individuals.
 - Use Google Search to ground any factual claims referenced in the seed's source_references.
+- IMPORTANT: The top-level JSON MUST include all four fields: title, styleGuide, music, and segments. Do not omit any.
+
+Visual field guidance (CRITICAL — read before writing each segment's "visual"):
+- Prefer INFOGRAPHIC-style visuals: animated charts rising, timelines scrolling, data points lighting up, diagrams assembling piece by piece, network graphs pulsing, side-by-side comparisons materialising on screen.
+- When showing a concept or fact, SHOW it — e.g. "a glowing bar chart grows left to right, each bar labelled with a percentage, against a deep navy background" not "a dark room with abstract particles".
+- Backgrounds must be SCENE-SPECIFIC to the topic: a rendered laboratory bench for science, a stylised city skyline for business/finance, a forest canopy for ecology, a circuit-board macro for technology — not a generic gradient or floating orbs.
+- Combine foreground infographic elements with a purposeful background: "a translucent pie chart floats over a slow-motion aerial shot of farmland, slice labels fade in one by one".
+- Use motion to carry information: numbers counting up, arrows animating, icons assembling, maps zooming.
+- Reserve pure abstract visuals only when the topic is genuinely abstract (philosophy, emotion). For every factual claim, use a visual that could appear in a well-designed explainer video.
 
 Respond with TWO fenced code blocks in this exact order and nothing else:
 
@@ -81,9 +99,10 @@ Respond with TWO fenced code blocks in this exact order and nothing else:
 
 Put NOTHING after the sources block.`;
 
-const REPAIR_PROMPT = (original: string) =>
+const REPAIR_PROMPT = (original: string, errMsg: string) =>
   `The following text should contain a video plan JSON but it is malformed or missing required fields.
-Reformat it into the exact JSON shape described in the system instruction.
+Validation failed with: "${errMsg}".
+Reformat it into the exact JSON shape described in the system instruction, ensuring ALL four top-level fields (title, styleGuide, music, segments) are present.
 Return ONLY the fenced \`\`\`json code block with the VideoPlan — nothing else.
 
 --- ORIGINAL TEXT ---
@@ -155,18 +174,18 @@ async function runPlannerAgent(
   const parsed = extractPlanBlock(rawText);
 
   try {
-    plan = validatePlan(parsed);
+    plan = validatePlan(parsed, topic);
     console.log("[planner] JSON parsed and validated successfully");
   } catch (err) {
     const msg = err instanceof ValidationError ? err.message : "JSON extraction failed";
     console.warn(`[planner] ${msg}, attempting repair…`);
 
     const repairResult = await runManagedAgent({
-      input: REPAIR_PROMPT(rawText),
+      input: REPAIR_PROMPT(rawText, msg),
       systemInstruction,
     });
     const reparsed = extractPlanBlock(repairResult.outputText);
-    plan = validatePlan(reparsed);
+    plan = validatePlan(reparsed, topic);
     console.log("[planner] JSON repaired and validated");
   }
 

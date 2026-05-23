@@ -41,20 +41,16 @@ export interface PlannerResult {
 // Tolerant JSON extractor
 // ---------------------------------------------------------------------------
 
-/** Required keys on each segment object */
-const SEGMENT_KEYS: (keyof VideoSegment)[] = [
-  "index",
-  "timeRange",
-  "title",
-  "visual",
-  "onScreenText",
-  "voiceover",
-  "transitionInCue",
-  "transitionOutCue",
+const SEGMENT_TIME_RANGES: VideoSegment["timeRange"][] = [
+  "0:00-0:08",
+  "0:08-0:16",
+  "0:16-0:24",
+  "0:24-0:32",
 ];
 
-/** Required keys on the root plan object */
-const PLAN_KEYS: (keyof VideoPlan)[] = ["title", "styleGuide", "music", "segments"];
+const DEFAULT_STYLE_GUIDE =
+  "Dark palette with neon accents, continuous rightward pan, cinematic vertical 9:16.";
+const DEFAULT_MUSIC = "Ambient electronic, low BPM, building energy.";
 
 function findBalancedJson(text: string): string | null {
   const start = text.indexOf("{");
@@ -115,30 +111,52 @@ export interface ReelSeedInput {
   visual_direction_notes?: string;
 }
 
-export function validatePlan(raw: unknown): VideoPlan {
+export function validatePlan(raw: unknown, fallbackTopic = "Untitled"): VideoPlan {
   if (typeof raw !== "object" || raw === null) {
     throw new ValidationError("Parsed value is not an object");
   }
   const obj = raw as Record<string, unknown>;
 
-  for (const key of PLAN_KEYS) {
-    if (!(key in obj)) throw new ValidationError(`Missing required key: ${key}`);
-  }
-
+  // segments is the only field we can't synthesize — keep strict
   if (!Array.isArray(obj["segments"]) || obj["segments"].length !== 4) {
     throw new ValidationError("segments must be an array of exactly 4 items");
   }
 
-  const segments = obj["segments"] as unknown[];
-  for (let i = 0; i < 4; i++) {
-    const seg = segments[i] as Record<string, unknown>;
-    if (typeof seg !== "object" || seg === null) {
+  const rawSegs = obj["segments"] as unknown[];
+  const builtSegments = rawSegs.map((rawSeg, i) => {
+    if (typeof rawSeg !== "object" || rawSeg === null) {
       throw new ValidationError(`Segment ${i} is not an object`);
     }
-    for (const key of SEGMENT_KEYS) {
-      if (!(key in seg)) throw new ValidationError(`Segment ${i} missing key: ${key}`);
-    }
-  }
+    const seg = rawSeg as Record<string, unknown>;
 
-  return obj as unknown as VideoPlan;
+    // visual is the only field we cannot synthesize — it is the entire Veo prompt
+    if (typeof seg["visual"] !== "string" || !(seg["visual"] as string).trim()) {
+      throw new ValidationError(`Segment ${i} missing or empty: visual`);
+    }
+
+    const idx = (typeof seg["index"] === "number" ? seg["index"] : i) as 0 | 1 | 2 | 3;
+
+    return {
+      index: idx,
+      timeRange: typeof seg["timeRange"] === "string"
+        ? (seg["timeRange"] as VideoSegment["timeRange"])
+        : SEGMENT_TIME_RANGES[idx] ?? SEGMENT_TIME_RANGES[i] ?? "0:00-0:08",
+      title: typeof seg["title"] === "string" ? (seg["title"] as string) : `Segment ${i + 1}`,
+      visual: seg["visual"] as string,
+      onScreenText: typeof seg["onScreenText"] === "string" ? (seg["onScreenText"] as string) : "",
+      voiceover: typeof seg["voiceover"] === "string" ? (seg["voiceover"] as string) : "",
+      transitionInCue: typeof seg["transitionInCue"] === "string" ? (seg["transitionInCue"] as string) : "",
+      transitionOutCue: typeof seg["transitionOutCue"] === "string" ? (seg["transitionOutCue"] as string) : "",
+    } satisfies VideoSegment;
+  }) as [VideoSegment, VideoSegment, VideoSegment, VideoSegment];
+
+  return {
+    title: typeof obj["title"] === "string" ? (obj["title"] as string) : fallbackTopic,
+    styleGuide:
+      typeof obj["styleGuide"] === "string"
+        ? (obj["styleGuide"] as string)
+        : DEFAULT_STYLE_GUIDE,
+    music: typeof obj["music"] === "string" ? (obj["music"] as string) : DEFAULT_MUSIC,
+    segments: builtSegments,
+  };
 }

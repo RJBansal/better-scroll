@@ -7,6 +7,31 @@ const POLL_INTERVAL_MS = 10_000;
 const MAX_RETRIES = 2;
 const MAX_PARALLEL = 2;
 
+// ---------------------------------------------------------------------------
+// Rate limiter: at most 10 Veo requests per 60-second window
+// ---------------------------------------------------------------------------
+const RATE_LIMIT_RPM = 10;
+const RATE_WINDOW_MS = 60_000;
+const requestTimestamps: number[] = [];
+
+async function acquireRateLimit(): Promise<void> {
+  while (true) {
+    const now = Date.now();
+    // Drop timestamps older than the rolling 60-second window
+    while (requestTimestamps.length > 0 && now - requestTimestamps[0]! > RATE_WINDOW_MS) {
+      requestTimestamps.shift();
+    }
+    if (requestTimestamps.length < RATE_LIMIT_RPM) {
+      requestTimestamps.push(now);
+      return;
+    }
+    // Wait until the oldest request falls out of the window
+    const waitMs = RATE_WINDOW_MS - (now - requestTimestamps[0]!) + 10;
+    console.log(`[veo] Rate limit reached (${RATE_LIMIT_RPM} rpm), waiting ${Math.ceil(waitMs / 1000)}s…`);
+    await new Promise<void>((resolve) => setTimeout(resolve, waitMs));
+  }
+}
+
 function buildSegmentPrompt(plan: VideoPlan, seg: VideoSegment): string {
   const prevSeg = seg.index > 0 ? plan.segments[seg.index - 1] : null;
   const nextSeg = seg.index < 3 ? plan.segments[seg.index + 1] : null;
@@ -52,6 +77,7 @@ async function generateSegmentWithRetry(
   const prompt = buildSegmentPrompt(plan, seg);
   console.log(`[veo] Starting segment ${segIndex} generation (attempt ${attempt + 1})…`);
 
+  await acquireRateLimit();
   let operation = await ai.models.generateVideos({
     model: "veo-3.1-lite-generate-preview",
     source: { prompt },

@@ -1,9 +1,8 @@
 import dotenv from "dotenv";
 import { defineConfig } from "drizzle-kit";
 
-dotenv.config({
-  path: "../../apps/web/.env",
-});
+// Load from packages/env/.env (canonical env location) then fall back to CWD
+dotenv.config({ path: "../env/.env" });
 
 export default defineConfig({
   schema: "./src/schema",

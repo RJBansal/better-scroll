@@ -7,7 +7,7 @@ export type Reel = {
   videoUrl: string
   poster?: string
   caption: string
-  sourceType: SourceType
+  category: string
   sourceTitle: string
   sourceUrl: string
   durationSec: number

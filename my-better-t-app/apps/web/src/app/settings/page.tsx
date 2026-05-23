@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react"
 
 import { BookmarkUpload } from "@/components/settings/bookmark-upload"
 import { GenerateDrop } from "@/components/settings/generate-drop"
+import { ProfileEditor } from "@/components/settings/profile-editor"
 import { SettingsRow, SettingsSection } from "@/components/settings/settings-row"
 import { usePreferences } from "@/lib/storage"
 import { SOURCE_LABELS, SOURCE_TYPES, type SourceType } from "@/lib/types"
@@ -36,6 +37,10 @@ export default function SettingsPage() {
             </p>
           </div>
         </header>
+
+        <SettingsSection title="About you">
+          <ProfileEditor />
+        </SettingsSection>
 
         <SettingsSection title="Sources">
           <BookmarkUpload />

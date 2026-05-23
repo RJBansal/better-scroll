@@ -1,5 +1,15 @@
 import { index, integer, primaryKey, sqliteTable, text } from "drizzle-orm/sqlite-core"
 
+export type ReelMeta = {
+  id: string
+  videoUrl: string
+  caption: string
+  sourceTitle: string
+  sourceUrl: string
+  durationSec: number
+  category: string
+}
+
 export const DEFAULT_PROFILE_ID = "default"
 
 export const profiles = sqliteTable("profiles", {
@@ -43,7 +53,7 @@ export const agentRuns = sqliteTable(
     outDir: text("out_dir"),
     readUpPath: text("read_up_path"),
     seedsPath: text("seeds_path"),
-    reels: text("reels", { mode: "json" }).$type<string[] | null>(),
+    reels: text("reels", { mode: "json" }).$type<ReelMeta[] | null>(),
     error: text("error"),
     startedAt: integer("started_at").notNull(),
     completedAt: integer("completed_at"),

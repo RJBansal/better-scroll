@@ -6,9 +6,7 @@
       "default": "./src/index.ts"
     }
   },
-  "scripts": {
-    "daily": "bun run scripts/daily.ts"
-  },
+  "scripts": {},
   "dependencies": {
     "@google/genai": "^1.3.0",
     "@my-better-t-app/env": "workspace:*",
