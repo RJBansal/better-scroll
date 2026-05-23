@@ -70,6 +70,7 @@ async function generateSegmentWithRetry(
   segIndex: number,
   outDir: string,
   attempt = 0,
+  segmentDurationSec = 8,
 ): Promise<string> {
   const seg = plan.segments[segIndex];
   if (!seg) throw new Error(`Invalid segment index: ${segIndex}`);
@@ -85,7 +86,7 @@ async function generateSegmentWithRetry(
       numberOfVideos: 1,
       aspectRatio: "9:16",
       resolution: "720p",
-      durationSeconds: 8,
+      durationSeconds: segmentDurationSec,
     },
   });
 
@@ -118,10 +119,11 @@ async function withSegmentRetry(
   plan: VideoPlan,
   i: 0 | 1 | 2 | 3,
   outDir: string,
+  segmentDurationSec: number,
 ): Promise<string> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
-      return await generateSegmentWithRetry(ai, apiKey, plan, i, outDir, attempt);
+      return await generateSegmentWithRetry(ai, apiKey, plan, i, outDir, attempt, segmentDurationSec);
     } catch (err) {
       if (attempt === MAX_RETRIES) throw err;
       console.warn(`[veo] Segment ${i} attempt ${attempt + 1} failed, retrying…`, err);
@@ -130,7 +132,11 @@ async function withSegmentRetry(
   throw new Error(`Segment ${i} failed after ${MAX_RETRIES + 1} attempts`);
 }
 
-export async function generateAllSegments(plan: VideoPlan, outDir: string): Promise<string[]> {
+export async function generateAllSegments(
+  plan: VideoPlan,
+  outDir: string,
+  segmentDurationSec = 8,
+): Promise<string[]> {
   const apiKey = process.env["GEMINI_API_KEY"];
   if (!apiKey) throw new Error("GEMINI_API_KEY environment variable is not set");
 
@@ -153,7 +159,7 @@ export async function generateAllSegments(plan: VideoPlan, outDir: string): Prom
       while (inFlight < MAX_PARALLEL && nextIdx < indices.length) {
         const i = indices[nextIdx++] as 0 | 1 | 2 | 3;
         inFlight++;
-        withSegmentRetry(ai, checkedApiKey, plan, i, outDir)
+        withSegmentRetry(ai, checkedApiKey, plan, i, outDir, segmentDurationSec)
           .then((path) => {
             results[i] = path;
             inFlight--;

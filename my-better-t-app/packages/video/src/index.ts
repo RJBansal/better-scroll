@@ -10,8 +10,8 @@ export { runManagedAgent } from "./managedAgent";
 export type { ManagedAgentRunInput, ManagedAgentResult } from "./managedAgent";
 
 export type GenerateReelOptions =
-  | { topic: string; baseOutDir?: string }
-  | { seed: import("./types").ReelSeedInput; baseOutDir?: string };
+  | { topic: string; baseOutDir?: string; reelDurationSec?: number }
+  | { seed: import("./types").ReelSeedInput; baseOutDir?: string; reelDurationSec?: number };
 
 export interface GenerateReelResult {
   planPath: string;
@@ -30,6 +30,8 @@ function slugify(text: string): string {
 
 export async function generateReel(opts: GenerateReelOptions): Promise<GenerateReelResult> {
   const baseOutDir = opts.baseOutDir ?? "./out";
+  const reelDurationSec = opts.reelDurationSec ?? 32;
+  const segmentDurationSec = Math.max(5, Math.round(reelDurationSec / 4));
 
   const isSeed = "seed" in opts;
   const label = isSeed
@@ -46,8 +48,8 @@ export async function generateReel(opts: GenerateReelOptions): Promise<GenerateR
 
   // Step 1: Plan
   const plannerResult = isSeed
-    ? await planReelFromSeed(opts.seed)
-    : await planReel(opts.topic);
+    ? await planReelFromSeed(opts.seed, reelDurationSec)
+    : await planReel(opts.topic, reelDurationSec);
 
   const planPath = join(outDir, "plan.json");
   await writeFile(planPath, JSON.stringify(plannerResult, null, 2), "utf8");
@@ -58,8 +60,8 @@ export async function generateReel(opts: GenerateReelOptions): Promise<GenerateR
   }
 
   // Step 2: Generate segments in parallel (max 2 at a time)
-  console.log("\n[pipeline] Generating 4 video segments…");
-  const segmentPaths = await generateAllSegments(plannerResult.plan, outDir);
+  console.log(`\n[pipeline] Generating 4 video segments (${segmentDurationSec}s each = ${segmentDurationSec * 4}s total)…`);
+  const segmentPaths = await generateAllSegments(plannerResult.plan, outDir, segmentDurationSec);
   console.log("[pipeline] All segments downloaded.");
 
   // Step 3: Stitch

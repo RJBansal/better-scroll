@@ -11,6 +11,8 @@ export interface DailyAgentOptions {
   profile: UserProfile;
   /** Number of reel seeds to generate. Default: 2 */
   reels?: number;
+  /** Total reel duration in seconds (must be divisible into 4 segments). Default: 32 */
+  reelDurationSec?: number;
   /** Base directory for outputs. Default: ./out */
   baseOutDir?: string;
 }
@@ -30,7 +32,7 @@ export interface DailyAgentResult {
 
 export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgentResult> {
   const MAX_REELS = 2;
-  const { profile, reels: reelCount = 2, baseOutDir } = opts;
+  const { profile, reels: reelCount = 2, reelDurationSec = 32, baseOutDir } = opts;
   const clampedReelCount = Math.min(reelCount, MAX_REELS);
 
   const resolvedBase = resolve(baseOutDir ?? "./out");
@@ -78,7 +80,7 @@ export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgent
   for (const [i, seed] of seeds.entries()) {
     console.log(`\n[agent] Generating reel ${i + 1}/${seeds.length}: ${seed.reel_id}`);
     try {
-      const result = await generateReel({ seed, baseOutDir: reelsOutDir });
+      const result = await generateReel({ seed, baseOutDir: reelsOutDir, reelDurationSec });
 
       // Read the saved plan.json to get the plannerResult (sources, etc.)
       let plannerResult: PlannerResult;

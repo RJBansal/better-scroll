@@ -1,6 +1,7 @@
 export interface VideoSegment {
   index: 0 | 1 | 2 | 3;
-  timeRange: "0:00-0:08" | "0:08-0:16" | "0:16-0:24" | "0:24-0:32";
+  /** Formatted as "M:SS-M:SS" — derived from segment duration, informational only */
+  timeRange: string;
   title: string;
   /** Detailed Veo-ready visual description */
   visual: string;
@@ -41,12 +42,18 @@ export interface PlannerResult {
 // Tolerant JSON extractor
 // ---------------------------------------------------------------------------
 
-const SEGMENT_TIME_RANGES: VideoSegment["timeRange"][] = [
-  "0:00-0:08",
-  "0:08-0:16",
-  "0:16-0:24",
-  "0:24-0:32",
-];
+function formatTimecode(totalSec: number): string {
+  const m = Math.floor(totalSec / 60);
+  const s = Math.floor(totalSec % 60);
+  return `${m}:${s.toString().padStart(2, "0")}`;
+}
+
+function makeTimeRanges(segmentDurationSec: number): string[] {
+  return [0, 1, 2, 3].map(
+    (i) =>
+      `${formatTimecode(i * segmentDurationSec)}-${formatTimecode((i + 1) * segmentDurationSec)}`,
+  );
+}
 
 const DEFAULT_STYLE_GUIDE =
   "Dark palette with neon accents, continuous rightward pan, cinematic vertical 9:16.";
@@ -111,7 +118,11 @@ export interface ReelSeedInput {
   visual_direction_notes?: string;
 }
 
-export function validatePlan(raw: unknown, fallbackTopic = "Untitled"): VideoPlan {
+export function validatePlan(
+  raw: unknown,
+  fallbackTopic = "Untitled",
+  segmentDurationSec = 8,
+): VideoPlan {
   if (typeof raw !== "object" || raw === null) {
     throw new ValidationError("Parsed value is not an object");
   }
@@ -135,12 +146,13 @@ export function validatePlan(raw: unknown, fallbackTopic = "Untitled"): VideoPla
     }
 
     const idx = (typeof seg["index"] === "number" ? seg["index"] : i) as 0 | 1 | 2 | 3;
+    const timeRanges = makeTimeRanges(segmentDurationSec);
 
     return {
       index: idx,
       timeRange: typeof seg["timeRange"] === "string"
-        ? (seg["timeRange"] as VideoSegment["timeRange"])
-        : SEGMENT_TIME_RANGES[idx] ?? SEGMENT_TIME_RANGES[i] ?? "0:00-0:08",
+        ? (seg["timeRange"] as string)
+        : (timeRanges[idx] ?? timeRanges[i] ?? "0:00-0:08"),
       title: typeof seg["title"] === "string" ? (seg["title"] as string) : `Segment ${i + 1}`,
       visual: seg["visual"] as string,
       onScreenText: typeof seg["onScreenText"] === "string" ? (seg["onScreenText"] as string) : "",

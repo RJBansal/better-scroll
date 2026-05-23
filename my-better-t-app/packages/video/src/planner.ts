@@ -10,20 +10,34 @@ import {
 } from "./types";
 
 // ---------------------------------------------------------------------------
-// System instructions
+// System instructions (parameterised by duration)
 // ---------------------------------------------------------------------------
 
-const BASE_SYSTEM_INSTRUCTION = `You are a creative director and video script writer.
-Given a topic, use Google Search to research accurate facts, then produce a cohesive storyboard for a 32-second vertical (9:16) social media reel.
+const VISUAL_GUIDANCE = `
+Visual field guidance (CRITICAL — read before writing each segment's "visual"):
+- Prefer INFOGRAPHIC-style visuals: animated charts rising, timelines scrolling, data points lighting up, diagrams assembling piece by piece, network graphs pulsing, side-by-side comparisons materialising on screen.
+- When showing a concept or fact, SHOW it — e.g. "a glowing bar chart grows left to right, each bar labelled with a percentage, against a deep navy background" not "a dark room with abstract particles".
+- Backgrounds must be SCENE-SPECIFIC to the topic: a rendered laboratory bench for science topics, a stylised city skyline at dusk for finance/business, a forest canopy time-lapse for ecology, a circuit-board close-up for technology — not a generic gradient or floating orbs.
+- Combine foreground infographic elements with a purposeful background: "a translucent pie chart floats over a slow-motion aerial shot of farmland, slice labels fade in one by one".
+- Use motion to carry information: numbers counting up, arrows animating, icons assembling, maps zooming.
+- Reserve pure abstract visuals only when the topic is genuinely abstract (philosophy, emotion). For every factual claim, use a visual that could appear in a well-designed explainer video.`.trim();
 
-The reel is split into EXACTLY 4 segments of 8 seconds each:
-  Segment 0: 0:00-0:08
-  Segment 1: 0:08-0:16
-  Segment 2: 0:16-0:24
-  Segment 3: 0:24-0:32
+function makeTimeRange(i: number, segSec: number): string {
+  const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  return `${fmt(i * segSec)}-${fmt((i + 1) * segSec)}`;
+}
+
+function buildBaseSystemInstruction(totalSec: number, segSec: number): string {
+  const wordsPerSeg = Math.round(segSec * 2); // ~2 words/sec
+  const timeRanges = [0, 1, 2, 3].map((i) => `  Segment ${i}: ${makeTimeRange(i, segSec)}`).join("\n");
+  return `You are a creative director and video script writer.
+Given a topic, use Google Search to research accurate facts, then produce a cohesive storyboard for a ${totalSec}-second vertical (9:16) social media reel.
+
+The reel is split into EXACTLY 4 segments of ${segSec} seconds each:
+${timeRanges}
 
 Rules:
-- Each voiceover is ~14-18 words spoken at ~2 words/second — fits in 8 seconds.
+- Each voiceover is ~${wordsPerSeg} words spoken at ~2 words/second — fits in ${segSec} seconds.
 - All 4 segments share a CONTINUOUS rightward camera pan and a consistent dark palette with neon accents so the stitched video feels seamless.
 - transitionOutCue of segment N must describe the exact shot that opens segment N+1 (transitionInCue of N+1).
 - Do NOT describe real, named, or identifiable individuals — use abstract, symbolic, or generic human silhouettes only.
@@ -31,13 +45,7 @@ Rules:
 - styleGuide must cover: color palette, camera movement, lens style, on-screen text style, and music mood.
 - IMPORTANT: The top-level JSON MUST include all four fields: title, styleGuide, music, and segments. Do not omit any.
 
-Visual field guidance (CRITICAL — read before writing each segment's "visual"):
-- Prefer INFOGRAPHIC-style visuals: animated charts rising, timelines scrolling, data points lighting up, diagrams assembling piece by piece, network graphs pulsing, side-by-side comparisons materialising on screen.
-- When showing a concept or fact, SHOW it — e.g. "a glowing bar chart grows left to right, each bar labelled with a percentage, against a deep navy background" not "a dark room with abstract particles".
-- Backgrounds must be SCENE-SPECIFIC to the topic: a rendered laboratory bench for science topics, a stylised city skyline at dusk for finance/business, a forest canopy time-lapse for ecology, a circuit-board close-up for technology — not a generic gradient or floating orbs.
-- Combine foreground infographic elements with a purposeful background: "a translucent pie chart floats over a slow-motion aerial shot of farmland, slice labels fade in one by one".
-- Use motion to carry information: numbers counting up, arrows animating, icons assembling, maps zooming.
-- Reserve pure abstract visuals only when the topic is genuinely abstract (philosophy, emotion). For every factual claim, use a visual that could appear in a well-designed explainer video.
+${VISUAL_GUIDANCE}
 
 Respond with TWO fenced code blocks in this exact order and nothing else:
 
@@ -49,7 +57,7 @@ Respond with TWO fenced code blocks in this exact order and nothing else:
   "segments": [
     {
       "index": 0,
-      "timeRange": "0:00-0:08",
+      "timeRange": "${makeTimeRange(0, segSec)}",
       "title": string,
       "visual": string,
       "onScreenText": string,
@@ -65,32 +73,29 @@ Respond with TWO fenced code blocks in this exact order and nothing else:
 { "sources": [{ "title": string, "uri": string }], "searchQueries": [string] }
 
 Put NOTHING after the sources block.`;
+}
 
-const SEED_SYSTEM_INSTRUCTION = `You are a creative director turning a pre-decided Reel Seed into a 4-segment video storyboard.
+function buildSeedSystemInstruction(totalSec: number, segSec: number): string {
+  const wordsPerSeg = Math.round(segSec * 2);
+  return `You are a creative director turning a pre-decided Reel Seed into a 4-segment video storyboard.
 
-Segment mapping:
-- Segment 0 (0:00-0:08): deliver the hook_angle exactly
-- Segment 1 (0:08-0:16): cover body_points[0] and body_points[1]
-- Segment 2 (0:16-0:24): cover body_points[2] (and body_points[3] if present)
-- Segment 3 (0:24-0:32): land the call_to_action
+Segment mapping (each segment is ${segSec} seconds, total ${totalSec} seconds):
+- Segment 0 (${makeTimeRange(0, segSec)}): deliver the hook_angle exactly
+- Segment 1 (${makeTimeRange(1, segSec)}): cover body_points[0] and body_points[1]
+- Segment 2 (${makeTimeRange(2, segSec)}): cover body_points[2] (and body_points[3] if present)
+- Segment 3 (${makeTimeRange(3, segSec)}): land the call_to_action
 
 Additional rules:
 - styleGuide MUST incorporate the seed's visual_direction_notes.
 - Voiceovers must match the seed's metadata.tone and metadata.pacing.
-- Each voiceover is ~14-18 words at ~2 words/second.
+- Each voiceover is ~${wordsPerSeg} words at ~2 words/second — fits in ${segSec} seconds.
 - Continuous rightward camera pan across all 4 segments.
 - transitionOutCue of segment N must match transitionInCue of segment N+1.
 - Do NOT describe real, named, or identifiable individuals.
 - Use Google Search to ground any factual claims referenced in the seed's source_references.
 - IMPORTANT: The top-level JSON MUST include all four fields: title, styleGuide, music, and segments. Do not omit any.
 
-Visual field guidance (CRITICAL — read before writing each segment's "visual"):
-- Prefer INFOGRAPHIC-style visuals: animated charts rising, timelines scrolling, data points lighting up, diagrams assembling piece by piece, network graphs pulsing, side-by-side comparisons materialising on screen.
-- When showing a concept or fact, SHOW it — e.g. "a glowing bar chart grows left to right, each bar labelled with a percentage, against a deep navy background" not "a dark room with abstract particles".
-- Backgrounds must be SCENE-SPECIFIC to the topic: a rendered laboratory bench for science, a stylised city skyline for business/finance, a forest canopy for ecology, a circuit-board macro for technology — not a generic gradient or floating orbs.
-- Combine foreground infographic elements with a purposeful background: "a translucent pie chart floats over a slow-motion aerial shot of farmland, slice labels fade in one by one".
-- Use motion to carry information: numbers counting up, arrows animating, icons assembling, maps zooming.
-- Reserve pure abstract visuals only when the topic is genuinely abstract (philosophy, emotion). For every factual claim, use a visual that could appear in a well-designed explainer video.
+${VISUAL_GUIDANCE}
 
 Respond with TWO fenced code blocks in this exact order and nothing else:
 
@@ -98,6 +103,7 @@ Respond with TWO fenced code blocks in this exact order and nothing else:
 2. A \`\`\`json sources block: { "sources": [{ "title": string, "uri": string }], "searchQueries": [string] }
 
 Put NOTHING after the sources block.`;
+}
 
 const REPAIR_PROMPT = (original: string, errMsg: string) =>
   `The following text should contain a video plan JSON but it is malformed or missing required fields.
@@ -162,6 +168,7 @@ async function runPlannerAgent(
   systemInstruction: string,
   input: string,
   topic: string,
+  segmentDurationSec: number,
 ): Promise<PlannerResult & { topic: string }> {
   console.log(`[planner] Calling managed agent for: "${topic}"…`);
   const result = await runManagedAgent({ input, systemInstruction });
@@ -174,7 +181,7 @@ async function runPlannerAgent(
   const parsed = extractPlanBlock(rawText);
 
   try {
-    plan = validatePlan(parsed, topic);
+    plan = validatePlan(parsed, topic, segmentDurationSec);
     console.log("[planner] JSON parsed and validated successfully");
   } catch (err) {
     const msg = err instanceof ValidationError ? err.message : "JSON extraction failed";
@@ -185,7 +192,7 @@ async function runPlannerAgent(
       systemInstruction,
     });
     const reparsed = extractPlanBlock(repairResult.outputText);
-    plan = validatePlan(reparsed, topic);
+    plan = validatePlan(reparsed, topic, segmentDurationSec);
     console.log("[planner] JSON repaired and validated");
   }
 
@@ -196,13 +203,20 @@ async function runPlannerAgent(
 // Public API
 // ---------------------------------------------------------------------------
 
-export async function planReel(topic: string): Promise<PlannerResult> {
-  const input = `Create a 32-second vertical reel storyboard for the topic: "${topic}"`;
-  return runPlannerAgent(BASE_SYSTEM_INSTRUCTION, input, topic);
+export async function planReel(topic: string, reelDurationSec = 32): Promise<PlannerResult> {
+  const segSec = Math.max(5, Math.round(reelDurationSec / 4));
+  const totalSec = segSec * 4;
+  const input = `Create a ${totalSec}-second vertical reel storyboard for the topic: "${topic}"`;
+  return runPlannerAgent(buildBaseSystemInstruction(totalSec, segSec), input, topic, segSec);
 }
 
-export async function planReelFromSeed(seed: ReelSeedInput): Promise<PlannerResult> {
+export async function planReelFromSeed(
+  seed: ReelSeedInput,
+  reelDurationSec = 32,
+): Promise<PlannerResult> {
+  const segSec = Math.max(5, Math.round(reelDurationSec / 4));
+  const totalSec = segSec * 4;
   const topic = seed.reel_id ?? seed.topic_focus;
-  const input = `Convert this Reel Seed into a 4-segment storyboard:\n\n${JSON.stringify(seed, null, 2)}`;
-  return runPlannerAgent(SEED_SYSTEM_INSTRUCTION, input, topic);
+  const input = `Convert this Reel Seed into a ${totalSec}-second 4-segment storyboard:\n\n${JSON.stringify(seed, null, 2)}`;
+  return runPlannerAgent(buildSeedSystemInstruction(totalSec, segSec), input, topic, segSec);
 }

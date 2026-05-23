@@ -6,15 +6,20 @@ import { eq } from "drizzle-orm";
 import { listBookmarkUrls } from "./bookmarks";
 import { ensureDefaultProfile, loadDefaultProfile } from "./profile";
 
-const MAX_AGENT_REELS = 2;
+const MAX_AGENT_REELS = 10;
+const DEFAULT_REEL_DURATION_SEC = 32;
 
 function getPublicRunsRoot(): string {
   // At Next.js runtime, process.cwd() is apps/web
   return resolve(process.cwd(), "public", "runs");
 }
 
-export async function runDailyAgentFromBookmarks(reels = MAX_AGENT_REELS) {
+export async function runDailyAgentFromBookmarks(
+  reels = MAX_AGENT_REELS,
+  reelDurationSec = DEFAULT_REEL_DURATION_SEC,
+) {
   const clampedReels = Math.min(reels, MAX_AGENT_REELS);
+  const clampedDuration = Math.max(8, Math.min(reelDurationSec, 120));
   const runId = crypto.randomUUID();
   const startedAt = Date.now();
   const publicRunsRoot = getPublicRunsRoot();
@@ -32,7 +37,12 @@ export async function runDailyAgentFromBookmarks(reels = MAX_AGENT_REELS) {
   try {
     const bookmarkUrls = await listBookmarkUrls();
     const profile = await loadDefaultProfile(bookmarkUrls);
-    const result = await runDailyAgent({ profile, reels: clampedReels, baseOutDir });
+    const result = await runDailyAgent({
+      profile,
+      reels: clampedReels,
+      reelDurationSec: clampedDuration,
+      baseOutDir,
+    });
 
     if (result.reels.length === 0) {
       throw new Error("All reels failed to generate. Check server logs for per-reel errors.");
@@ -48,7 +58,7 @@ export async function runDailyAgentFromBookmarks(reels = MAX_AGENT_REELS) {
         caption: seed.topic_focus,
         sourceTitle: firstSource?.title ?? seed.metadata.source_references[0] ?? "",
         sourceUrl: firstSource?.uri ?? "",
-        durationSec: 32,
+        durationSec: clampedDuration,
         category: seed.category,
       };
     });
