@@ -1,8 +1,50 @@
-# my-better-t-app
+# Better Scroll
 
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines Next.js, Self, ORPC, and more.
+Better Scroll is an AI-powered reel app that turns saved knowledge into short, scrollable video briefings. The MVP focuses on research papers first, then expands into browser bookmarks, YouTube watch lists, saved HTML pages, PDFs, and other knowledge sources.
 
-## Features
+The app is designed around a pre-generated content workflow: agents run on a schedule, process the user's saved sources, generate scripts, and deliver a limited set of short videos for the next day. For the initial demo, the system targets 10 generated videos.
+
+## MVP Architecture
+
+### App Experience
+
+- Web frontend as the primary app surface
+- Expo-compatible mobile fallback for deployment flexibility
+- Scroll-based reel interface for AI-generated video content
+- Pre-generated feed instead of fully real-time generation
+
+### Agent Workflow
+
+- Cloud-managed agents run at predetermined times
+- Initial workflow target: 12am processing with 6am video delivery
+- Agents scrape, summarize, and transform source material into video scripts
+- Google Grounding Search is used for managed research and enrichment
+- Gemini handles link processing and content extraction
+
+### Knowledge Sources
+
+- Browser bookmarks are the primary input, starting from exported HTML files
+- Research papers and PDFs are the first content focus
+- HTML pages, including social media bookmarks, are planned next
+- YouTube videos from watch lists are supported as a later source type
+- Chat memory integration is a future consideration
+
+### Video Pipeline
+
+- Script generation feeds the video creation workflow
+- Veo3 generates clips with an 8-second maximum per clip
+- The MVP may use 4 parallel calls to create roughly 24-30 second reels
+- Sequential generation may be explored for better context continuity
+
+### Storage And Infrastructure
+
+- Local storage is used for the first MVP
+- GCP credits are available for future cloud storage
+- Google Drive is the simplest planned cloud storage option
+- Agent management runs in a cloud environment
+- The architecture remains compatible with Expo app deployment
+
+## Tech Stack
 
 - **TypeScript** - For type safety and improved developer experience
 - **Next.js** - Full-stack React framework
