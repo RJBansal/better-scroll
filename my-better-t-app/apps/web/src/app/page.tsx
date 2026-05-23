@@ -1,47 +1,35 @@
-"use client";
-import { useQuery } from "@tanstack/react-query";
+"use client"
 
-import { orpc } from "@/utils/orpc";
+import { useState } from "react"
 
-const TITLE_TEXT = `
- ██████╗ ███████╗████████╗████████╗███████╗██████╗
- ██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
- ██████╔╝█████╗     ██║      ██║   █████╗  ██████╔╝
- ██╔══██╗██╔══╝     ██║      ██║   ██╔══╝  ██╔══██╗
- ██████╔╝███████╗   ██║      ██║   ███████╗██║  ██║
- ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝
+import { EndOfDrop } from "@/components/feed/end-of-drop"
+import { FeedOverlay } from "@/components/feed/feed-overlay"
+import { ReelCanvas } from "@/components/feed/reel-canvas"
+import { MOCK_REELS } from "@/lib/mock-reels"
+import { usePreferences } from "@/lib/storage"
 
- ████████╗    ███████╗████████╗ █████╗  ██████╗██╗  ██╗
- ╚══██╔══╝    ██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
-    ██║       ███████╗   ██║   ███████║██║     █████╔╝
-    ██║       ╚════██║   ██║   ██╔══██║██║     ██╔═██╗
-    ██║       ███████║   ██║   ██║  ██║╚██████╗██║  ██╗
-    ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
- `;
+export default function FeedPage() {
+  const [muted, setMuted] = useState(true)
+  const { prefs } = usePreferences()
 
-export default function Home() {
-  const healthCheck = useQuery(orpc.healthCheck.queryOptions());
+  const enabled = MOCK_REELS.filter((reel) => prefs.enabledSources[reel.sourceType])
+  const reels = enabled.slice(0, prefs.dailyReelCount)
 
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-2">
-      <pre className="overflow-x-auto font-mono text-sm">{TITLE_TEXT}</pre>
-      <div className="grid gap-6">
-        <section className="rounded-lg border p-4">
-          <h2 className="mb-2 font-medium">API Status</h2>
-          <div className="flex items-center gap-2">
-            <div
-              className={`h-2 w-2 rounded-full ${healthCheck.data ? "bg-green-500" : "bg-red-500"}`}
-            />
-            <span className="text-sm text-muted-foreground">
-              {healthCheck.isLoading
-                ? "Checking..."
-                : healthCheck.data
-                  ? "Connected"
-                  : "Disconnected"}
-            </span>
-          </div>
-        </section>
+    <main className="relative h-svh w-svw overflow-hidden bg-background">
+      <FeedOverlay />
+      <div className="no-scrollbar h-full w-full snap-y snap-mandatory overflow-y-auto overscroll-y-contain">
+        {reels.map((reel, index) => (
+          <ReelCanvas
+            key={reel.id}
+            reel={reel}
+            index={index}
+            muted={muted}
+            onToggleMuted={() => setMuted((v) => !v)}
+          />
+        ))}
+        <EndOfDrop count={reels.length} />
       </div>
-    </div>
-  );
+    </main>
+  )
 }
