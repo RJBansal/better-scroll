@@ -31,9 +31,8 @@ export interface DailyAgentResult {
 }
 
 export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgentResult> {
-  const MAX_REELS = 2;
   const { profile, reels: reelCount = 2, reelDurationSec = 32, baseOutDir } = opts;
-  const clampedReelCount = Math.min(reelCount, MAX_REELS);
+  const clampedReelCount = reelCount;
 
   const resolvedBase = resolve(baseOutDir ?? "./out");
   const datestamp = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
@@ -44,7 +43,7 @@ export async function runDailyAgent(opts: DailyAgentOptions): Promise<DailyAgent
   console.log(`Daily Agent: ${profile.name}`);
   console.log(`Date: ${datestamp}`);
   console.log(`Output: ${outDir}`);
-  console.log(`Reels: ${clampedReelCount}${reelCount > MAX_REELS ? ` (capped from ${reelCount})` : ""}`);
+  console.log(`Reels: ${clampedReelCount}`);
   console.log(`${"=".repeat(50)}\n`);
 
   // Step 1: Research
