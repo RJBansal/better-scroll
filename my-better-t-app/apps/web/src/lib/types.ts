@@ -22,6 +22,7 @@ export type ParsedBookmark = {
 
 export type Preferences = {
   dailyReelCount: number
+  dailyRealReelCount: number
   dropTime: string
   reelDurationSec: number
   reducedMotion: boolean
@@ -30,6 +31,7 @@ export type Preferences = {
 
 export const DEFAULT_PREFERENCES: Preferences = {
   dailyReelCount: 10,
+  dailyRealReelCount: 2,
   dropTime: "06:00",
   reelDurationSec: 28,
   reducedMotion: false,

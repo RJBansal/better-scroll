@@ -24,6 +24,10 @@ export const env = createEnv({
       )
       .pipe(z.array(z.url()).min(1)),
     NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
+    PEXELS_API_KEY: z.string().min(1).optional(),
+    REDDIT_CLIENT_ID: z.string().min(1).optional(),
+    REDDIT_CLIENT_SECRET: z.string().min(1).optional(),
+    REDDIT_USER_AGENT: z.string().min(1).default("better-scroll-agent/0.1"),
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,

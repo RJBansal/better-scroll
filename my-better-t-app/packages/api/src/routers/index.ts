@@ -8,6 +8,7 @@ import { getDefaultProfile, updateDefaultProfile } from "../services/profile"
 import { getLatestReels } from "../services/reels"
 
 const MAX_AGENT_REELS = 10
+const MAX_REAL_REELS = 6
 
 const replaceBookmarksInput = z.object({
   urls: z.array(z.url()).max(5000),
@@ -16,6 +17,7 @@ const replaceBookmarksInput = z.object({
 const runDailyInput = z.object({
   reels: z.number().int().min(1).max(MAX_AGENT_REELS).optional(),
   reelDurationSec: z.number().int().min(8).max(120).optional(),
+  realReels: z.number().int().min(0).max(MAX_REAL_REELS).optional(),
 })
 
 const updateProfileInput = z.object({
@@ -39,7 +41,7 @@ export const appRouter = {
   agent: {
     runDaily: publicProcedure
       .input(runDailyInput)
-      .handler(({ input }) => runDailyAgentFromBookmarks(input.reels, input.reelDurationSec)),
+      .handler(({ input }) => runDailyAgentFromBookmarks(input.reels, input.reelDurationSec, input.realReels)),
   },
   profile: {
     get: publicProcedure.handler(() => getDefaultProfile()),

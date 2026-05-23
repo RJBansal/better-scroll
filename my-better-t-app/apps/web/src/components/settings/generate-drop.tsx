@@ -12,6 +12,7 @@ type AgentRunResult = {
   readUpPath: string
   seedsPath: string
   reels: string[]
+  realReels: string[]
 }
 
 export function GenerateDrop() {
@@ -29,6 +30,7 @@ export function GenerateDrop() {
       const next = await client.agent.runDaily({
         reels: prefs.dailyReelCount,
         reelDurationSec: prefs.reelDurationSec,
+        realReels: prefs.dailyRealReelCount,
       })
       setResult(next)
     } catch (err) {
@@ -56,7 +58,7 @@ export function GenerateDrop() {
           {running ? "Generating..." : "Generate drop"}
         </button>
         <span className="text-xs tabular-nums text-muted-foreground">
-          {prefs.dailyReelCount} reel{prefs.dailyReelCount !== 1 ? "s" : ""} &middot; {prefs.reelDurationSec}s each
+          {prefs.dailyReelCount} generated &middot; {prefs.dailyRealReelCount} real &middot; {prefs.reelDurationSec}s each
         </span>
       </div>
 
@@ -71,6 +73,15 @@ export function GenerateDrop() {
           {result.reels.length > 0 ? (
             <ul className="flex flex-col gap-1 pt-1">
               {result.reels.map((reel) => (
+                <li key={reel} className="truncate">
+                  {reel}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {result.realReels.length > 0 ? (
+            <ul className="flex flex-col gap-1 pt-1">
+              {result.realReels.map((reel) => (
                 <li key={reel} className="truncate">
                   {reel}
                 </li>

@@ -8,6 +8,8 @@ export type ReelMeta = {
   sourceUrl: string
   durationSec: number
   category: string
+  /** generated | pexels | reddit */
+  source: string
 }
 
 export const DEFAULT_PROFILE_ID = "default"

@@ -12,6 +12,8 @@ import { SOURCE_LABELS, SOURCE_TYPES, type SourceType } from "@/lib/types"
 
 const REEL_COUNT_MIN = 3
 const REEL_COUNT_MAX = 20
+const REAL_REEL_COUNT_MIN = 0
+const REAL_REEL_COUNT_MAX = 6
 const DURATION_MIN = 15
 const DURATION_MAX = 45
 
@@ -96,6 +98,21 @@ export default function SettingsPage() {
                 onChange={(event) => update({ dropTime: event.target.value })}
                 disabled={!hydrated}
                 className="rounded-md border border-input bg-transparent px-3 py-2 text-sm tabular-nums text-foreground focus-visible:border-ring focus-visible:outline-none disabled:opacity-50"
+              />
+            }
+          />
+          <SettingsRow
+            label="Real reels per drop"
+            description="Extra Pexels portrait videos mixed into the generated drop."
+            htmlFor="real-reel-count"
+            control={
+              <NumberStepper
+                id="real-reel-count"
+                value={prefs.dailyRealReelCount}
+                min={REAL_REEL_COUNT_MIN}
+                max={REAL_REEL_COUNT_MAX}
+                onChange={(value) => update({ dailyRealReelCount: value })}
+                disabled={!hydrated}
               />
             }
           />
