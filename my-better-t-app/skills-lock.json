@@ -37,6 +37,12 @@
       "skillPath": "skills/heroui-native/SKILL.md",
       "computedHash": "d2fc03a13d03678d40799726a144ba72ba1cb08126176ddbf0a0461c901aef29"
     },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": "skill/SKILL.md",
+      "computedHash": "34e59a34b9705187e87039faa5d9585aebe0056ef657f761b905afef276a3362"
+    },
     "native-data-fetching": {
       "source": "expo/skills",
       "sourceType": "github",
