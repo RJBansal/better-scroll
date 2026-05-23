@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { extractJson, runManagedAgent } from "@my-better-t-app/video";
-import type { ReelSeed, UserProfile } from "./types.js";
+import type { ReelSeed, UserProfile } from "./types";
 
 const SEED_KEYS: (keyof ReelSeed)[] = [
   "reel_id",

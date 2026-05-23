@@ -1,13 +1,13 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { type GenerateReelResult, generateReel } from "@my-better-t-app/video";
-import { decoupleReels } from "./decoupler.js";
-import { runResearcher } from "./researcher.js";
-import type { UserProfile } from "./types.js";
+import { decoupleReels } from "./decoupler";
+import { runResearcher } from "./researcher";
+import type { UserProfile } from "./types";
 
-export type { UserProfile, ReelSeed, ResearchResult } from "./types.js";
+export type { UserProfile, ReelSeed, ResearchResult } from "./types";
 // Re-export for convenience
-export { loadProfile } from "./profile.js";
+export { loadProfile } from "./profile";
 
 export interface DailyAgentOptions {
   profile: UserProfile;

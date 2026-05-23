@@ -1,4 +1,4 @@
-import { runManagedAgent } from "./managedAgent.js";
+import { runManagedAgent } from "./managedAgent";
 import {
   type PlannerResult,
   type ReelSeedInput,
@@ -7,7 +7,7 @@ import {
   ValidationError,
   extractJson,
   validatePlan,
-} from "./types.js";
+} from "./types";
 
 // ---------------------------------------------------------------------------
 // System instructions

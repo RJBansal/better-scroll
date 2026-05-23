@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 import { resolve } from "node:path";
-import { generateReel } from "../src/index.js";
+import { generateReel } from "../src/index";
 
 const topic = process.argv[2]?.trim();
 

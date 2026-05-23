@@ -1,24 +1,39 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { FileUp, Loader2, X } from "lucide-react"
 
 import { parseBookmarkHtml } from "@/lib/bookmark-parser"
-import { useBookmarks } from "@/lib/storage"
+import { client } from "@/utils/orpc"
 
 const MAX_FILE_SIZE = 25 * 1024 * 1024 // 25 MB
+const MAX_BOOKMARK_URLS = 5000
 const SAMPLE_LIMIT = 8
-
-const TIME_FORMATTER = new Intl.DateTimeFormat("en-US", {
-  dateStyle: "medium",
-  timeStyle: "short",
-})
+const EMPTY_BOOKMARKS = { count: 0, sample: [] as string[] }
 
 export function BookmarkUpload() {
   const inputRef = useRef<HTMLInputElement>(null)
-  const { bookmarks, save, clear, hydrated } = useBookmarks()
+  const [bookmarks, setBookmarks] = useState(EMPTY_BOOKMARKS)
+  const [hydrated, setHydrated] = useState(false)
   const [parsing, setParsing] = useState(false)
+  const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const refreshBookmarks = async () => {
+    try {
+      const next = await client.bookmarks.list()
+      setBookmarks(next)
+    } catch (err) {
+      console.error(err)
+      setError("Couldn't load saved bookmarks.")
+    } finally {
+      setHydrated(true)
+    }
+  }
+
+  useEffect(() => {
+    void refreshBookmarks()
+  }, [])
 
   const handleFiles = async (files: FileList | null) => {
     setError(null)
@@ -41,17 +56,38 @@ export function BookmarkUpload() {
         setError("No bookmarks found in this file.")
         return
       }
-      save({
-        count: parsed.length,
-        uploadedAt: Date.now(),
-        filename: file.name,
-        sample: parsed.slice(0, SAMPLE_LIMIT),
+      const urls = [...new Set(parsed.map((bookmark) => bookmark.url))]
+      if (urls.length > MAX_BOOKMARK_URLS) {
+        setError(`Upload has more than ${MAX_BOOKMARK_URLS.toLocaleString()} URLs.`)
+        return
+      }
+
+      setSaving(true)
+      const result = await client.bookmarks.replace({ urls })
+      setBookmarks({
+        count: result.count,
+        sample: urls.slice(0, SAMPLE_LIMIT),
       })
     } catch (err) {
       console.error(err)
-      setError("Couldn't parse this file.")
+      setError("Couldn't save this file.")
     } finally {
       setParsing(false)
+      setSaving(false)
+    }
+  }
+
+  const clearBookmarks = async () => {
+    setError(null)
+    setSaving(true)
+    try {
+      await client.bookmarks.replace({ urls: [] })
+      setBookmarks(EMPTY_BOOKMARKS)
+    } catch (err) {
+      console.error(err)
+      setError("Couldn't clear saved bookmarks.")
+    } finally {
+      setSaving(false)
     }
   }
 
@@ -77,16 +113,14 @@ export function BookmarkUpload() {
                 {bookmarks.count.toLocaleString()} bookmarks
               </div>
               <div className="text-xs text-muted-foreground">
-                {bookmarks.filename}
-                {bookmarks.uploadedAt
-                  ? ` · uploaded ${TIME_FORMATTER.format(bookmarks.uploadedAt)}`
-                  : null}
+                Saved for the next agent run
               </div>
             </div>
             <button
               type="button"
-              onClick={clear}
+              onClick={clearBookmarks}
               aria-label="Remove uploaded bookmarks"
+              disabled={saving}
               className="grid size-8 place-items-center rounded-full text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground"
             >
               <X className="size-4" />
@@ -95,9 +129,9 @@ export function BookmarkUpload() {
 
           {bookmarks.sample.length > 0 ? (
             <ul className="flex flex-col gap-1 text-xs text-muted-foreground">
-              {bookmarks.sample.slice(0, 4).map((bm) => (
-                <li key={bm.url} className="truncate">
-                  {bm.title}
+              {bookmarks.sample.slice(0, 4).map((url) => (
+                <li key={url} className="truncate">
+                  {url}
                 </li>
               ))}
               {bookmarks.count > 4 ? (
@@ -111,32 +145,33 @@ export function BookmarkUpload() {
           <button
             type="button"
             onClick={() => inputRef.current?.click()}
+            disabled={saving}
             className="self-start text-xs font-medium text-primary transition-colors hover:underline"
           >
-            Replace file
+            {saving ? "Saving..." : "Replace file"}
           </button>
         </div>
       ) : (
         <button
           type="button"
           onClick={() => inputRef.current?.click()}
-          disabled={parsing}
+          disabled={parsing || saving}
           className="flex flex-col items-start gap-2 rounded-md border border-dashed border-border bg-card/30 px-5 py-6 text-left transition-colors hover:border-foreground/30 hover:bg-card/50 disabled:cursor-progress disabled:opacity-70"
         >
           <div className="flex items-center gap-2 text-foreground">
-            {parsing ? (
+            {parsing || saving ? (
               <Loader2 className="size-4 animate-spin" />
             ) : (
               <FileUp className="size-4" />
             )}
             <span className="text-sm font-medium">
-              {parsing ? "Parsing\u2026" : "Upload bookmarks"}
+              {parsing ? "Parsing\u2026" : saving ? "Saving..." : "Upload bookmarks"}
             </span>
           </div>
           <p className="max-w-[42ch] text-xs leading-relaxed text-muted-foreground">
             Drop a Chrome, Firefox, Safari, or Edge bookmarks export
-            (<span className="text-foreground/70">.html</span>). Parsed locally;
-            nothing leaves your machine.
+            (<span className="text-foreground/70">.html</span>). Parsed locally,
+            then URLs are saved for the agent.
           </p>
         </button>
       )}

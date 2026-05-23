@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { GoogleGenAI } from "@google/genai";
-import type { VideoPlan, VideoSegment } from "./types.js";
+import type { VideoPlan, VideoSegment } from "./types";
 
 const POLL_INTERVAL_MS = 10_000;
 const MAX_RETRIES = 2;

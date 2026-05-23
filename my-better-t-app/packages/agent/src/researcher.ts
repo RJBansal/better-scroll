@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { runManagedAgent } from "@my-better-t-app/video";
-import type { ResearchResult, UserProfile } from "./types.js";
+import type { ResearchResult, UserProfile } from "./types";
 
 const SYSTEM_INSTRUCTION = `You are a daily research manager for a personalized content system.
 

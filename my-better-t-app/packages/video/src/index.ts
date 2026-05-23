@@ -1,17 +1,17 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { planReel, planReelFromSeed } from "./planner.js";
-import { stitch } from "./stitch.js";
-import { generateAllSegments } from "./veo.js";
+import { planReel, planReelFromSeed } from "./planner";
+import { stitch } from "./stitch";
+import { generateAllSegments } from "./veo";
 
-export type { PlannerResult, VideoPlan, VideoSegment, Source, ReelSeedInput } from "./types.js";
-export { extractJson } from "./types.js";
-export { runManagedAgent } from "./managedAgent.js";
-export type { ManagedAgentRunInput, ManagedAgentResult } from "./managedAgent.js";
+export type { PlannerResult, VideoPlan, VideoSegment, Source, ReelSeedInput } from "./types";
+export { extractJson } from "./types";
+export { runManagedAgent } from "./managedAgent";
+export type { ManagedAgentRunInput, ManagedAgentResult } from "./managedAgent";
 
 export type GenerateReelOptions =
   | { topic: string; baseOutDir?: string }
-  | { seed: import("./types.js").ReelSeedInput; baseOutDir?: string };
+  | { seed: import("./types").ReelSeedInput; baseOutDir?: string };
 
 export interface GenerateReelResult {
   planPath: string;

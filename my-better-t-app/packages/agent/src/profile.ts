@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import type { UserProfile } from "./types.js";
+import type { UserProfile } from "./types";
 
 const SAMPLE_PROFILE_PATH = join(
   new URL("../profiles/sample.json", import.meta.url).pathname,
