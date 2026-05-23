@@ -1,0 +1,120 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: The AI Revolution",
+    "styleGuide": "Color Palette: Predominantly dark blues and purples (#0A0A2A, #1C0A3A) with vibrant neon accents (electric blue #00FFFF, magenta #FF00FF, lime green #00FF00) for data points and connections. Camera Movement: A smooth, continuous rightward pan throughout the entire 32-second reel, subtly revealing the next scene. Lens Style: Shallow depth of field, subtle lens flare on neon elements, slightly futuristic and abstract. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), bold, glowing neon effect matching accent colors. Music Mood: Upbeat, futuristic, slightly mysterious electronic track with a driving but not distracting beat.",
+    "music": "Synthwave / Dark Ambient Electronic",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The 2017 Breakthrough",
+        "visual": "Opens on a dark, abstract digital landscape. Generic human silhouettes stand before glowing, complex, but linear data streams representing traditional RNNs/CNNs, struggling to connect distant points. The camera begins its slow rightward pan.",
+        "onScreenText": "The 2017 Breakthrough\nProcessing Sequences: The Challenge",
+        "voiceover": "In 2017, a landmark paper, \"Attention Is All You Need,\" revolutionized AI. Traditional models struggled with long sequences and parallel processing.",
+        "transitionInCue": "Camera focused on struggling linear data streams.",
+        "transitionOutCue": "Camera slowly pans right, revealing a new, more interconnected data visualization forming."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Self-Attention: Dynamic Focus",
+        "visual": "Continuing the rightward pan, the scene shifts to an abstract visualization of 'self-attention.' Glowing neon lines dynamically connect various 'tokens' (abstract data blocks) within a single sequence, illustrating how they weigh importance to each other. Queries, keys, and values are subtly represented.",
+        "onScreenText": "Self-Attention: Dynamic Focus\nContext is Key",
+        "voiceover": "It introduced self-attention, allowing models to dynamically weigh the importance of different input parts. Context became key for understanding.",
+        "transitionInCue": "Camera reveals abstract visualization of 'self-attention' with dynamic neon connections.",
+        "transitionOutCue": "Camera continues rightward, leaving the specific attention mechanism to reveal a broader architectural view."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "The Transformer: Parallel Power",
+        "visual": "The rightward pan reveals a minimalist, neon-outlined representation of the Transformer's encoder-decoder architecture. Glowing data streams flow through the stacked attention blocks in parallel, emphasizing the absence of sequential bottlenecks.",
+        "onScreenText": "The Transformer: No Recurrence, No Convolutions\nParallel Power",
+        "voiceover": "The Transformer uses *only* attention, ditching recurrence and convolutions. This enabled unprecedented parallel processing, boosting speed and efficiency.",
+        "transitionInCue": "Camera reveals minimalist, neon-outlined Transformer architecture with parallel data flow.",
+        "transitionOutCue": "Camera continues rightward, moving past the Transformer's structure towards its branching applications."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Foundation of Modern AI",
+        "visual": "The final rightward pan showcases the impact. The Transformer's core structure (from previous segment) now branches into multiple glowing pathways, each leading to symbolic representations of its applications: text generation (flowing text), machine translation (two abstract languages merging), and even evolving into abstract visual processing patterns.",
+        "onScreenText": "Foundation of Modern AI\nGPT, BERT, and Beyond",
+        "voiceover": "This breakthrough became the foundation for modern AI, powering large language models like GPT and BERT, transforming many fields.",
+        "transitionInCue": "Camera reveals Transformer's core structure branching into multiple application pathways.",
+        "transitionOutCue": "Scene ends on a wide shot of the sprawling, interconnected network of AI applications, fading to black as the music concludes."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "wikipedia.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz_WMyFhhACcV68XsD_4m-YsoFn5HffChNtKhWPUrvONY5SMhU_lEtuZ7I4vjvIE_SZeGdD-31M33S-KbQ5uRNPBCfhtfjyAx2FgKH28Bb63ntqdb20oSsmnqYp4crYRmHDpzZT_ak6K67N18v-SzbJUs="
+    },
+    {
+      "title": "nd.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6upuec24NR5xjGindXe1J_H9tThAYjCLivprYGPlBmJzhW7Yuyy4hbcziW_iaKjwynE-iRfv54vKnidL4IMg4HCTUHI5HTx_5sgW-qZLyFl1gN7YfBHrZKdByWFce8OFxd7f_Q4cHtUDD3fAicYrzSCpH6V336aqwXSJaWxduhwd2iS4nCPULZiEg0j_ZjHfOshsU"
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2_A2_6uDHoiHFPp9-2oxXv0LfEfb6Qj5gGCHonD1r9A95pAh-JDyyzm7cIarj_GqUMw43uYbDjI9Pgmn5ExPHSHCovvZ9VLFAsxgArvRM5TJNLVFmivrvODyYps3pOfoZHixANZRkwNPseong7cRwJGeskI98PKJ56tOOM1HfRhYS2CB-cb9C0ePHpFchKgqNz9rP1g5qfX2ivHGO62LSYXaOmg=="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0AKp8026-510Faf5uPdKk5lSsYYS1L3wgOsVi34nSI2pYsXaeWCMJ79bXC3VWFbFPtrCkNkcpq3fkIFmL-K574lN2bbUoEVQ-Swox62BlMn4uCi9YXMBBi-2qkjoPz4L9XryJAxLvLYtt"
+    },
+    {
+      "title": "datacamp.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElfOF3qmmKFvQtl8Lg7-aWFetl7X3ILqVzTCwx__aWro5ECOjC8ZdDuatz144jfbSqJt_m4hEwfXyW4pOGq1geH6rT56K0Kr33oOJjbtDwJ8KGllIq7Plp2_Dr_EKsf24UszWccyNj"
+    },
+    {
+      "title": "codecademy.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq62BzMXxvIcfp_g83clD3iupMShixDqZqrwDSFkptcQyJQhBAz3bYBllB8Q0_RLR4gB-B2qsc-KZcFSlnkDWaeoaR7BSzSpTpvOvQXBDSI2Kzcjt7l0HhuqaSvNk0-Gx06MJb2QxzjUxaBR6iqVh61EIFVP241zWfNTB-eWByWCUKjbkM6glGNRmhuL_p6A=="
+    },
+    {
+      "title": "geeksforgeeks.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwQwwPUTBHkxondnLC5bLF_2YkfrGxm-aFDojc7F3oLVDP3_fp_y_UaCf0_SK_w7W1yoyaHeFOpVBUvRTgBYk8LuVRfJYv3iW7Na5b0HjN44W4rVcqDK4whX8O9rn9itVAkCva19ozkqgNvn4uwhbTsl-R"
+    },
+    {
+      "title": "researchgate.net",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETUu780Ivqppff4wmY4siE_mNmwMKBJF97McA3z9hjL84utvfBK_2l9cqb04zSFpB2P-QRQxoroUN9e3fAa3Z0yHjQryiFrSFcL7vk8zMAlx6Q04Ty77h1sYML0rnyTUfT0NZ6xWpvoVvFjGj80jdobPnjH0HuLt-A9lX7iwN3Wh85-y4xc8n1Cq7mTTiH7DY7cvAc5QumeOp4XIjKOEB_97C89lwc6v6A0-N2HZR7PnlLwaL8zLTJS2hWyADLpgVhAesKh4gI2ZEKp2ph38u45d5I9SyRK7KPPg=="
+    },
+    {
+      "title": "datacamp.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpYV3T1-nQbRnOnznFYBECfawkgC0nDVz0Dg4WeYW2X2r6K6rHjPb_FVLRLLsj5JZMKR_cgh7uY6niDybPxyY9oSu-6aUYyuBBWfD4wGdwXyB-iLuR6TNNx5unN1F8RTp95AczPq17A4VpHfDcengpidk="
+    },
+    {
+      "title": "neurips.cc",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5VHXOFxJt76wIBHCIrnbLfso6Bn-AAkQ7Wrmr9vFtZMcDo5WH64y9F7afMiFv1zRZ465ZBFSIewcSWMUrwQC5fqwha6olAgTZbMkvg_bdcKPMj6Fqe0MndFDtm1bjF31BZ8zyyq-qSincJJRjkeZBPU6t5STn24otAXKF3w=="
+    },
+    {
+      "title": "github.io",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGo26lCKBw5r3JmXaHUOSqBNuBmB2Bq2H76REju_CINL29RQs7HWZtOUmKFsvHtveXhA9sgWb9QAxG-0Nm_b0ljmNPKcEd9g1Z77q7eS6tTvkfBJKW57GWIfIvHcLx4Wrf9hvqSIds7w57Aviyow9dY99QwOSCJEoNH_CXsWvJ0J9CPOQ=="
+    },
+    {
+      "title": "portkey.ai",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkX4C95PnjYJA5Flpd1jQm6UcFKulpDeY0n3NqJAjVndsbZXV4og6Sqpd2ftN0yUzffOxoURRqI2Zt6iOBTenA_YdIkb6E7pottwfI6AkBmkoH3e77Kxnmuk9xOQ94YZlhniSmFnqIEyioicqgC76SovzLDQQ="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGla6mZY9zVoZctMaUebPSNeIJFtmvoMNUD9s7fVrhwh2duOQCvZIO6IBBzGE5orzQ7SE4ad_ogk1euBNhBWEBw9koywVeokXMzQcfnT2_8i4tvMZG_DOn2KCo8sYnpxuQloLuM16jeifnS_jWV"
+    },
+    {
+      "title": "pluralsight.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyh2_UlLryHl5pyTlGhOosBKjOPba80GsVVERHpJqDIwRzuxleNqQALFVu4tpNqeG3TATO5aVFz918dcm6teM5xSV7q3RCV91lwV4aP_Kh7yGejoZU_iKiMjbDUbchl5mqTYZcetr5I2E6w_UTyz3nsZb-V2g5c8hEdM9gFzzuNt8h4FrHQALrGC40bkPx8_61Csl0AQ=="
+    },
+    {
+      "title": "isi.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFokGDuFcQMbEinRA7lvL52NFLYBrrWYSrFSWAMi2IAdXEHaNe36jzSpNljAKdaYRcsdEDZ5AJxpYVUHDxkZd5CYI7mnwC17_1rDXWdfPjwWs_Yjeheto4wNDG_RAdw17Ffp7A51A2G3uxhlWNqzyNUD04Yr1BK0VNsZKP4BwGXh70iLBUB5xtC7Cf-BJ1ZNzrqzRmmHu8="
+    }
+  ],
+  "searchQueries": [
+    "Attention Is All You Need paper summary",
+    "what is the Transformer architecture AI",
+    "impact of Attention Is All You Need paper",
+    "self-attention mechanism explanation",
+    "When was the \"Attention Is All You Need\" paper published?"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: The AI Revolution\",\n  \"styleGuide\": \"Color Palette: Predominantly dark blues and purples (#0A0A2A, #1C0A3A) with vibrant neon accents (electric blue #00FFFF, magenta #FF00FF, lime green #00FF00) for data points and connections. Camera Movement: A smooth, continuous rightward pan throughout the entire 32-second reel, subtly revealing the next scene. Lens Style: Shallow depth of field, subtle lens flare on neon elements, slightly futuristic and abstract. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), bold, glowing neon effect matching accent colors. Music Mood: Upbeat, futuristic, slightly mysterious electronic track with a driving but not distracting beat.\",\n  \"music\": \"Synthwave / Dark Ambient Electronic\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The 2017 Breakthrough\",\n      \"visual\": \"Opens on a dark, abstract digital landscape. Generic human silhouettes stand before glowing, complex, but linear data streams representing traditional RNNs/CNNs, struggling to connect distant points. The camera begins its slow rightward pan.\",\n      \"onScreenText\": \"The 2017 Breakthrough\\nProcessing Sequences: The Challenge\",\n      \"voiceover\": \"In 2017, a landmark paper, \\\"Attention Is All You Need,\\\" revolutionized AI. Traditional models struggled with long sequences and parallel processing.\",\n      \"transitionInCue\": \"Camera focused on struggling linear data streams.\",\n      \"transitionOutCue\": \"Camera slowly pans right, revealing a new, more interconnected data visualization forming.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"Self-Attention: Dynamic Focus\",\n      \"visual\": \"Continuing the rightward pan, the scene shifts to an abstract visualization of 'self-attention.' Glowing neon lines dynamically connect various 'tokens' (abstract data blocks) within a single sequence, illustrating how they weigh importance to each other. Queries, keys, and values are subtly represented.\",\n      \"onScreenText\": \"Self-Attention: Dynamic Focus\\nContext is Key\",\n      \"voiceover\": \"It introduced self-attention, allowing models to dynamically weigh the importance of different input parts. Context became key for understanding.\",\n      \"transitionInCue\": \"Camera reveals abstract visualization of 'self-attention' with dynamic neon connections.\",\n      \"transitionOutCue\": \"Camera continues rightward, leaving the specific attention mechanism to reveal a broader architectural view.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"The Transformer: Parallel Power\",\n      \"visual\": \"The rightward pan reveals a minimalist, neon-outlined representation of the Transformer's encoder-decoder architecture. Glowing data streams flow through the stacked attention blocks in parallel, emphasizing the absence of sequential bottlenecks.\",\n      \"onScreenText\": \"The Transformer: No Recurrence, No Convolutions\\nParallel Power\",\n      \"voiceover\": \"The Transformer uses *only* attention, ditching recurrence and convolutions. This enabled unprecedented parallel processing, boosting speed and efficiency.\",\n      \"transitionInCue\": \"Camera reveals minimalist, neon-outlined Transformer architecture with parallel data flow.\",\n      \"transitionOutCue\": \"Camera continues rightward, moving past the Transformer's structure towards its branching applications.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"Foundation of Modern AI\",\n      \"visual\": \"The final rightward pan showcases the impact. The Transformer's core structure (from previous segment) now branches into multiple glowing pathways, each leading to symbolic representations of its applications: text generation (flowing text), machine translation (two abstract languages merging), and even evolving into abstract visual processing patterns.\",\n      \"onScreenText\": \"Foundation of Modern AI\\nGPT, BERT, and Beyond\",\n      \"voiceover\": \"This breakthrough became the foundation for modern AI, powering large language models like GPT and BERT, transforming many fields.\",\n      \"transitionInCue\": \"Camera reveals Transformer's core structure branching into multiple application pathways.\",\n      \"transitionOutCue\": \"Scene ends on a wide shot of the sprawling, interconnected network of AI applications, fading to black as the music concludes.\"\n    }\n  ]\n}\n```"
+}

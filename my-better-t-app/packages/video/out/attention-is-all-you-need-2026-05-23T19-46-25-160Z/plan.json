@@ -1,0 +1,103 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: A Revolution in AI",
+    "styleGuide": "Color Palette: Dark blues, deep purples, and blacks as background, with bright neon accents in electric blue, vibrant pink, and glowing green for data streams, connections, and highlights. Camera Movement: A continuous, slow, rightward pan throughout all segments, revealing new elements smoothly. Lens Style: Wide-angle, slightly distorted, with shallow depth of field to keep focus on foreground elements, enhanced with subtle lens flares and glowing particles. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat or Lato), white with a subtle neon glow matching accent colors, appearing and disappearing with a smooth fade. Music Mood: Ambient, futuristic, slightly mysterious, with a building sense of wonder and intelligent design.",
+    "music": "Ambient, electronic, synth-wave, building to a subtle crescendo.",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The Dawn of Transformers",
+        "visual": "Opening on a cosmic, swirling nebula of dark blues and purples. As the camera pans right, abstract glowing lines and nodes (representing neural networks) appear, slowly forming a complex, interconnected structure.",
+        "onScreenText": "2017: A Paradigm Shift",
+        "voiceover": "In 2017, a groundbreaking paper titled 'Attention Is All You Need' revolutionized AI. It introduced the Transformer model, changing everything.",
+        "transitionInCue": "Opening on a cosmic, swirling nebula of dark blues and purples. As the camera pans right, abstract glowing lines and nodes (representing neural networks) appear, slowly forming a complex, interconnected structure.",
+        "transitionOutCue": "The camera continues panning right, revealing more intricate connections within the abstract network, with one central glowing node pulsing brightly."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Understanding the Transformer",
+        "visual": "Continuing the rightward pan, the glowing central node from the previous shot expands into a stylized, translucent 3D model of a Transformer block, with visible layers and data flowing through them as neon streams.",
+        "onScreenText": "Meet the Transformer",
+        "voiceover": "The Transformer is a neural network architecture, foundational to modern Large Language Models. Its secret lies in the 'self-attention' mechanism.",
+        "transitionInCue": "The camera continues panning right, revealing more intricate connections within the abstract network, with one central glowing node pulsing brightly.",
+        "transitionOutCue": "The pan continues, now focusing on a specific section of the Transformer block where data streams split into three distinct, brightly colored pathways labeled Q, K, and V."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "How Self-Attention Works",
+        "visual": "The camera continues panning right, showcasing the 'Query,' 'Key,' and 'Value' streams. These streams merge into a vibrant, animated matrix of connections, illustrating how the model weighs different parts of an input sequence simultaneously.",
+        "onScreenText": "Query, Key, Value: Parallel Processing",
+        "voiceover": "Self-attention creates Query, Key, and Value vectors from input data. This allows the model to weigh different parts for contextual understanding.",
+        "transitionInCue": "The pan continues, now focusing on a specific section of the Transformer block where data streams split into three distinct, brightly colored pathways labeled Q, K, and V.",
+        "transitionOutCue": "The animated matrix of connections resolves into a series of glowing textual fragments, then transforms into abstract human silhouettes processing information at high speed, as the pan continues right."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "The Legacy and Impact",
+        "visual": "The rightward pan concludes, revealing a vast, interconnected digital city made of glowing data structures and abstract representations of LLMs. Silhouettes of individuals interact seamlessly with glowing interfaces, representing global impact.",
+        "onScreenText": "Powering Modern AI",
+        "voiceover": "This architecture now powers most modern LLMs, revolutionizing machine translation, text generation, and more. 'Attention Is All You Need' truly changed AI forever.",
+        "transitionInCue": "The animated matrix of connections resolves into a series of glowing textual fragments, then transforms into abstract human silhouettes processing information at high speed, as the pan continues right.",
+        "transitionOutCue": "The shot fades out slowly on the vast digital city, leaving a lingering glow."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkXIdgp3p21qK1FAJ4hRzgrQH2XE3zk1bbbvisiM-d-QsljRqp7FpserZn9JMcdfymN81u6wcn0678yfYk4bSRygDEKW7mPQzrqPSHg1HqAZwhSopVZapSa7-4dSAeMcchDFW0sG2jsDZnaE-m"
+    },
+    {
+      "title": "coursera.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4S5XKh1ZjpGbHzcL5-OIaPetquGPNt335jQnCyV1LWGINeuebdUlv9Kcam-gH0DFzTbuazxcyibHWbwdI0dYg5BNqjCNHZoC2dYkXKDdDCWNCfR-paghmn_kvBZHr2q7RmoUOuhtL7cZmfpjvleNS3PIF5SZPs0Q="
+    },
+    {
+      "title": "hpe.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEys0nd04bWvT0R4eg6uiZmoBqJD_1RvQiKPPOjITXiPNlhYvszpZM6jquO2p2TnFPyo9iJ--Az-x3pFx8v4Q4fs4j42Zl-upqzP67cBUusrVt6y0-cRwgtuQD10g0yFtLhsxjmcLkDeBm3pFThfc4UPZPH"
+    },
+    {
+      "title": "h2o.ai",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmf0YV7gJYWp3AsIha86nkj9jsBBjWCNacPx0LGE8gqkKJmin6dGg85re10xRUFK9wI_ub9qXI7auIaDgKZXZBig3SOdzQ1MNuyDjjNNEctSsKKZwEHjCzYnTPJjgO"
+    },
+    {
+      "title": "datacamp.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNCPzqcNXBMVqdoC4EcYSFPNicGLTITnQSPZfwoRZtBq20XTBM_CWngMGNAHiAZLFTfbPhHmCO_yJKcRzvs3ndWlfWQ_QZST7B7ck0u6et5PZVSupdeDIGI-qy72ShgY4Wh584e8gk"
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH31vJ9XvZIxvAlH5iH06U0hFDykNuiDyMVxYAP9oyeBCeO3yErVJlCYBH_vvRJ7ZuYk_aPNPx17od_LMzY9dueZPQL8e_GB0NABJLvdYUcVvExmrRs29xCDdZ338Wiuozps4tg3oRTc8OjsLAQ357WNg9zr_arAXQTeRO0u-8vDLTJ1T0UIp3bW82Gcw8QQywrKiz1u-geJ-asy096KoAu4AZwEHOohWoODg=="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW5Eu0PGngu3-EDVj3mFwWVFLpPHElSJzBxKPnVjPidkRUTgkMe9qD3rT8oIaAL1HnglmkB86r_yl5BV1_Q97OYXHcs-sY9ZPXja50sNv62O0ALDdfF6ynXOC7b4ofzlu7vV4RQK8Zg2Pm"
+    },
+    {
+      "title": "wikipedia.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd8vPEKwZbsVjPsD9UFw0rAbd6DzCz9H_U4esr8wtKoLxtzmjVmDfhbbrIhrT5KWCT7J9JDLXtTHOAX5u9GXM5zeDhZ8USUeDwfv1pEZwdw14WnJ35DwReQQUjSIzstdVUgm_9nLLbioKIpJBFNaDVYPs="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGb5PUA0kgMyp6NYbs8jHENGT5ETYNPX7mU_nn83GihqXkFGMoRBvdK7ikVSmUDFDLGnhj65GlU_cmqHtGXEd0c21h0NWi0DtgE9vzuSYwQWZq4EJU1t3ZoxzIDIDYaLHMGjNbvB0W8qWCdsIJvgaz2A78CjlPEU0vl_cpqN9YNqe_aOZwrv0w1NVU2-DRSQfv-GHqBCNGGmZu2DuYaAewSZufXK7l7GrRg7wdlDoT5YGveIQ7pdDdydqEKOQ=="
+    },
+    {
+      "title": "nd.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJxh_7Twg0Z9aBcb8h0mSzblmQdFIqKv5YgwmrgMZ2Qstf967VmnaSprOr1O49Ouc413zuUTm88vHA6YiGFnM0yiaiF0tolZhfvPeLiEQThrP1UYBPSbloozKZ7lqlq2teCdp9C8gyhGDhE2p1SZgmFVCBlLQYaFNyVKVXrG0qAd07MnDLSr2BzgOCKTHqU4A317Ud"
+    },
+    {
+      "title": "towardsdatascience.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXVvxephANT1rT2VCgXKs2breuHjw-B0jmdg15u9GW61208dZQIJQ0fwra60cXJYdUepRr3jaKuTpkGXpvQ-0j-QSH2rX2DlWJsr3oYltWCeHQnP3VD_keqU1rEhj14qhRnz2vDAtIX_KztqSn_0Wp5rwRMTA_9kdueGYyj78sSwzwFJmxsVvRLqb-yMAmwtWt8xDvnCY2QqvkHQJCIXt-6vlZ"
+    }
+  ],
+  "searchQueries": [
+    "Attention Is All You Need paper summary",
+    "What is a Transformer model?",
+    "What is self-attention in AI?",
+    "Impact of Attention Is All You Need paper"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: A Revolution in AI\",\n  \"styleGuide\": \"Color Palette: Dark blues, deep purples, and blacks as background, with bright neon accents in electric blue, vibrant pink, and glowing green for data streams, connections, and highlights. Camera Movement: A continuous, slow, rightward pan throughout all segments, revealing new elements smoothly. Lens Style: Wide-angle, slightly distorted, with shallow depth of field to keep focus on foreground elements, enhanced with subtle lens flares and glowing particles. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat or Lato), white with a subtle neon glow matching accent colors, appearing and disappearing with a smooth fade. Music Mood: Ambient, futuristic, slightly mysterious, with a building sense of wonder and intelligent design.\",\n  \"music\": \"Ambient, electronic, synth-wave, building to a subtle crescendo.\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The Dawn of Transformers\",\n      \"visual\": \"Opening on a cosmic, swirling nebula of dark blues and purples. As the camera pans right, abstract glowing lines and nodes (representing neural networks) appear, slowly forming a complex, interconnected structure.\",\n      \"onScreenText\": \"2017: A Paradigm Shift\",\n      \"voiceover\": \"In 2017, a groundbreaking paper titled 'Attention Is All You Need' revolutionized AI. It introduced the Transformer model, changing everything.\",\n      \"transitionInCue\": \"Opening on a cosmic, swirling nebula of dark blues and purples. As the camera pans right, abstract glowing lines and nodes (representing neural networks) appear, slowly forming a complex, interconnected structure.\",\n      \"transitionOutCue\": \"The camera continues panning right, revealing more intricate connections within the abstract network, with one central glowing node pulsing brightly.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"Understanding the Transformer\",\n      \"visual\": \"Continuing the rightward pan, the glowing central node from the previous shot expands into a stylized, translucent 3D model of a Transformer block, with visible layers and data flowing through them as neon streams.\",\n      \"onScreenText\": \"Meet the Transformer\",\n      \"voiceover\": \"The Transformer is a neural network architecture, foundational to modern Large Language Models. Its secret lies in the 'self-attention' mechanism.\",\n      \"transitionInCue\": \"The camera continues panning right, revealing more intricate connections within the abstract network, with one central glowing node pulsing brightly.\",\n      \"transitionOutCue\": \"The pan continues, now focusing on a specific section of the Transformer block where data streams split into three distinct, brightly colored pathways labeled Q, K, and V.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"How Self-Attention Works\",\n      \"visual\": \"The camera continues panning right, showcasing the 'Query,' 'Key,' and 'Value' streams. These streams merge into a vibrant, animated matrix of connections, illustrating how the model weighs different parts of an input sequence simultaneously.\",\n      \"onScreenText\": \"Query, Key, Value: Parallel Processing\",\n      \"voiceover\": \"Self-attention creates Query, Key, and Value vectors from input data. This allows the model to weigh different parts for contextual understanding.\",\n      \"transitionInCue\": \"The pan continues, now focusing on a specific section of the Transformer block where data streams split into three distinct, brightly colored pathways labeled Q, K, and V.\",\n      \"transitionOutCue\": \"The animated matrix of connections resolves into a series of glowing textual fragments, then transforms into abstract human silhouettes processing information at high speed, as the pan continues right.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"The Legacy and Impact\",\n      \"visual\": \"The rightward pan concludes, revealing a vast, interconnected digital city made of glowing data structures and abstract representations of LLMs. Silhouettes of individuals interact seamlessly with glowing interfaces, representing global impact.\",\n      \"onScreenText\": \"Powering Modern AI\",\n      \"voiceover\": \"This architecture now powers most modern LLMs, revolutionizing machine translation, text generation, and more. 'Attention Is All You Need' truly changed AI forever.\",\n      \"transitionInCue\": \"The animated matrix of connections resolves into a series of glowing textual fragments, then transforms into abstract human silhouettes processing information at high speed, as the pan continues right.\",\n      \"transitionOutCue\": \"The shot fades out slowly on the vast digital city, leaving a lingering glow.\"\n    }\n  ]\n}\n```"
+}

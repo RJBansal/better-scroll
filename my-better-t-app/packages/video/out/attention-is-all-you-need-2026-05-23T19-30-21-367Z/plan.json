@@ -1,0 +1,58 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: The AI Revolution",
+    "styleGuide": "Color Palette: Dark blues, deep purples, and black with vibrant neon accents (electric blue, bright pink, lime green). Camera Movement: Continuous, smooth rightward horizontal pan throughout the entire 32 seconds, with subtle forward pushes during key reveals. Lens Style: Wide-angle, slightly distorted for futuristic feel, with soft lens flares from neon elements. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), bold, glowing neon effect matching accent colors. Music Mood: Uplifting, slightly mysterious, electronic synth-wave with a building tempo, conveying innovation and excitement.",
+    "music": "Uplifting electronic synth-wave with a building tempo.",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The Foundational Paper",
+        "visual": "Starts on a dark, abstract digital landscape. A glowing neon title 'Attention Is All You Need' emerges, as if written in light, with '2017' appearing subtly below it. Abstract neural network nodes begin to form and pulsate in the background.",
+        "onScreenText": "Attention Is All You Need (2017)",
+        "voiceover": "In 2017, a pivotal paper titled 'Attention Is All You Need' was published. It introduced a radical new architecture, fundamentally reshaping the landscape of Artificial Intelligence.",
+        "transitionInCue": "Starts on a dark, abstract digital landscape. A glowing neon title 'Attention Is All You Need' emerges.",
+        "transitionOutCue": "As the camera pans right, the title fades slightly, revealing abstract, struggling sequential data flows."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Overcoming Sequential Limitations",
+        "visual": "The continuous rightward pan reveals abstract, interconnected glowing 'data paths' flowing sequentially but struggling to bridge long distances. Distant nodes appear dim, representing lost context. A bright 'attention spark' appears, hinting at a solution.",
+        "onScreenText": "Old Models: Slow, Limited Context",
+        "voiceover": "Before, AI models processed information sequentially, often losing context over long data sequences. This limited their efficiency and ability to understand complex relationships.",
+        "transitionInCue": "The camera pans right, revealing abstract, struggling sequential data flows. Distant nodes appear dim.",
+        "transitionOutCue": "The camera continues panning right, as the struggling data paths dissolve into dynamic, interconnected glowing lines forming a 'mesh' or 'web'."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "The Transformer & Attention",
+        "visual": "The rightward pan now shows a vibrant, dynamic network where glowing data lines (representing 'attention') instantly connect distant nodes. Abstract 'Transformer' blocks (glowing geometric shapes) are seen efficiently processing information in parallel.",
+        "onScreenText": "Introducing: The Transformer Architecture",
+        "voiceover": "The paper introduced the 'Transformer' architecture, relying entirely on 'attention mechanisms'. This allowed models to weigh information importance instantly, processing data in parallel.",
+        "transitionInCue": "The camera continues panning right, showing a vibrant, dynamic network where glowing data lines instantly connect distant nodes.",
+        "transitionOutCue": "The camera pans further right, revealing a vast, expanding network of interconnected, glowing abstract 'brains' or 'cores'."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "The AI Revolution's Backbone",
+        "visual": "The pan reveals a vast, expanding network of interconnected, glowing abstract 'brains' or 'cores'. Neon labels like 'GPT', 'BERT', and 'Gemini' emerge from these cores, symbolizing their foundation on the Transformer. The network pulses with power.",
+        "onScreenText": "Powering GPT, BERT, Gemini & More!",
+        "voiceover": "This breakthrough enabled massive advancements, powering modern Large Language Models and generative AI tools we use daily. It truly ushered in the current era of artificial intelligence.",
+        "transitionInCue": "The camera pans further right, revealing a vast, expanding network of interconnected, glowing abstract 'brains' or 'cores'.",
+        "transitionOutCue": "The final shot holds on the pulsing, interconnected network, fading to black as the music swells."
+      }
+    ]
+  },
+  "sources": [],
+  "searchQueries": [
+    "Attention Is All You Need paper publication year",
+    "Attention Is All You Need main contribution",
+    "Transformer architecture explained simple",
+    "impact of Attention Is All You Need paper on AI LLMs"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: The AI Revolution\",\n  \"styleGuide\": \"Color Palette: Dark blues, deep purples, and black with vibrant neon accents (electric blue, bright pink, lime green). Camera Movement: Continuous, smooth rightward horizontal pan throughout the entire 32 seconds, with subtle forward pushes during key reveals. Lens Style: Wide-angle, slightly distorted for futuristic feel, with soft lens flares from neon elements. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), bold, glowing neon effect matching accent colors. Music Mood: Uplifting, slightly mysterious, electronic synth-wave with a building tempo, conveying innovation and excitement.\",\n  \"music\": \"Uplifting electronic synth-wave with a building tempo.\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The Foundational Paper\",\n      \"visual\": \"Starts on a dark, abstract digital landscape. A glowing neon title 'Attention Is All You Need' emerges, as if written in light, with '2017' appearing subtly below it. Abstract neural network nodes begin to form and pulsate in the background.\",\n      \"onScreenText\": \"Attention Is All You Need (2017)\",\n      \"voiceover\": \"In 2017, a pivotal paper titled 'Attention Is All You Need' was published. It introduced a radical new architecture, fundamentally reshaping the landscape of Artificial Intelligence.\",\n      \"transitionInCue\": \"Starts on a dark, abstract digital landscape. A glowing neon title 'Attention Is All You Need' emerges.\",\n      \"transitionOutCue\": \"As the camera pans right, the title fades slightly, revealing abstract, struggling sequential data flows.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"Overcoming Sequential Limitations\",\n      \"visual\": \"The continuous rightward pan reveals abstract, interconnected glowing 'data paths' flowing sequentially but struggling to bridge long distances. Distant nodes appear dim, representing lost context. A bright 'attention spark' appears, hinting at a solution.\",\n      \"onScreenText\": \"Old Models: Slow, Limited Context\",\n      \"voiceover\": \"Before, AI models processed information sequentially, often losing context over long data sequences. This limited their efficiency and ability to understand complex relationships.\",\n      \"transitionInCue\": \"The camera pans right, revealing abstract, struggling sequential data flows. Distant nodes appear dim.\",\n      \"transitionOutCue\": \"The camera continues panning right, as the struggling data paths dissolve into dynamic, interconnected glowing lines forming a 'mesh' or 'web'.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"The Transformer & Attention\",\n      \"visual\": \"The rightward pan now shows a vibrant, dynamic network where glowing data lines (representing 'attention') instantly connect distant nodes. Abstract 'Transformer' blocks (glowing geometric shapes) are seen efficiently processing information in parallel.\",\n      \"onScreenText\": \"Introducing: The Transformer Architecture\",\n      \"voiceover\": \"The paper introduced the 'Transformer' architecture, relying entirely on 'attention mechanisms'. This allowed models to weigh information importance instantly, processing data in parallel.\",\n      \"transitionInCue\": \"The camera continues panning right, showing a vibrant, dynamic network where glowing data lines instantly connect distant nodes.\",\n      \"transitionOutCue\": \"The camera pans further right, revealing a vast, expanding network of interconnected, glowing abstract 'brains' or 'cores'.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"The AI Revolution's Backbone\",\n      \"visual\": \"The pan reveals a vast, expanding network of interconnected, glowing abstract 'brains' or 'cores'. Neon labels like 'GPT', 'BERT', and 'Gemini' emerge from these cores, symbolizing their foundation on the Transformer. The network pulses with power.\",\n      \"onScreenText\": \"Powering GPT, BERT, Gemini & More!\",\n      \"voiceover\": \"This breakthrough enabled massive advancements, powering modern Large Language Models and generative AI tools we use daily. It truly ushered in the current era of artificial intelligence.\",\n      \"transitionInCue\": \"The camera pans further right, revealing a vast, expanding network of interconnected, glowing abstract 'brains' or 'cores'.\",\n      \"transitionOutCue\": \"The final shot holds on the pulsing, interconnected network, fading to black as the music swells.\"\n    }\n  ]\n}\n```"
+}

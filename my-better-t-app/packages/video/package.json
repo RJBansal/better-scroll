@@ -1,0 +1,15 @@
+{
+  "name": "@my-better-t-app/video",
+  "type": "module",
+  "scripts": {
+    "generate": "bun run scripts/generate.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.6.0"
+  },
+  "devDependencies": {
+    "@my-better-t-app/config": "workspace:*",
+    "@types/node": "^22.13.14",
+    "typescript": "catalog:"
+  }
+}

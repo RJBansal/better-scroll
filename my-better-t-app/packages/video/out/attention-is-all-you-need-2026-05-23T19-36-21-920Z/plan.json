@@ -1,0 +1,104 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: The AI Revolution",
+    "styleGuide": "Color Palette: Dark blues, purples, and blacks as background. Vibrant neon accents (electric blue, bright pink, green) for data flow, connections, and key elements. Camera Movement: Continuous, slow, smooth rightward pan throughout the entire 32 seconds, stitching the scenes seamlessly. Lens Style: Wide, slightly ethereal, soft focus on distant elements, sharp on foreground. Glimmers and light trails. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), neon glow effect, centrally placed or subtly integrated with visuals. Music Mood: Ambient, futuristic, slightly mysterious, building to an inspiring and energetic close.",
+    "music": "Synthwave / Cinematic Sci-Fi (BPM 100-110)",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The AI Bottleneck",
+        "visual": "A dark, abstract corridor with symbolic 'data packets' moving slowly in a single, linear file from left to right. Neon red lines symbolize 'sequential processing' creating bottlenecks. Generic, silhouetted human-like figures observe with frustration from the side.",
+        "onScreenText": "AI's Old Problem: Sequential Processing",
+        "voiceover": "Before 2017, AI processed information word-by-word, like a slow assembly line. This made complex tasks inefficient and limited understanding.",
+        "transitionInCue": "Starts with a continuous rightward pan revealing a linear flow of data.",
+        "transitionOutCue": "Continues rightward pan, moving past the slow linear processing towards a brighter, more complex neon network forming."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "The Breakthrough Paper",
+        "visual": "The rightward pan reveals a glowing, abstract digital 'paper' unfurling in mid-air, surrounded by shimmering blue and green neon energy. The linear data flow from the previous scene branches out, becoming parallel streams of light.",
+        "onScreenText": "2017: 'Attention Is All You Need'",
+        "voiceover": "Then came 'Attention Is All You Need' – a paper that revolutionized AI. It introduced the Transformer, enabling parallel data processing.",
+        "transitionInCue": "The camera continues its rightward pan, revealing a glowing abstract 'paper' and branching neon data streams.",
+        "transitionOutCue": "Continues rightward pan, as the branching data streams coalesce into a central, glowing abstract 'brain' or 'core'."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "How Self-Attention Works",
+        "visual": "The central 'brain' core from the previous scene now shows intricate, glowing neon connections (like a neural network). Abstract 'tokens' represented by small, glowing geometric shapes appear, with neon lines instantly forming dynamic connections between them, illustrating 'self-attention'.",
+        "onScreenText": "Self-Attention: Understanding Context",
+        "voiceover": "This architecture uses 'self-attention', allowing AI to weigh every part of an input simultaneously. It grasps context instantly, no matter the length.",
+        "transitionInCue": "The camera continues its rightward pan, revealing a glowing abstract 'brain' with intricate neon connections forming between geometric 'tokens'.",
+        "transitionOutCue": "Continues rightward pan, moving from the detailed self-attention visualization towards a broader, interconnected digital city landscape."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Modern AI's Foundation",
+        "visual": "The rightward pan concludes on a vibrant, futuristic digital city skyline, with towering structures representing LLMs and generative AI. Neon light trails representing data flow between these structures, powered by the core from the previous scene.",
+        "onScreenText": "Powering ChatGPT, Gemini & Modern AI!",
+        "voiceover": "This groundbreaking idea is now the backbone of almost all modern AI, from ChatGPT to Gemini, driving innovation across the globe.",
+        "transitionInCue": "The camera continues its rightward pan, revealing a vibrant digital city skyline with towering structures.",
+        "transitionOutCue": "The camera slowly zooms out slightly on the digital city, fading to black as the music swells and concludes."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "parseur.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYInmjlzKo1nAbG8U-MK8hGd7gz57soK3idBL69lLPwVKxZSXLbnNQHWnnEObFiBDx8uwOUweVo49hJjn1I4chhjKavvQY-cGEBFZ4NsqwYo2P6ik4qLB9z5Yes79K--X-Omox1TRR8kthAYk="
+    },
+    {
+      "title": "wikipedia.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnO2p_yrhOwZBT1tdSd7fw_DjWPLDN-CgypzjBJfEp3tkfY48si9JTUPbnUTC2hLCx-qqscIn6oUfHk_CILUBFiYRosrWjxY57badeXUcQMszlM_WctLAynZSdRUxvqMmyWGOwfYGR2qVd80Lz8qS4bA=="
+    },
+    {
+      "title": "towardsai.net",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoGLQgN3r8gvkzFTixa_t-dgZgHM-te85lF2DlsxYhyUpwlcWgJO_bzn0LUi6WBV8RJoQOUdeZmLyGX3n_3mdt_PIR7XyfhqiUNvqaSG6BEyh1OBG_Xgaxeh44urFs0KfhcqT_8gTrrReclA2aiEb-LYPj6Rjg9CTDERKxdUsoyJCv2Twffe9-EIn10y7s1GRkYztSNB5V6fTEK4SEpK4Oig5X_FMR5Jzt0_o7TnOKQgaiEtq-5oRMP_omcj7fEH99"
+    },
+    {
+      "title": "amazon.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5hZPu7rGY7dHkqicBc2rcm8Q5-vJO3XDdbsglrAoa4HO2z9wzIc2rUVfHoyx0Hlp1T0LwkxdvPS9MQ7j2X6uE711I-KOfugXwwRb_X3mh3xxCfnoqb9Vn1Vsb3WOUdeQFO7mnRO2UoBhaObddgqiKTmtr0Y5_uwaPW9Q22U7sOXw="
+    },
+    {
+      "title": "towardsai.net",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFxbw3CBuP5wQy0VuULc26D7zHlp6Rmc-9loCsD1QQzsPER4xrmxqTemQex-rpE6PjdcaZBA6223czBMiGvc2hKYcsxQzKboMMh7U5pjdImKwMkZKsotrFjni4v7lY_0odWSPNVybSPW3Hq_k9jgs_dMdeuvRMT8cNH7qZ1Z8SHm3lmt9Pf2Rm"
+    },
+    {
+      "title": "nd.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvsEC5-NKnk9LmzKewsBefnDVEVmb95zJA043GCkE80rLsq5OXfbcSm7nCYFSF9iHok5txm-tKS8pKYpk_HU4hvni2ga6mOXW_ctQwb-Im8lPDCQRkQE_uUybSsSvveiHgbujGs0rK6Vr-LmM8eT8SY8Py_CkBJbvgFpzItQ04mRhG-xnDo-Frk9IlwPoJa9HRTM4="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQOvB7CpmNEfRLHQV8eSc8xFBYQ01U09lNC3NSLQReP1cWo64X1LrItD7FK_-GGuMDLKq6So4o04rDs5EpVGjvQc7quknr_BiqoPW3cQUQv1MRZr7hJriDr2j5oJIil5_S-don965_pP8pKSY3IttF6FAVdXBxn2aDtTvlVZ2q6dP6gM7hwXFARIspU2sU0QwyKiCKDn6pyjY4jVQvgs7bCUOMd9_vXQv6"
+    },
+    {
+      "title": "datacamp.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmg7qXgZTR21jqkFLfIspbQWI8I5gVlyAhpaD7uKYoaKw67GM-kNehJsznixu2JH0R1VrCdYjufYieBWWa91ZoYik7bLoWwxdvpMey4nobLlykqLp0v7nMMQugXtxKzAQFA53GXZY="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEckZhzyQ_6eKiKHUAmzT-O1CUbPkk8chLw8O7dxVSdGwjwZtPF5GjZSd_iidpzDZE8NK6-UOEkStFik4Af_Tpiv-0aIWTLhrHFdVJj6zoYj_49gez11sPnwxvqapW6R5khQ5Palyk3JDIkIXkNZ2Ixtr1PjD1mWBGj6Bh7W7QViUHdH2IXKmxULgcz68-ZHEo_rqkubZ-6RxzwTw=="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0Fi3x21KCXypsXOmH_L-0_hSrYcwJyheDixHrtjjYl6qQdxl9znH980bp8aJiixPi_kn5LND8FLOuT3Qcke4AhmlsMB64LhMrI4QV6xUCGZDDXk-dI5_g0QN93ZX9Z2sTY0PfO3pEeVLqn5T-uqoO"
+    },
+    {
+      "title": "cloudflare.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCOm9S_PPtnpGLnuGOYw6OTLBLYXK6zgUvK2x8icdhBEXKfpvzqYqD6K1PuBUykc-Eld4tWlrC6DpAtFZ5xPqel65hk3OAuoW71ookzrQRUTzFkminauAN-linoUEmZMkb5D7idMgi0_EHB9OsL2XobA85U7MMsTkdKtNTvlk="
+    }
+  ],
+  "searchQueries": [
+    "Attention Is All You Need paper summary",
+    "Transformer architecture explanation for beginners",
+    "Self-attention mechanism simplified",
+    "Impact of Attention Is All You Need on AI",
+    "What are Large Language Models built on"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: The AI Revolution\",\n  \"styleGuide\": \"Color Palette: Dark blues, purples, and blacks as background. Vibrant neon accents (electric blue, bright pink, green) for data flow, connections, and key elements. Camera Movement: Continuous, slow, smooth rightward pan throughout the entire 32 seconds, stitching the scenes seamlessly. Lens Style: Wide, slightly ethereal, soft focus on distant elements, sharp on foreground. Glimmers and light trails. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), neon glow effect, centrally placed or subtly integrated with visuals. Music Mood: Ambient, futuristic, slightly mysterious, building to an inspiring and energetic close.\",\n  \"music\": \"Synthwave / Cinematic Sci-Fi (BPM 100-110)\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The AI Bottleneck\",\n      \"visual\": \"A dark, abstract corridor with symbolic 'data packets' moving slowly in a single, linear file from left to right. Neon red lines symbolize 'sequential processing' creating bottlenecks. Generic, silhouetted human-like figures observe with frustration from the side.\",\n      \"onScreenText\": \"AI's Old Problem: Sequential Processing\",\n      \"voiceover\": \"Before 2017, AI processed information word-by-word, like a slow assembly line. This made complex tasks inefficient and limited understanding.\",\n      \"transitionInCue\": \"Starts with a continuous rightward pan revealing a linear flow of data.\",\n      \"transitionOutCue\": \"Continues rightward pan, moving past the slow linear processing towards a brighter, more complex neon network forming.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"The Breakthrough Paper\",\n      \"visual\": \"The rightward pan reveals a glowing, abstract digital 'paper' unfurling in mid-air, surrounded by shimmering blue and green neon energy. The linear data flow from the previous scene branches out, becoming parallel streams of light.\",\n      \"onScreenText\": \"2017: 'Attention Is All You Need'\",\n      \"voiceover\": \"Then came 'Attention Is All You Need' – a paper that revolutionized AI. It introduced the Transformer, enabling parallel data processing.\",\n      \"transitionInCue\": \"The camera continues its rightward pan, revealing a glowing abstract 'paper' and branching neon data streams.\",\n      \"transitionOutCue\": \"Continues rightward pan, as the branching data streams coalesce into a central, glowing abstract 'brain' or 'core'.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"How Self-Attention Works\",\n      \"visual\": \"The central 'brain' core from the previous scene now shows intricate, glowing neon connections (like a neural network). Abstract 'tokens' represented by small, glowing geometric shapes appear, with neon lines instantly forming dynamic connections between them, illustrating 'self-attention'.\",\n      \"onScreenText\": \"Self-Attention: Understanding Context\",\n      \"voiceover\": \"This architecture uses 'self-attention', allowing AI to weigh every part of an input simultaneously. It grasps context instantly, no matter the length.\",\n      \"transitionInCue\": \"The camera continues its rightward pan, revealing a glowing abstract 'brain' with intricate neon connections forming between geometric 'tokens'.\",\n      \"transitionOutCue\": \"Continues rightward pan, moving from the detailed self-attention visualization towards a broader, interconnected digital city landscape.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"Modern AI's Foundation\",\n      \"visual\": \"The rightward pan concludes on a vibrant, futuristic digital city skyline, with towering structures representing LLMs and generative AI. Neon light trails representing data flow between these structures, powered by the core from the previous scene.\",\n      \"onScreenText\": \"Powering ChatGPT, Gemini & Modern AI!\",\n      \"voiceover\": \"This groundbreaking idea is now the backbone of almost all modern AI, from ChatGPT to Gemini, driving innovation across the globe.\",\n      \"transitionInCue\": \"The camera continues its rightward pan, revealing a vibrant digital city skyline with towering structures.\",\n      \"transitionOutCue\": \"The camera slowly zooms out slightly on the digital city, fading to black as the music swells and concludes.\"\n    }\n  ]\n}\n```"
+}

@@ -1,0 +1,120 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: The AI Revolution",
+    "styleGuide": "Color palette: Dark, futuristic, with neon blue, purple, and green accents (e.g., #0A0A10 background, #00FFFF, #8A2BE2, #00FF7F highlights). Camera movement: Smooth, continuous rightward pan throughout the entire 32 seconds, creating a seamless, interconnected journey. Lens style: Wide-angle, slightly distorted at edges to emphasize a vast, interconnected digital space. On-screen text style: Clean, sans-serif (e.g., 'Roboto Mono' or 'Exo 2'), glowing neon text, centrally placed or subtly integrated into the visual elements. Music mood: Ambient, futuristic, slightly mysterious, building in intensity, with a subtle driving beat.",
+    "music": "Synthwave / Cyberpunk Ambient - building intensity",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The AI Challenge",
+        "visual": "Opens on an abstract digital landscape with glowing data packets flowing along a winding, sequential path, symbolizing traditional, inefficient processing. The path looks bottlenecked in places. Dark background with subtle neon grid lines. Camera begins a slow, continuous rightward pan.",
+        "onScreenText": "A New Era for AI",
+        "voiceover": "Before 2017, AI struggled with long data sequences, processing them one step at a time. Then, a groundbreaking paper changed everything.",
+        "transitionInCue": "Camera begins a slow, continuous rightward pan over a winding digital data path.",
+        "transitionOutCue": "Camera continues panning right, as the winding path fragments into a more open, yet complex, digital network with glowing nodes."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Introducing Attention",
+        "visual": "The rightward pan continues across the fragmented network. Glowing data nodes appear, and dynamic neon lines (representing 'attention') visibly connect distant, relevant nodes, skipping intermediate steps. These connections light up as the camera passes.",
+        "onScreenText": "The Attention Mechanism",
+        "voiceover": "The solution? 'Attention Is All You Need.' This paper introduced the attention mechanism, letting AI focus on crucial data points.",
+        "transitionInCue": "Camera continues panning right across a fragmented network of glowing data nodes, with dynamic neon lines connecting distant nodes.",
+        "transitionOutCue": "Camera continues panning right, revealing that the dynamically connected nodes are now forming into more organized, block-like structures."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "The Transformer Model",
+        "visual": "The pan reveals a simplified, abstract, glowing block diagram representing the Transformer's encoder-decoder architecture. Data streams flow in parallel through different sections, indicated by pulsing neon lines. Multiple 'attention heads' are visible as interwoven glowing patterns within the blocks.",
+        "onScreenText": "The Transformer Model",
+        "voiceover": "It built the Transformer, an architecture that processes entire sequences simultaneously, capturing complex relationships and speeding up training.",
+        "transitionInCue": "Camera continues panning right, revealing a simplified, abstract, glowing block diagram of the Transformer's encoder-decoder architecture.",
+        "transitionOutCue": "Camera continues panning right, as the Transformer block's output branches out into diverse, glowing application interfaces."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Revolutionizing AI",
+        "visual": "The pan moves across various abstract representations of AI applications: glowing words forming dynamically (text generation), abstract shapes being identified (computer vision), and symbols translating across (machine translation). The final shot is a vast, interconnected, glowing network of AI advancements.",
+        "onScreenText": "Revolutionizing AI",
+        "voiceover": "This innovation revolutionized AI, powering Large Language Models like GPT, advancing translation, vision, and more. The future of AI is here.",
+        "transitionInCue": "Camera continues panning right, showing the Transformer block's output branching out into diverse, glowing application interfaces.",
+        "transitionOutCue": "Ends on a wide shot of a vast, interconnected, glowing network, representing the broad impact of Transformers."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "amazon.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDnnwdHPPQdv4heIdN1Z_hKo3vzjswtmoUMkQ9HFYG_0G59ZX16QH9cuWx6aSWKyier-CUjUq5HlEzoWFwRyBZzAA5zpdtlgmy3M6p3_wvXHmY0s-KFZ0Ft46r_aN4ysi4nXPjvS14zrmtQ79_m8CHBNmwBWTHV2EvfA1-ZXY9s5Q="
+    },
+    {
+      "title": "delltechnologies.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKWvUvI_Sc_xYzCTRhEnLMbdQ6TqUikoeVYPhlemxbKzqJ7j-qbalN9YXml5veY5ssoo1zPBg8afrnQM-W1-aOeWXnBH31-NdUe5ERU9R_oyFwUuOLtSSsrKXD2Teiu0ODpR0UUqyoHn3tCTfVtrks5c2uKFZ0XWZfqGi_gwg-ayKy4atgJygd0e89KGNNjB8eyBzVJfb2WAj-"
+    },
+    {
+      "title": "github.io",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEasLpbIsSmabYyKqgRxS06-DSe-gS4Jf2ixBWKWobcK-VBsCV8gs1Mxgu7TMC9fjcWxIjf_Rl_F_7gjhbPJ_KptjzutGPWmgCRAp4KWntu6-ERXcV-P1iRY4LJ3zhDMnhUTT7qqzCCJTu4tTYQnox9v1at6J5DSpL3Rj_17D5T_Pbh"
+    },
+    {
+      "title": "scribd.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8vHlQVCs-5PXh4IOmOpfBsF6wZvOfu9qCj7z3zbYZZSCryNVVR5bNOpGXrCwFtM2bq_wgXsP9NyDz5qKXV6M-Rx2UuYEksydH_cTon5VeEvYyiumwClkB0J8zWdWY9Uh8KSPYbg8iha--U0a5llpqLZXN8Fe5bCS9ONpMGHRNht8ad974cJ4T0kSuZBFuXb0F5Q=="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn-rL61qA7M1ndU6QCp-Ml0kxigsU24I4MylTSCizhsYM8nPJ5LTRdiGZf1UrOpV_MAvzolMFBhnRlDGt1I1GxATNl-vyT2cqy7Gbpsmmnyu-9fuNbj6HldhSU-HP68avIoYrnP7dpKD5M4JwVlp1XN6CCwYsw_YQYh_MnJ22Qb-zTyxafEgxfY2bCXGZ7EpYDW8lDklYlAA=="
+    },
+    {
+      "title": "wikipedia.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGh7_Fhqr9VDOWpFu_jPZpcKF_AKPfm4rYnJSGoC2AEx3B7qw4oXZBHfigRPbh5QiSsjARhEncMz-U5KyW_rm71Tw3-038LM0unJpLgOJolxOAKPTEZaWq3A7gn3O2g1K4quZhQHszVTW0f6UtS5wTR1Qu"
+    },
+    {
+      "title": "cohere.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-_jLg1wEuBo6KMjGW-R12XLAiJ49S98uzAPtiwZGTK7WXpXcs8yEisesVu65UB8IfDTN8okAjW6UF9wIy2SYPE02Xd_QTnQURCbGq22ksZizLVtbt9xPhWdMZNiC9avs3ZOM="
+    },
+    {
+      "title": "h2o.ai",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkSXdMYS3BN6hZ1ijRDIxOkdiLJnWqtBEAsWeEULa7fYrBNN0PG5Qs87DwXMag_iYKOgfuLuPoZNiQWsYbcKx4fHDFNQNkwV3OyDKXzkk2MYOM7lkb9AzJB93CWXI="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVC16Sge1Qu2zPPoJEfsxsTFCxK5Z3qi_rDkQS3_MigHulzpPzzaBeOSlanZcUIjUAJXKPxUC4NNSf1v3TfaKF-HdQ8_K2taxVr-cO3CahLv5sGLxCJigQNl-jHT-UCl0lePa0Bg1W4jI="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW4lMKLyQ1iBQ_9tZJCqczs8xdQeZe3O7G32lRw5ZhFAU4HO42bw12rJZfLwpiovcwYDgAWWNHaxbm9qPFuxGaphHBSQHVPzT65JtKlAYDkJrZ3u4R3uezd2qTjQneJliLvukhjbNxVb5WPppafeiZnS6DPGNT4r3pCHMSD5apHLxhX_Pxd1CwQ8qMscbo9TmaEV4Jqa08Q2djnFxZoLQoK3SkaM-0QDIA"
+    },
+    {
+      "title": "github.io",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiy_Oe79M51LCQaVK707WcMJ__BK5Tlh81oln09mZBHdgBOZB_oSvmXvWcd5lAI0Fv8Gd8uOVzM5NdbZu3HjZs0EF7zjEjdNkKAYkP0Td9MCtVsC8AxOYY_VEMEEfJw0AP72bVnAmwb2vArg=="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwC8iVEQTJHNkgXjDRxNxsyi0W1Xvm5vkREol-_cVjeaUC0gyDOLUD-4YjoLguOo2F8XG5tXSzOZ29w8GOiOthLOmqZCta24FMweytzWJd53QYwcscjQrkqi-2EsnhHZuyKjMgas7mTcWCjE="
+    },
+    {
+      "title": "sawitnetwork.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFOGGzrAaJj8ssBgJo2LrDojpCWy3QxcEdxtxuKJuTv46tJ3-E_sS6hSk_zWlpx0yTMcNowSDrPTDNKjO44HbyH0LMk2mpxB3kVD-Tr5Ea1IEasXGStsaJhBWOhd8wmXH0osYyOvnC-FbmBzMg3hWREMqQWzSGGztqcB4bvdGK9UIRSuFIB0Ob08VmNSmsl89tedA6cpo-XXX9HWnvhQ=="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHR_Ows7vIWtWQaU2CiVHHjmQfse0KKf6Ot3GJRraaMXfLFTSC7a-i-YkJTAU5_dE6TmxizoxqRzy01cl-yLSty_xeNBNCxHyGErPI-I--NjkwDAlXRXfOEc9KCEmWCGGcsDxzImV7krYBIr0yMeZJqwis0EJCAzn4xrgHJJJzLGndGrVqig-GriSlkJ1M_9ump5haX59aSeB15ivyVsgpukItUj-huEEAc4WeLy1k="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEI2bKlhI3yyZKMJflq6iIKNlWFFT3XsPTLrSRvB_sVCbmdFmHS7tzg46_QcnKH1lpcjMbD2AElu1sIKvw-EOdxmiOLBDOFlIdA7t1NoTj7N7pu4P4jPn_TL1G-iyoZVk-DqN8X1-onGurpI1Zz30KVjBWGoMnE_45sSZb67AkW_ebDuPuxTZ1v4cAdQFIiJfiL9f3YTuEJfqZbgFEaB5z6AUv_pbjbsg=="
+    }
+  ],
+  "searchQueries": [
+    "Attention Is All You Need paper summary",
+    "what is the Transformer architecture",
+    "how self-attention works in AI",
+    "impact of Transformer model AI",
+    "applications of transformer models in AI"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: The AI Revolution\",\n  \"styleGuide\": \"Color palette: Dark, futuristic, with neon blue, purple, and green accents (e.g., #0A0A10 background, #00FFFF, #8A2BE2, #00FF7F highlights). Camera movement: Smooth, continuous rightward pan throughout the entire 32 seconds, creating a seamless, interconnected journey. Lens style: Wide-angle, slightly distorted at edges to emphasize a vast, interconnected digital space. On-screen text style: Clean, sans-serif (e.g., 'Roboto Mono' or 'Exo 2'), glowing neon text, centrally placed or subtly integrated into the visual elements. Music mood: Ambient, futuristic, slightly mysterious, building in intensity, with a subtle driving beat.\",\n  \"music\": \"Synthwave / Cyberpunk Ambient - building intensity\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The AI Challenge\",\n      \"visual\": \"Opens on an abstract digital landscape with glowing data packets flowing along a winding, sequential path, symbolizing traditional, inefficient processing. The path looks bottlenecked in places. Dark background with subtle neon grid lines. Camera begins a slow, continuous rightward pan.\",\n      \"onScreenText\": \"A New Era for AI\",\n      \"voiceover\": \"Before 2017, AI struggled with long data sequences, processing them one step at a time. Then, a groundbreaking paper changed everything.\",\n      \"transitionInCue\": \"Camera begins a slow, continuous rightward pan over a winding digital data path.\",\n      \"transitionOutCue\": \"Camera continues panning right, as the winding path fragments into a more open, yet complex, digital network with glowing nodes.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"Introducing Attention\",\n      \"visual\": \"The rightward pan continues across the fragmented network. Glowing data nodes appear, and dynamic neon lines (representing 'attention') visibly connect distant, relevant nodes, skipping intermediate steps. These connections light up as the camera passes.\",\n      \"onScreenText\": \"The Attention Mechanism\",\n      \"voiceover\": \"The solution? 'Attention Is All You Need.' This paper introduced the attention mechanism, letting AI focus on crucial data points.\",\n      \"transitionInCue\": \"Camera continues panning right across a fragmented network of glowing data nodes, with dynamic neon lines connecting distant nodes.\",\n      \"transitionOutCue\": \"Camera continues panning right, revealing that the dynamically connected nodes are now forming into more organized, block-like structures.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"The Transformer Model\",\n      \"visual\": \"The pan reveals a simplified, abstract, glowing block diagram representing the Transformer's encoder-decoder architecture. Data streams flow in parallel through different sections, indicated by pulsing neon lines. Multiple 'attention heads' are visible as interwoven glowing patterns within the blocks.\",\n      \"onScreenText\": \"The Transformer Model\",\n      \"voiceover\": \"It built the Transformer, an architecture that processes entire sequences simultaneously, capturing complex relationships and speeding up training.\",\n      \"transitionInCue\": \"Camera continues panning right, revealing a simplified, abstract, glowing block diagram of the Transformer's encoder-decoder architecture.\",\n      \"transitionOutCue\": \"Camera continues panning right, as the Transformer block's output branches out into diverse, glowing application interfaces.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"Revolutionizing AI\",\n      \"visual\": \"The pan moves across various abstract representations of AI applications: glowing words forming dynamically (text generation), abstract shapes being identified (computer vision), and symbols translating across (machine translation). The final shot is a vast, interconnected, glowing network of AI advancements.\",\n      \"onScreenText\": \"Revolutionizing AI\",\n      \"voiceover\": \"This innovation revolutionized AI, powering Large Language Models like GPT, advancing translation, vision, and more. The future of AI is here.\",\n      \"transitionInCue\": \"Camera continues panning right, showing the Transformer block's output branching out into diverse, glowing application interfaces.\",\n      \"transitionOutCue\": \"Ends on a wide shot of a vast, interconnected, glowing network, representing the broad impact of Transformers.\"\n    }\n  ]\n}\n```"
+}

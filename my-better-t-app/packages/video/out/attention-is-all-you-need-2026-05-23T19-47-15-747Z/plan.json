@@ -1,0 +1,148 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: The AI Revolution",
+    "styleGuide": "Color Palette: Dark blues, deep purples, and blacks as primary background, with neon accents (electric blue, vibrant magenta, bright gold) for data flow and highlights. Camera Movement: A continuous, slow, rightward pan throughout all segments, creating a seamless, flowing experience. Lens Style: Wide-angle, slightly distorted for a futuristic, immersive feel. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), bold, glowing neon effect in electric blue or vibrant magenta. Music Mood: Ethereal, pulsing, slightly mysterious electronic score with a build-up towards a sense of discovery and impact.",
+    "music": "Ethereal, pulsing electronic score",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The Sequential AI Bottleneck",
+        "visual": "A dark, abstract digital landscape. Data points (small, glowing cubes) move slowly in a single, linear file from left to right, creating a visible bottleneck where they pause and stack up. Neon lines trace their slow, sequential path. Generic, dark human silhouettes observe this slow flow on the left.",
+        "onScreenText": "AI's Old Problem: Sequential Processing",
+        "voiceover": "Before 2017, AI models struggled with understanding long sequences, processing information one step at a time. This limited their ability to grasp complex context.",
+        "transitionInCue": "A dark, abstract digital landscape. Data points (small, glowing cubes) move slowly in a single, linear file from left to right.",
+        "transitionOutCue": "The camera continues its rightward pan. The slow, sequential data flow moves out of frame as new, more dynamic elements begin to enter from the right."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Introducing the Transformer",
+        "visual": "The continuous rightward pan reveals a stark, neon-outlined architectural structure emerging. This is a stylized, abstract representation of the Transformer model. Beams of electric blue light highlight its angular form. The previous slow data flow is now far in the background, overshadowed.",
+        "onScreenText": "Attention Is All You Need (2017) \n The Transformer Architecture",
+        "voiceover": "Then, a groundbreaking paper titled 'Attention Is All You Need' introduced the Transformer architecture, ditching recurrence and convolutions entirely.",
+        "transitionInCue": "The camera continues its rightward pan. The slow, sequential data flow moves out of frame as a stark, neon-outlined architectural structure begins to enter from the right.",
+        "transitionOutCue": "The camera continues its rightward pan, moving closer to the Transformer structure. The internal components of the Transformer structure become more visible, with glowing connections."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "The Power of Self-Attention",
+        "visual": "Continuing the rightward pan, we're now inside the abstract Transformer structure. Instead of linear flow, glowing data particles (representing 'tokens') are now interconnected by dynamic, pulsating neon lines, indicating a 'self-attention' network. Particles are simultaneously 'querying' and 'keying' each other. More generic human silhouettes appear on the side, observing the complex, parallel interactions.",
+        "onScreenText": "Self-Attention: All Tokens, All At Once \n Parallel Processing, Contextual Understanding",
+        "voiceover": "At its heart is self-attention, allowing the model to simultaneously weigh the importance of every part of the input. This enables parallel processing and deep contextual understanding.",
+        "transitionInCue": "The camera continues its rightward pan, moving closer to the Transformer structure. The internal components of the Transformer structure are now visible, with glowing connections and data particles.",
+        "transitionOutCue": "The camera continues its rightward pan, moving past the self-attention network. The view starts to widen, showing the impact of this new architecture."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Revolutionizing AI",
+        "visual": "The final rightward pan reveals a vast, interconnected network of glowing nodes and pathways, symbolizing the widespread adoption and impact. Icons representing LLMs (ChatGPT-like chat bubble), Image AI (camera lens), and other applications glow with vibrant neon. The entire scene pulsates with energy, representing a new era of AI.",
+        "onScreenText": "Powering LLMs, Vision AI, & Beyond! \n The Future of AI Is Here.",
+        "voiceover": "This breakthrough revolutionized AI, becoming the foundation for most modern Large Language Models and powering advancements in vision, speech, and multimodal AI.",
+        "transitionInCue": "The camera continues its rightward pan, moving past the self-attention network. The view widens, showing a vast, interconnected network of glowing nodes and pathways.",
+        "transitionOutCue": "The camera slowly zooms out, revealing the entire futuristic AI landscape fading into the dark background, leaving a single, bright neon glow in the center."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJq1hP1DGUh_RvCKlXNiz8uKapbChoxMRw-gotW6K7M5WryJ1lqfB8g9sWGbEqV8DiwGPtamoX64OMxWAqhj_hma2s_zWBH9Lxu4TPjnssFk4OJMcTumI99-O6ElIn332UapFlGxsopCiBAXU="
+    },
+    {
+      "title": "datacamp.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAcEFzRpaPl0rkjKHsrCdZQUzI6Mnes-Q5F0FBSaLZOkXorKJ7HnInlznJehF6sthP9rI5Vbhol0YQyJxExZZMS0Z_rR3za5tl4QPzBx2NyzLdNL0Y5UOapZopVyoWvVGnMGJQZSsdBfDQkM1rht30Aw=="
+    },
+    {
+      "title": "neurips.cc",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcoSNi0ONxlilLcDgcYijYAyMEAGcJXa52RRfmoDjnkMojp1Gc_EO3J3szTEz4sZDQ-WiPWyOK9wxwc87XpzG1IY0MQqm-cvCNUHFVtkm4rftFdSa_QwX0_pf78_mHFyDwIPnfisTF0vtR8wKV_XxH3Yb33PIH583pMvWl"
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdzlLBb6FzUc45zwjE4jDvZ9Qh6t4EGcR40EgUIBHK52fft1XUzI_yDbI_6xOqcGZQahayWo9Rq9cvfbLsdeGMhY2SL8GlC9vGK6WmBt-hSItwlyo5MlauRAD57jqBy76qqQFrJz5j12M9MYgjp2CPzS7hTJhg2Ym504Atxc8mTttmyd-TYi33Yb-__SaQXtEK0UfqAdEhTg=="
+    },
+    {
+      "title": "github.io",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsggu1s1ydU3-YX6HbMbMXUAIbckkWVEEoiLAFWED04_QUWs5AQ6Ja7h5yyPt4JiHC6f3pieuLl-Tmsb1TboZGxfpuxhx_VkZG7aOFG_eiPmMSrIfVS2x7BK4_m422xSWFNCuCs7rBHeV0oBqinRBknAZoszZr60VYLCyvCYD1xcxN"
+    },
+    {
+      "title": "portkey.ai",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsLNiiCKD_Zaj81pPvWvd_TXfu6VWyg7gpFuXbJMne0D88RMuWaUcsSykNzzloAYEeFnynMs7cmp5LAfGiVg7Ftrv4uTzA3fahfaPPi_kG2Y113tXEAHW2p-wSTmn8ECvCLsjN0jupHrOzK3DODtVDoQyNYQ=="
+    },
+    {
+      "title": "nd.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFziTSq5upazxW27L6Z59mLoekEcGd7EXSYbeDOK8ecWF8_TnahlD69V86LxGx5IFnpawCrskcsUfTjdtu3CEcqvqeVtTHESeg3phGbPWrQjqKqSRjs_OmK1CoPmyuIRFjau7xhrEWnxj0mTXSDl2BH1aqYTJE7O8TBozDPzOaEiWFK44bzeL5WwUHxl5lvfyiyTpw="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg8b3G1Rzpkv2RTQX1-4Xyv6hQNXdweUjU7M1nGQ1CUD1RRdhfq6nf4MBeZC0edP2Vj0MLWA-7lLWefyF4INjjfN7IKfTK5eGONBBa2yPpIJE02axFO0ULiTm6bVNXgwm4d2mofZyXJsz1TPU3-pczNYl0ut9_I4oDO3Ivb2QarWBiZkdzuYDLTJkCjT6vpH8S4QlgOH7ejSv9ogVzheMWxt2aXc1-m8tfhYk2"
+    },
+    {
+      "title": "researchgate.net",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4dOIbumSr4AYOmOrsh_9llSSfvu9CdeagEvp_KKOHBO94yyzPKEEiln1nhbiPfHzH1T9HSOSni13jI9hhF656tK0lXZvJRV_gmKZgK6vvGloPa5zq26ZKmV3pKdqdH4thXW-Xemd8Pin2dP-EYVrgEyBQLWgihvlpXwdCVgPIf1axma_hM5Bmf6eCPUBJW2_kzZmw9XxgYRnw1YaJiOEoTZotyOkaaqL44T8xYBlmYirnyLPrnZxwkNmI29HSSnMg8Mbz2fgLCJNA61Z8eLiWm5tAV0r9IxJH"
+    },
+    {
+      "title": "towardsdatascience.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEl-43WIQznkoEjldfAF1Z9SBm9Fin6FPKTrlF--o9nx-9z6EII8BKJOrK0rQqUE-8UNF9XoMfv_ovyP--XFo_4vVYX4IJdElYMIIQcpdiv6A_BOI_KK1mXsh8Wm-8eDWsxJIWsV7SEYJ2gHEExDQj_ySA8I2GZPel-Yt5GJ-FRL0PuLwMxzW6G7an2HQNA20J33UIF7l5xjXNkgw09VOSIms="
+    },
+    {
+      "title": "datacamp.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlvEjEXSkAlJs_ZPrS_iFeGcdOM2ZIU2LLe_mkcE5cNB0Z8v-Ptm9Wti16Ehj1qgM6s8L8dGnMuoH-FNs8knHkLX7eJkp8tVBx6q-vx9o30Ri7LzGpDLbiQuemQ9xZzfPy89Z5hqA="
+    },
+    {
+      "title": "h2o.ai",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGThM-_mne7CS2_340JGFijUzIYAlfC1lSlu3rStuwWQ4XQLEyUfk5i0dRw7RJBZcAMqpIQq8-Bk6bWz1iF_heOq0Zk-7aickA_1G0Cv8PgEqCcy9_Hg1D46GgJ2W0="
+    },
+    {
+      "title": "codecademy.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWF0RkU4XVVdnESSmr8aV-Qy7KetBJkZi1SzKfDIco4o-Il7Zhsi55tb1JCJFIyStn7Nt7Y4xtSXccIlMKeUhROALLtWKeyZwYaG1hLoxZnfpSbI37IuUw7rZzwMUKdZX0-qL6KFzdE4YHhn3xrQ7o0tgx1KYHowpbiQ_q4zHiLVa_sV2Y8H3tSGO6vsxB"
+    },
+    {
+      "title": "geeksforgeeks.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGhbpsEsXTegusPuVShhfH2DZbwO9qDw4I42EcXkE1NW8ml0BuWYntiut7MZAwl5cft5ZG9pwPvDTGHOL2yFVcJl14K657aH_RTl0LHYMANvMbShqD8DhEJsjMPiBeEuJ-zGNRDp8Fqihzj4u40rvkb6A="
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHW2AUQjvlojWoQQ5bkkOAwh5UEhju_0kZ2ofRu-W96JAsy3ftAriEzj3hGm7NODyBIohusFARqQpweU1Tv4q2Ag_cGB_K2_uHRd7uA-L-XSeVC5hClsuqobtjV6qPXTQEbv5r8o9HWWKQ="
+    },
+    {
+      "title": "amazon.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5BupvkLKNDyIFrTUotMaoGnup39z26mWtJsTGrU_gx5N9lFVoQiggQIsy6_cmdXIyhICg-hjOj-bkiNLbSyHxd59Wz1QnHjb2m5evBcO8md2DTIwyGdIwDvoJuwO0q0vHIQL7AzuuVFGjytRxqUhjpRvXCFHunSLlowlaPQkhKg4="
+    },
+    {
+      "title": "mit.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGf-xvXpiVyiQUoDCSX9GqUecECPNAqk7ZV-_-Gf2an2qbQbfh3oqIupE-qN-IlXSUyu86nSEu5lzeCXcd_WCvBvB1doXzXTZAIERfimssKPe0DULN2cwwGdOz1qdWQF8dvGP6RNrYNuIg="
+    },
+    {
+      "title": "pluralsight.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHduiAeNQC9GS7SRCQfMjJtNvF06PuEh87fERtOmxUYT_JkBjF2BM40Il4G5nj8YwcqFToPZ6vj9qbHGVObnzwuYRATwe6jOhE1T1Bisd7CcSEbTqaBKJfIHNVd2Te1Wydgzt5eab0CcHzMcdSAyDiPnqIzkQhy3ckP-rJ5ueFs-9PyWzr8SXIZ1TnCotJS9it_UkE9"
+    },
+    {
+      "title": "wikipedia.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5flfFo5aCG_JshKlS3OISGOCXB7zdFantc82u--1lMnFh2lbr47g8Cymuu2B3DTDe_FTf8DOoFgSEQSs4cII-AXKp5wPwSinUESw21f04xkGmRbeTg5DA6B3ENjR86FX2MShj6ZqhkssllmLgyJ2ZUA=="
+    },
+    {
+      "title": "parseur.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9s1jLkj6fhvnfhEGREHJjnSCHiFSDJAr67qE9Y2UADjQzD5Z7hk38EroMx0sp9kD4xipPFGwsDk4y2nTpDSg8UEHV8maSoGl4muzNLBSavJZ5RWYR6K_CtO03oVzyLTqTu-dAUJJLSMUdPuI="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUUlpSJXLzfEQCCvfa1Wkqm40dCqhoU6Utaqu8oYaZ8zKfWBISaqK-ynSxXvdszsdFNUpxoAr9qn2ieeU1TP6UXpn74N_rHfIpfvOqJVhxjLMot0RD8QZP4CMfZEWI-RZUG2lOvql1cK5jK_nmSMuEKEcobFOp09sFkAtM7SCpbk8yYKbRaBw-e2sPT5CFZz1Tbc6bM1mqh7K600sCOHd-88pQIQN3JffRhTDafGtKpbEFCPQiwVRI7oBx"
+    },
+    {
+      "title": "kaggle.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfHsFvi82wKwKlNXY2OW0B_00HcKDkfByUBYecq56f-_3JHRL88Vq1AwRo_FaWTEYHM5j7GFEMRPwHrj4zeZSPRMi2uTqnOwKu879xYCCsoQX5pOGPMCYEso090j-RqA=="
+    }
+  ],
+  "searchQueries": [
+    "Attention Is All You Need paper summary",
+    "What is Transformer architecture in AI",
+    "What is self-attention mechanism",
+    "Impact of Attention Is All You Need paper",
+    "Why is Attention Is All You Need important"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: The AI Revolution\",\n  \"styleGuide\": \"Color Palette: Dark blues, deep purples, and blacks as primary background, with neon accents (electric blue, vibrant magenta, bright gold) for data flow and highlights. Camera Movement: A continuous, slow, rightward pan throughout all segments, creating a seamless, flowing experience. Lens Style: Wide-angle, slightly distorted for a futuristic, immersive feel. On-Screen Text Style: Clean, sans-serif font (e.g., Montserrat, Lato), bold, glowing neon effect in electric blue or vibrant magenta. Music Mood: Ethereal, pulsing, slightly mysterious electronic score with a build-up towards a sense of discovery and impact.\",\n  \"music\": \"Ethereal, pulsing electronic score\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The Sequential AI Bottleneck\",\n      \"visual\": \"A dark, abstract digital landscape. Data points (small, glowing cubes) move slowly in a single, linear file from left to right, creating a visible bottleneck where they pause and stack up. Neon lines trace their slow, sequential path. Generic, dark human silhouettes observe this slow flow on the left.\",\n      \"onScreenText\": \"AI's Old Problem: Sequential Processing\",\n      \"voiceover\": \"Before 2017, AI models struggled with understanding long sequences, processing information one step at a time. This limited their ability to grasp complex context.\",\n      \"transitionInCue\": \"A dark, abstract digital landscape. Data points (small, glowing cubes) move slowly in a single, linear file from left to right.\",\n      \"transitionOutCue\": \"The camera continues its rightward pan. The slow, sequential data flow moves out of frame as new, more dynamic elements begin to enter from the right.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"Introducing the Transformer\",\n      \"visual\": \"The continuous rightward pan reveals a stark, neon-outlined architectural structure emerging. This is a stylized, abstract representation of the Transformer model. Beams of electric blue light highlight its angular form. The previous slow data flow is now far in the background, overshadowed.\",\n      \"onScreenText\": \"Attention Is All You Need (2017) \\n The Transformer Architecture\",\n      \"voiceover\": \"Then, a groundbreaking paper titled 'Attention Is All You Need' introduced the Transformer architecture, ditching recurrence and convolutions entirely.\",\n      \"transitionInCue\": \"The camera continues its rightward pan. The slow, sequential data flow moves out of frame as a stark, neon-outlined architectural structure begins to enter from the right.\",\n      \"transitionOutCue\": \"The camera continues its rightward pan, moving closer to the Transformer structure. The internal components of the Transformer structure become more visible, with glowing connections.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"The Power of Self-Attention\",\n      \"visual\": \"Continuing the rightward pan, we're now inside the abstract Transformer structure. Instead of linear flow, glowing data particles (representing 'tokens') are now interconnected by dynamic, pulsating neon lines, indicating a 'self-attention' network. Particles are simultaneously 'querying' and 'keying' each other. More generic human silhouettes appear on the side, observing the complex, parallel interactions.\",\n      \"onScreenText\": \"Self-Attention: All Tokens, All At Once \\n Parallel Processing, Contextual Understanding\",\n      \"voiceover\": \"At its heart is self-attention, allowing the model to simultaneously weigh the importance of every part of the input. This enables parallel processing and deep contextual understanding.\",\n      \"transitionInCue\": \"The camera continues its rightward pan, moving closer to the Transformer structure. The internal components of the Transformer structure are now visible, with glowing connections and data particles.\",\n      \"transitionOutCue\": \"The camera continues its rightward pan, moving past the self-attention network. The view starts to widen, showing the impact of this new architecture.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"Revolutionizing AI\",\n      \"visual\": \"The final rightward pan reveals a vast, interconnected network of glowing nodes and pathways, symbolizing the widespread adoption and impact. Icons representing LLMs (ChatGPT-like chat bubble), Image AI (camera lens), and other applications glow with vibrant neon. The entire scene pulsates with energy, representing a new era of AI.\",\n      \"onScreenText\": \"Powering LLMs, Vision AI, & Beyond! \\n The Future of AI Is Here.\",\n      \"voiceover\": \"This breakthrough revolutionized AI, becoming the foundation for most modern Large Language Models and powering advancements in vision, speech, and multimodal AI.\",\n      \"transitionInCue\": \"The camera continues its rightward pan, moving past the self-attention network. The view widens, showing a vast, interconnected network of glowing nodes and pathways.\",\n      \"transitionOutCue\": \"The camera slowly zooms out, revealing the entire futuristic AI landscape fading into the dark background, leaving a single, bright neon glow in the center.\"\n    }\n  ]\n}\n```"
+}

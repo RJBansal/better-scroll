@@ -1,0 +1,92 @@
+{
+  "topic": "Attention Is All You Need",
+  "plan": {
+    "title": "Attention Is All You Need: The AI Revolution",
+    "styleGuide": "Color Palette: Dark blues, purples, and deep greys dominate, with vibrant neon accents (cyan, magenta, electric yellow) used for data paths, connections, and highlighted elements. Camera Movement: A continuous, slow, rightward camera pan that seamlessly transitions across all four segments, creating a sense of progression. Lens Style: Slightly wide-angle, cinematic feel with subtle, organic light flares and a shallow depth of field to emphasize foreground elements. On-Screen Text Style: Clean, modern sans-serif font (e.g., 'Exo 2' or 'Oxanium'), bold, with a neon glow effect matching the accent colors. Music Mood: Ethereal, atmospheric, and slightly mysterious, evolving into an optimistic and subtly intense electronic soundscape.",
+    "music": "Futuristic Ambient Synths with a subtle build-up.",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "The Problem with Old AI Models",
+        "visual": "A dimly lit digital landscape with abstract, translucent 'sequence' blocks moving left-to-right in a linear fashion, representing sequential data processing. Neon lines connect only adjacent blocks, highlighting their limitations. As the camera pans right, a subtle glitch effect introduces tension.",
+        "onScreenText": "BEFORE 2017: Sequential Processing",
+        "voiceover": "Before 2017, AI processed information sequentially, like reading word-by-word. This was slow and struggled to grasp long-range connections.",
+        "transitionInCue": "Camera starts pan right, revealing linear data blocks.",
+        "transitionOutCue": "Camera continues right pan, revealing a large, static title 'ATTENTION IS ALL YOU NEED' in neon glow."
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Introducing Attention: A New Paradigm",
+        "visual": "The camera pans right past the neon title 'ATTENTION IS ALL YOU NEED'. The linear blocks from before now break apart, and a web of fine, glowing neon lines (representing 'attention') dynamically connects distant blocks, not just adjacent ones. Focus shifts to one block, showing multiple glowing connections.",
+        "onScreenText": "ATTENTION: Weighing Importance",
+        "voiceover": "Then came 'Attention Is All You Need.' This groundbreaking paper introduced a mechanism where models could weigh the importance of different data parts.",
+        "transitionInCue": "Camera continues right pan, revealing a large, static title 'ATTENTION IS ALL YOU NEED' in neon glow.",
+        "transitionOutCue": "Camera continues right pan across the dynamic web, highlighting the 'self-attention' concept with a central glowing node emitting connections."
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "Self-Attention and Parallel Processing",
+        "visual": "The camera continues its rightward pan, focusing on a central glowing 'node' representing a data point. Numerous neon lines (queries, keys, values) radiate from it, connecting to *all* other data points in the visible frame, forming a complex, interwoven network. Some connections brighten, showing high 'attention' scores.",
+        "onScreenText": "SELF-ATTENTION: Process All At Once",
+        "voiceover": "This 'self-attention' allows AI to process all information simultaneously, understanding context regardless of distance. This enabled unprecedented parallelization.",
+        "transitionInCue": "Camera continues right pan across the dynamic web, highlighting the 'self-attention' concept with a central glowing node emitting connections.",
+        "transitionOutCue": "Camera continues right pan, transitioning from the intricate network to a wider shot of a vast, rapidly building digital city made of interconnected structures."
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "The Transformer's Impact",
+        "visual": "The camera completes its rightward pan, revealing a vast, rapidly expanding digital cityscape, symbolizing the Transformer architecture's proliferation. Towers glow with neon light, representing various AI applications. The cityscape expands into the distance, suggesting limitless potential.",
+        "onScreenText": "TRANSFORMERS: Foundation of Modern AI",
+        "voiceover": "This innovation, called the Transformer architecture, revolutionized AI. It's the foundation for modern large language models, powering tools like GPT and Gemini.",
+        "transitionInCue": "Camera continues right pan, transitioning from the intricate network to a wider shot of a vast, rapidly building digital city made of interconnected structures.",
+        "transitionOutCue": "Digital cityscape fades slightly, as the central 'Attention' concept pulses brightly, then fades to black."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_yb4VAaDv4xJos6DK-3sgcl0GwNOMdANMB0t_B27SXbHg9qD_82mmhupGHhHX_QGaHyDSqQosjrP_sNyvjZyoam_AaWwke40ZTdS2s6RUJrbrNXzRxyH3aTE8xF4cufI73ZjGF1iF-3XGww3CTY9FS6OovNisMeWZl94hny6HiQsyQHvnoHHzqRjavd90QY9g533XbDWYotN3DYTRFznrR1Ilt2LwSBrCNxNPAg=="
+    },
+    {
+      "title": "github.io",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGyCE3q8NVNQLOApukGYDKA14ftIgg_kUhvtJ75vVKM868Amo2-CGFoTMngP72gsbRTaTKnYwJFme3M1V2goK8OUD-n2VvE_l4Je0k5A32qLLpJK11fLF4uYbah1smFb6DfB3O5u3ByT73O1ekpKOdGFI="
+    },
+    {
+      "title": "neurips.cc",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBzcoTp1L7t5mhSdGfGHb0S_dVlDr-FZALO2O407tHNWybP_v0fyYiiwFdRaQokE03tM8x_Cjbh6qaKduqIMxsQuKx2zqPw23gZnIvTcUO_nHU52vob5R4TJGkQAhu-SMDyT1W-b4i79-_sNYUD0u_TUBjT056x2Als29qYw=="
+    },
+    {
+      "title": "nd.edu",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv8lIiVZYCOXgXgY7z2-Mf3veMxyAj9I9gZZTG9HkkP3P0C7m176NXghJv3C6SqQc9lFBYBJ3Wp81b_lg_acSOCzjEQEt2RexOug6pIIXsRSQ-cLyG1id0pcHZ6dRIpwYJIiNBqRNavqcZpyuHLaURndV1DJXiB43ftXAd8S4-Jzt-yZ7JxRGn_beGVO50nSQW6An9"
+    },
+    {
+      "title": "ibm.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO-f-YWRiojKZUskOiXRxt-se9MgGY2dA0U5JWmRJ_V3buG4-PsNl0ylfSk8mmqLKSRz2KjuOiZ8UeQWku0peYYADcJGVWhOR_5VFPA-lPnVMhkeK3g7_8fHFSRQUr4YZFwYbGYCPYMVpE"
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqA4JKMlcA-zZ0lePy9ykIDO7Fcm1xBtODOvPCSjhnBvvBfT5cpM1TtF2vox55M-bZ7XitEEqs52U8k2Kmlq8o2X2LojZTHSVfv2yv3Vpe40nkEv_tin-aOwvDY315q8AjEi4VBrgyCUltjwV2Beuq_aUULEsOcAKZKQcqJOXeX5tFQlgCeBlVIfkkloFo04bjIZ7EvV070tIGhQ=="
+    },
+    {
+      "title": "wikipedia.org",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpXpDn15W1h3BF71mrQJfBCqFR43hJ6oiU8tHG9sERlffBE-gBIhA-0bcugiT_jO3-QrUc6CPrDhhg7vyCUfnmdX1t-SVbH1TFu5ANhz2q0J7GMEF5S5POxrDS6dm1bk-j-j-fmZ2DHZsDVl2xcJ5UyJQ="
+    },
+    {
+      "title": "medium.com",
+      "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQRpx_LQgGXCeEsl-o_56TMnwjtRqGzVIxWLXyo4_RHEYhYdKkMxMF34k-p6I2qD4C0YZkpl6Dd4NzV6VmH1d8o2FeGgzDwgc_MrpQmjqmovkJ4DQMq-anAlGEFSWla_u4EtRJqrDlOsb_HzeImM0F3uNGo-f3qm51CEJ7XvolSa57l-jeDaxol8ye91zKq2SbYRuX2IjY-zmwDRSgoVjkEA7DC--uwsdRX8_WAb49AhcQ_S2CSMjNhxyCPg=="
+    }
+  ],
+  "searchQueries": [
+    "Attention Is All You Need paper summary",
+    "What is self-attention in transformers",
+    "Impact of Attention Is All You Need",
+    "Transformer architecture key ideas",
+    "Before Attention Is All You Need RNN limitations"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Attention Is All You Need: The AI Revolution\",\n  \"styleGuide\": \"Color Palette: Dark blues, purples, and deep greys dominate, with vibrant neon accents (cyan, magenta, electric yellow) used for data paths, connections, and highlighted elements. Camera Movement: A continuous, slow, rightward camera pan that seamlessly transitions across all four segments, creating a sense of progression. Lens Style: Slightly wide-angle, cinematic feel with subtle, organic light flares and a shallow depth of field to emphasize foreground elements. On-Screen Text Style: Clean, modern sans-serif font (e.g., 'Exo 2' or 'Oxanium'), bold, with a neon glow effect matching the accent colors. Music Mood: Ethereal, atmospheric, and slightly mysterious, evolving into an optimistic and subtly intense electronic soundscape.\",\n  \"music\": \"Futuristic Ambient Synths with a subtle build-up.\",\n  \"segments\": [\n    {\n      \"index\": 0,\n      \"timeRange\": \"0:00-0:08\",\n      \"title\": \"The Problem with Old AI Models\",\n      \"visual\": \"A dimly lit digital landscape with abstract, translucent 'sequence' blocks moving left-to-right in a linear fashion, representing sequential data processing. Neon lines connect only adjacent blocks, highlighting their limitations. As the camera pans right, a subtle glitch effect introduces tension.\",\n      \"onScreenText\": \"BEFORE 2017: Sequential Processing\",\n      \"voiceover\": \"Before 2017, AI processed information sequentially, like reading word-by-word. This was slow and struggled to grasp long-range connections.\",\n      \"transitionInCue\": \"Camera starts pan right, revealing linear data blocks.\",\n      \"transitionOutCue\": \"Camera continues right pan, revealing a large, static title 'ATTENTION IS ALL YOU NEED' in neon glow.\"\n    },\n    {\n      \"index\": 1,\n      \"timeRange\": \"0:08-0:16\",\n      \"title\": \"Introducing Attention: A New Paradigm\",\n      \"visual\": \"The camera pans right past the neon title 'ATTENTION IS ALL YOU NEED'. The linear blocks from before now break apart, and a web of fine, glowing neon lines (representing 'attention') dynamically connects distant blocks, not just adjacent ones. Focus shifts to one block, showing multiple glowing connections.\",\n      \"onScreenText\": \"ATTENTION: Weighing Importance\",\n      \"voiceover\": \"Then came 'Attention Is All You Need.' This groundbreaking paper introduced a mechanism where models could weigh the importance of different data parts.\",\n      \"transitionInCue\": \"Camera continues right pan, revealing a large, static title 'ATTENTION IS ALL YOU NEED' in neon glow.\",\n      \"transitionOutCue\": \"Camera continues right pan across the dynamic web, highlighting the 'self-attention' concept with a central glowing node emitting connections.\"\n    },\n    {\n      \"index\": 2,\n      \"timeRange\": \"0:16-0:24\",\n      \"title\": \"Self-Attention and Parallel Processing\",\n      \"visual\": \"The camera continues its rightward pan, focusing on a central glowing 'node' representing a data point. Numerous neon lines (queries, keys, values) radiate from it, connecting to *all* other data points in the visible frame, forming a complex, interwoven network. Some connections brighten, showing high 'attention' scores.\",\n      \"onScreenText\": \"SELF-ATTENTION: Process All At Once\",\n      \"voiceover\": \"This 'self-attention' allows AI to process all information simultaneously, understanding context regardless of distance. This enabled unprecedented parallelization.\",\n      \"transitionInCue\": \"Camera continues right pan across the dynamic web, highlighting the 'self-attention' concept with a central glowing node emitting connections.\",\n      \"transitionOutCue\": \"Camera continues right pan, transitioning from the intricate network to a wider shot of a vast, rapidly building digital city made of interconnected structures.\"\n    },\n    {\n      \"index\": 3,\n      \"timeRange\": \"0:24-0:32\",\n      \"title\": \"The Transformer's Impact\",\n      \"visual\": \"The camera completes its rightward pan, revealing a vast, rapidly expanding digital cityscape, symbolizing the Transformer architecture's proliferation. Towers glow with neon light, representing various AI applications. The cityscape expands into the distance, suggesting limitless potential.\",\n      \"onScreenText\": \"TRANSFORMERS: Foundation of Modern AI\",\n      \"voiceover\": \"This innovation, called the Transformer architecture, revolutionized AI. It's the foundation for modern large language models, powering tools like GPT and Gemini.\",\n      \"transitionInCue\": \"Camera continues right pan, transitioning from the intricate network to a wider shot of a vast, rapidly building digital city made of interconnected structures.\",\n      \"transitionOutCue\": \"Digital cityscape fades slightly, as the central 'Attention' concept pulses brightly, then fades to black.\"\n    }\n  ]\n}\n```"
+}

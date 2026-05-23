@@ -1,0 +1,4 @@
+file '/Users/rajatbansal/git/better-scroll/my-better-t-app/packages/video/out/attention-is-all-you-need-2026-05-23T19-50-40-663Z/seg_0.mp4'
+file '/Users/rajatbansal/git/better-scroll/my-better-t-app/packages/video/out/attention-is-all-you-need-2026-05-23T19-50-40-663Z/seg_1.mp4'
+file '/Users/rajatbansal/git/better-scroll/my-better-t-app/packages/video/out/attention-is-all-you-need-2026-05-23T19-50-40-663Z/seg_2.mp4'
+file '/Users/rajatbansal/git/better-scroll/my-better-t-app/packages/video/out/attention-is-all-you-need-2026-05-23T19-50-40-663Z/seg_3.mp4'
