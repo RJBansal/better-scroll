@@ -6,6 +6,8 @@ import { desc, eq } from "drizzle-orm";
 import { fetchPexelsRealReels } from "./pexels";
 
 const FALLBACK_REAL_REELS = 4;
+const CURATED_BRAINROT_REELS_COUNT = 6;
+const OUR_REEL_INSERT_INTERVAL = 2;
 
 const DEFAULT_DROP_RUN_ID = "d91f4642-2fc5-406d-841c-46e3c2aa0839";
 const DEFAULT_DROP_DATE = "2026-05-23";
@@ -41,6 +43,76 @@ const DEFAULT_DROP_REELS: ReelMeta[] = [
     durationSec: DEFAULT_DROP_DURATION_SEC,
     category: "Exploratory Discovery",
     source: "generated",
+  },
+];
+
+const CURATED_BRAINROT_REELS: ReelMeta[] = [
+  {
+    id: "curated_brainrot_very_funny_cats",
+    videoUrl:
+      "https://archive.org/download/150-lost-viral-junk-videos/Very%20Funny%20Cats%201.mp4",
+    caption: "Cats doing NPC side quests for no reason",
+    sourceTitle: "Very Funny Cats 1",
+    sourceUrl: "https://archive.org/details/150-lost-viral-junk-videos",
+    durationSec: 30,
+    category: "Brainrot",
+    source: "web",
+  },
+
+  {
+    id: "curated_brainrot_tiktok_dance_compilation",
+    videoUrl:
+      "https://archive.org/download/viva-cut-video-1618413535894-hd/VivaCut_video_1618413535894_HD.mp4",
+    caption: "TikTok dance break spawned in the feed",
+    sourceTitle: "Tiktok Dance Compilation",
+    sourceUrl: "https://archive.org/details/viva-cut-video-1618413535894-hd",
+    durationSec: 30,
+    category: "Brainrot",
+    source: "web",
+  },
+  {
+    id: "curated_brainrot_super_dance_megamix",
+    videoUrl:
+      "https://archive.org/download/super-dance-megamix/Super%20Dance%20Megamix%201.mp4",
+    caption: "Dance floor NPC compilation unlocked",
+    sourceTitle: "Super Dance Megamix 1",
+    sourceUrl: "https://archive.org/details/super-dance-megamix",
+    durationSec: 30,
+    category: "Brainrot",
+    source: "web",
+  },
+  {
+    id: "curated_brainrot_super_dance_megamix_2",
+    videoUrl:
+      "https://archive.org/download/super-dance-megamix/Super%20Dance%20Megamix%204.%20Mix%201.mp4",
+    caption: "More dance compilation energy for the dopamine scroll",
+    sourceTitle: "Super Dance Megamix 4 Mix 1",
+    sourceUrl: "https://archive.org/details/super-dance-megamix",
+    durationSec: 30,
+    category: "Brainrot",
+    source: "web",
+  },
+  {
+    id: "curated_brainrot_video_dance",
+    videoUrl:
+      "https://archive.org/download/mwf-323-video-dance/mwf-323-video-dance.mp4",
+    caption: "Retro dance visuals for maximum scroll damage",
+    sourceTitle: "Video Dance",
+    sourceUrl: "https://archive.org/details/mwf-323-video-dance",
+    durationSec: 30,
+    category: "Brainrot",
+    source: "web",
+  },
+  {
+    id: "curated_brainrot_rhythm_dance",
+    videoUrl:
+      "https://archive.org/download/VIDEODANCE90Eiffel65BlueDaBaDeeVIDEOMUSICALI/Videodance%20%2790%20-%20Corona%20-%20The%20Rhythm%20Of%20The%20Night%20%28Live%20At%20Dance%20Machine%29.mp4",
+    caption: "Rhythm of the Night but make it brainrot",
+    sourceTitle: "Corona - The Rhythm Of The Night",
+    sourceUrl: "https://archive.org/details/VIDEODANCE90Eiffel65BlueDaBaDeeVIDEOMUSICALI",
+    durationSec: 30,
+    category: "Brainrot",
+    source: "web",
   },
 ];
 
@@ -102,19 +174,36 @@ async function fetchPexelsReelMetas(maxReels: number): Promise<ReelMeta[]> {
   return pexelsResults.map(toPexelsReelMeta);
 }
 
-function interleaveGeneratedAndPexels(generated: ReelMeta[], pexels: ReelMeta[]): ReelMeta[] {
-  const interleaved: ReelMeta[] = [];
-  for (let i = 0; i < generated.length; i++) {
-    interleaved.push(generated[i]!);
-    if (i < generated.length - 1 && pexels[i]) {
-      interleaved.push(pexels[i]!);
+function getCuratedBrainrotReels(maxReels = CURATED_BRAINROT_REELS_COUNT): ReelMeta[] {
+  return CURATED_BRAINROT_REELS.slice(0, maxReels);
+}
+
+function insertOurReelsAfterExternalReels(
+  externalReels: ReelMeta[],
+  ourReels: ReelMeta[],
+  interval = OUR_REEL_INSERT_INTERVAL,
+): ReelMeta[] {
+  if (ourReels.length === 0) return externalReels;
+
+  const orderedReels: ReelMeta[] = [];
+  let ourReelIndex = 0;
+
+  for (let i = 0; i < externalReels.length; i++) {
+    orderedReels.push(externalReels[i]!);
+    const shouldInsertOurReel = (i + 1) % interval === 0 && ourReelIndex < ourReels.length;
+
+    if (shouldInsertOurReel) {
+      orderedReels.push(ourReels[ourReelIndex]!);
+      ourReelIndex++;
     }
   }
-  return interleaved;
+
+  return [...orderedReels, ...ourReels.slice(ourReelIndex)];
 }
 
 async function fetchFallbackRealReels(): Promise<ReelMeta[]> {
-  return fetchPexelsReelMetas(FALLBACK_REAL_REELS);
+  const pexelsReels = await fetchPexelsReelMetas(FALLBACK_REAL_REELS);
+  return [...getCuratedBrainrotReels(), ...pexelsReels];
 }
 
 export async function getLatestReels(): Promise<ReelMeta[]> {
@@ -126,14 +215,19 @@ export async function getLatestReels(): Promise<ReelMeta[]> {
     .limit(1);
 
   const reels = rows[0]?.reels;
-  if (reels && reels.length > 0) return reels;
+  if (reels && reels.length > 0) {
+    const externalReels = [...getCuratedBrainrotReels(), ...reels.filter((reel) => reel.source !== "generated")];
+    const ourReels = reels.filter((reel) => reel.source === "generated");
+    return insertOurReelsAfterExternalReels(externalReels, ourReels);
+  }
 
   // No agent runs yet — serve the curated default drop with Pexels between each generated reel
   const defaultDrop = getDefaultDropReels();
   if (defaultDrop.length > 0) {
     const pexelsCount = Math.max(0, defaultDrop.length - 1);
     const pexelsReels = pexelsCount > 0 ? await fetchPexelsReelMetas(pexelsCount) : [];
-    return interleaveGeneratedAndPexels(defaultDrop, pexelsReels);
+    const externalReels = [...getCuratedBrainrotReels(), ...pexelsReels];
+    return insertOurReelsAfterExternalReels(externalReels, defaultDrop);
   }
 
   // Default drop assets missing — fall back to live Pexels real reels

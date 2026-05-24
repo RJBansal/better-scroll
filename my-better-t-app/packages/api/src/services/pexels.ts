@@ -82,8 +82,9 @@ export async function fetchPexelsRealReels(
   maxReels = 2,
 ): Promise<PexelsRealReel[]> {
   const results: PexelsRealReel[] = []
+  const brainrotQueries = [...new Set(["funny","meme", ...queries])]
 
-  for (const query of queries) {
+  for (const query of brainrotQueries) {
     if (results.length >= maxReels) break
     try {
       const videos = await searchPexelsPortraitVideos(query, 10)
