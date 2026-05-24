@@ -1,0 +1,71 @@
+{
+  "topic": "reel_20260523_mcp_security",
+  "plan": {
+    "title": "Model Context Protocol: The Local Backdoor",
+    "styleGuide": "Dark palette with neon accents, continuous rightward pan, cinematic vertical 9:16.",
+    "music": "Ambient electronic, low BPM, building energy.",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "Segment 1",
+        "visual": "A moody, dark developer studio setup with a multi-monitor desk glowing softly with violet backlighting. In the foreground, an electric-violet network diagram shows an external AI agent connecting to a local host server. A red animated dotted arrow labeled 'Malicious Payload' shoots from the web, bypasses an abstract firewall graphic, and penetrates into a central glowing directory folder labeled 'Local Directory (~/)'. A circular radar-like scanning graphic sweeps continuously over the diagram, highlighting a blinking 'BACKDOOR DETECTED' warning sign.",
+        "onScreenText": "",
+        "voiceover": "Your local AI agents might be opening a backdoor to your computer.",
+        "transitionInCue": "None (Video starts directly with continuous rightward camera pan)",
+        "transitionOutCue": "Rightward camera pan with neon violet glitch transition"
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Segment 2",
+        "visual": "A dark cyberpunk-inspired terminal with scrolling violet system logs in the background. In the foreground, a detailed split-screen side-by-side infographic comparison materializes. The left panel shows an animated timeline representing the 'MCP Stateless Spec' with independent JSON-RPC packets scrolling up. The right panel displays the 'CVE-2026-27825 Path Traversal' vulnerability: a glowing file directory tree chart displays the tool 'confluence_download_attachment' with a red path traversal arrow climbing up from a restricted folder and writing directly into '/usr/bin'.",
+        "onScreenText": "",
+        "voiceover": "While the MCP stateless spec simplifies scaling, tool vulnerabilities like CVE-2026-27825 allow critical remote code execution.",
+        "transitionInCue": "Rightward camera pan with neon violet glitch transition",
+        "transitionOutCue": "Rightward camera pan with crimson scanning-glitch transition"
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "Segment 3",
+        "visual": "A dark, atmospheric server rack backdrop with pulsing neon circuit boards. Overlaid in the foreground is an animated network graph showing a DNS rebinding attack mechanism: a browser icon resolving a domain first to an attacker-controlled external IP, which instantly rotates on an animated dial to bind directly to '127.0.0.1'. A crimson payload arrow bypasses the Same-Origin Policy, striking a highlighted icon of a local Go-SDK MCP server. A sharp warning label flashes at the bottom: 'SECURITY RATING: UNTRUSTED ENTITY'.",
+        "onScreenText": "",
+        "voiceover": "Unprotected Go SDK localhost servers risk DNS rebinding attacks. Treat local MCP servers as untrusted third-party entities.",
+        "transitionInCue": "Rightward camera pan with crimson scanning-glitch transition",
+        "transitionOutCue": "Rightward camera pan with terminal-flicker glitch transition"
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Segment 4",
+        "visual": "A futuristic cyber-security operations control center display with faint grid lines. In the foreground, a horizontal block diagram titled 'Zero-Trust AI Agent Shield' assembles. Icons for 'Cursor IDE' and 'Windsurf IDE' send data streams through a glowing neon-green firewall layer labeled 'Zero-Trust Authentication Shield'. On the right, a high-tech glowing checklist slides on-screen with items '1. Lock Localhost Bindings' and '2. Restrict Tool Paths' lighting up with green checkmarks as they register 100% complete.",
+        "onScreenText": "",
+        "voiceover": "Audit your Cursor and Windsurf MCP endpoints and enforce zero-trust controls.",
+        "transitionInCue": "Rightward camera pan with terminal-flicker glitch transition",
+        "transitionOutCue": "None (Video ends with fade to black)"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "The 2026-07-28 MCP Specification Release Candidate",
+      "uri": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+    },
+    {
+      "title": "mcp-atlassian - CVE-2026-27825 · GitHub Advisory Database",
+      "uri": "https://github.com/advisories/GHSA-xjgw-4wvw-rgm4"
+    },
+    {
+      "title": "DNS Rebinding Protection Disabled by Default in Model Context Protocol Go SDK",
+      "uri": "https://github.com/modelcontextprotocol/go-sdk/security/advisories/GHSA-xw59-hvm2-8pj6"
+    }
+  ],
+  "searchQueries": [
+    "\"CVE-2026-27825\"",
+    "\"Model Context Protocol\" security vulnerability",
+    "\"Model Context Protocol\" DNS rebinding",
+    "\"Model Context Protocol\" stateless"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Model Context Protocol: The Local Backdoor\",\n  \"styleGuide\": {\n    \"colorPalette\": \"Electric Violet (#8F00FF), Deep Crimson (#D80032), Neon Cyberpunk Green (#39FF14), Dark Obsidian Black (#0B0B0C)\",\n    \"typography\": \"Fira Code (monospaced for code and cyber metrics), Montserrat Bold (urgent, heavy headings)\",\n    \"visualStyle\": \"Edgy, high-contrast cybersecurity cyberpunk aesthetic. High-fidelity neon-glowing 2D and 3D infographic overlays superimposed on moody, dark studio backgrounds. Glitch transitions and scrolling terminal outputs carry visual energy.\",\n    \"motionStyle\": \"Suspenseful and rapid-fire. Smooth continuous rightward camera pan serving as a physical timeline across scenes, punctuated by sudden neon glitch-flickers at segment boundaries.\",\n    \"voiceoverTone\": \"Urgent, cautionary, and deeply technical\",\n    \"voiceoverPacing\": \"Suspenseful, rapid-fire, and critical\"\n  },\n  \"music\": {\n    \"track\": \"Industrial Cyber-Thriller Beat\",\n    \"tempo\": \"130 BPM\",\n    \"pacing\": \"Suspenseful, syncopated synthetic percussion, heavy low-frequency bass swells, and recurring glitch sound effects timed to scene boundaries.\"\n  },\n  \"segments\": [\n    {\n      \"segmentIndex\": 0,\n      \"timecodeRange\": \"0:00-0:08\",\n      \"voiceover\": \"Your local AI agents might be opening a backdoor to your computer.\",\n      \"visual\": \"A moody, dark developer studio setup with a multi-monitor desk glowing softly with violet backlighting. In the foreground, an electric-violet network diagram shows an external AI agent connecting to a local host server. A red animated dotted arrow labeled 'Malicious Payload' shoots from the web, bypasses an abstract firewall graphic, and penetrates into a central glowing directory folder labeled 'Local Directory (~/)'. A circular radar-like scanning graphic sweeps continuously over the diagram, highlighting a blinking 'BACKDOOR DETECTED' warning sign.\",\n      \"transitionInCue\": \"None (Video starts directly with continuous rightward camera pan)\",\n      \"transitionOutCue\": \"Rightward camera pan with neon violet glitch transition\"\n    },\n    {\n      \"segmentIndex\": 1,\n      \"timecodeRange\": \"0:08-0:16\",\n      \"voiceover\": \"While the MCP stateless spec simplifies scaling, tool vulnerabilities like CVE-2026-27825 allow critical remote code execution.\",\n      \"visual\": \"A dark cyberpunk-inspired terminal with scrolling violet system logs in the background. In the foreground, a detailed split-screen side-by-side infographic comparison materializes. The left panel shows an animated timeline representing the 'MCP Stateless Spec' with independent JSON-RPC packets scrolling up. The right panel displays the 'CVE-2026-27825 Path Traversal' vulnerability: a glowing file directory tree chart displays the tool 'confluence_download_attachment' with a red path traversal arrow climbing up from a restricted folder and writing directly into '/usr/bin'.\",\n      \"transitionInCue\": \"Rightward camera pan with neon violet glitch transition\",\n      \"transitionOutCue\": \"Rightward camera pan with crimson scanning-glitch transition\"\n    },\n    {\n      \"segmentIndex\": 2,\n      \"timecodeRange\": \"0:16-0:24\",\n      \"voiceover\": \"Unprotected Go SDK localhost servers risk DNS rebinding attacks. Treat local MCP servers as untrusted third-party entities.\",\n      \"visual\": \"A dark, atmospheric server rack backdrop with pulsing neon circuit boards. Overlaid in the foreground is an animated network graph showing a DNS rebinding attack mechanism: a browser icon resolving a domain first to an attacker-controlled external IP, which instantly rotates on an animated dial to bind directly to '127.0.0.1'. A crimson payload arrow bypasses the Same-Origin Policy, striking a highlighted icon of a local Go-SDK MCP server. A sharp warning label flashes at the bottom: 'SECURITY RATING: UNTRUSTED ENTITY'.\",\n      \"transitionInCue\": \"Rightward camera pan with crimson scanning-glitch transition\",\n      \"transitionOutCue\": \"Rightward camera pan with terminal-flicker glitch transition\"\n    },\n    {\n      \"segmentIndex\": 3,\n      \"timecodeRange\": \"0:24-0:32\",\n      \"voiceover\": \"Audit your Cursor and Windsurf MCP endpoints and enforce zero-trust controls.\",\n      \"visual\": \"A futuristic cyber-security operations control center display with faint grid lines. In the foreground, a horizontal block diagram titled 'Zero-Trust AI Agent Shield' assembles. Icons for 'Cursor IDE' and 'Windsurf IDE' send data streams through a glowing neon-green firewall layer labeled 'Zero-Trust Authentication Shield'. On the right, a high-tech glowing checklist slides on-screen with items '1. Lock Localhost Bindings' and '2. Restrict Tool Paths' lighting up with green checkmarks as they register 100% complete.\",\n      \"transitionInCue\": \"Rightward camera pan with terminal-flicker glitch transition\",\n      \"transitionOutCue\": \"None (Video ends with fade to black)\"\n    }\n  ]\n}\n```\n\n```json\n{\n  \"sources\": [\n    {\n      \"title\": \"The 2026-07-28 MCP Specification Release Candidate\",\n      \"uri\": \"https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/\"\n    },\n    {\n      \"title\": \"mcp-atlassian - CVE-2026-27825 · GitHub Advisory Database\",\n      \"uri\": \"https://github.com/advisories/GHSA-xjgw-4wvw-rgm4\"\n    },\n    {\n      \"title\": \"DNS Rebinding Protection Disabled by Default in Model Context Protocol Go SDK\",\n      \"uri\": \"https://github.com/modelcontextprotocol/go-sdk/security/advisories/GHSA-xw59-hvm2-8pj6\"\n    }\n  ],\n  \"searchQueries\": [\n    \"\\\"CVE-2026-27825\\\"\",\n    \"\\\"Model Context Protocol\\\" security vulnerability\",\n    \"\\\"Model Context Protocol\\\" DNS rebinding\",\n    \"\\\"Model Context Protocol\\\" stateless\"\n  ]\n}\n```"
+}

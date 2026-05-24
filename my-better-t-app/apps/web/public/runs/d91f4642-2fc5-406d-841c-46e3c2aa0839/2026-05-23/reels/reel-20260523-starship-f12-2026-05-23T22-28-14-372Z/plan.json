@@ -1,0 +1,53 @@
+{
+  "topic": "reel_20260523_starship_f12",
+  "plan": {
+    "title": "Unlocking Team Productivity with AI Assistance",
+    "styleGuide": "Dark palette with neon accents, continuous rightward pan, cinematic vertical 9:16.",
+    "music": "Ambient electronic, low BPM, building energy.",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "Segment 1",
+        "visual": "The camera slowly pans rightward across a futuristic, glowing software development environment. In the foreground, a sleek, translucent user interface window materializes, displaying a dynamic typing cursor that writes out the greeting. In the background, a highly detailed close-up of a dark-blue circuit board with pulsing turquoise pathways sets a high-tech tone.",
+        "onScreenText": "",
+        "voiceover": "Hello! Please let me know how I can assist you today. What would you like to work on?",
+        "transitionInCue": "none (start of video)",
+        "transitionOutCue": "smooth pan continues rightward into a stylized developer dashboard"
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Segment 2",
+        "visual": "Continuing the steady rightward camera pan, a split-screen infographic moves into view. On the left, an animated timeline chart representing 'Onboarding Time' shrinks rapidly by exactly fifty percent. On the right, a glowing circular gauge counts up dynamically from zero to twenty-six point nine percent, representing 'AI-authored production code'. The background transitions to a stylized city skyline at dusk, glowing with ambient office window lights.",
+        "onScreenText": "",
+        "voiceover": "AI assistants now cut engineering onboarding times in half, generating over twenty-six percent of modern production code.",
+        "transitionInCue": "smooth pan continues rightward into a stylized developer dashboard",
+        "transitionOutCue": "smooth pan continues rightward into a customer support analytics visualization"
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "Segment 3",
+        "visual": "As the rightward camera pan continues, we slide into an enterprise operations dashboard. In the foreground, an elegant, rising bar chart animates upward to a thirty-four percent height marker, labeled 'Issue Resolution Speedup'. Next to it, an intricate flowchart icon connects three stages representing multi-step autonomous planning. The background remains a detailed, shallow-depth-of-field view of high-tech server racks with blinking soft-blue LED indicators.",
+        "onScreenText": "",
+        "voiceover": "They boost customer support issue resolution by thirty-four percent while autonomously managing complex, multi-step workflows.",
+        "transitionInCue": "smooth pan continues rightward into a customer support analytics visualization",
+        "transitionOutCue": "smooth pan continues rightward into the final call-to-action screen"
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Segment 4",
+        "visual": "The rightward camera pan settles onto a beautiful clean-end frame. In the center, a prominent, stylized chat bubble icon pops open, pulsing with the text 'ASSIST' in bold, bright white letters. An animated mouse cursor clicks the button, and glowing particles burst outwards. The background displays a modern, minimalist collaborative workspace with clean desks and soft ambient warm lighting, bringing the high-tech journey to a professional close.",
+        "onScreenText": "",
+        "voiceover": "Comment 'ASSIST' below to receive our exclusive guide on integrating AI into your team's daily workflow!",
+        "transitionInCue": "smooth pan continues rightward into the final call-to-action screen",
+        "transitionOutCue": "none (end of video)"
+      }
+    ]
+  },
+  "sources": [],
+  "searchQueries": [],
+  "rawText": "Hello! Please let me know how I can assist you today. What would you like to work on?"
+}

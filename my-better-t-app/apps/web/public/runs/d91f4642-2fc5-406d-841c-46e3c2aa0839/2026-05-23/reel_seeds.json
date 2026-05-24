@@ -1,0 +1,74 @@
+[
+  {
+    "reel_id": "reel_20260523_xml_prompts",
+    "category": "Goal Motivation",
+    "topic_focus": "Prompt structural efficiency with XML tags",
+    "core_narrative_arc": {
+      "hook_angle": "Is your LLM's attention being wasted on JSON syntax?",
+      "body_points": [
+        "JSON syntax overloads the self-attention mechanism.",
+        "XML tags create clean, localized attentional bounding boxes.",
+        "Refactoring to XML reduces output variance and hallucinations.",
+        "Save token costs and lower KV cache entropy."
+      ],
+      "call_to_action": "Refactor one unstructured prompt to self-closing XML tags today."
+    },
+    "metadata": {
+      "tone": "Insightful, analytical, and action-oriented",
+      "pacing": "Fast, precise, and authoritative",
+      "source_references": [
+        "Attention Is All You Need",
+        "XML vs. JSON context engineering"
+      ]
+    },
+    "visual_direction_notes": "Cinematic tech-minimalist aesthetic. High-contrast dark mode IDE with glowing emerald XML tags contrasting against dim amber JSON brackets. Fluid, macro camera pans showing mathematical equations transforming into clean, bounded code blocks. Warm accent lighting in a clean workspace environment."
+  },
+  {
+    "reel_id": "reel_20260523_starship_f12",
+    "category": "Hobby News",
+    "topic_focus": "Starship Flight 12 structural upgrades and telemetry innovations",
+    "core_narrative_arc": {
+      "hook_angle": "SpaceX just changed orbital turnarounds forever with Flight 12.",
+      "body_points": [
+        "Starship V3 launched with Raptor 3 engines and record-shattering payload.",
+        "Booster 19 missed catch, crashing at 1,450 km/h.",
+        "Ship 39 performed perfect splashdown in Indian Ocean.",
+        "Camera-equipped satellites inspected the thermal shield in real-time."
+      ],
+      "call_to_action": "Watch Scott Manley's full Flight 12 breakdown to see the telemetry data in action."
+    },
+    "metadata": {
+      "tone": "Thrilling, technical, and awe-inspiring",
+      "pacing": "Dynamic, high-energy, and cinematic",
+      "source_references": [
+        "Starship Flight 12 Starship V3 (Block 3) test flight",
+        "Scott Manley's Flight 12 video breakdown"
+      ]
+    },
+    "visual_direction_notes": "Hyper-realistic, high-fidelity aerospace aesthetic. Cool blue and fiery copper color palette. Dramatic slow-motion shots of Starship V3 launching from OLP-2, shifting to a satellite perspective in space capturing a glowing plasma re-entry. Dynamic telemetry overlay graphs flickering on screen to show structural load."
+  },
+  {
+    "reel_id": "reel_20260523_mcp_security",
+    "category": "Exploratory Discovery",
+    "topic_focus": "Zero-trust security and statelessness in Model Context Protocol",
+    "core_narrative_arc": {
+      "hook_angle": "Your local AI agents might be opening a backdoor to your computer.",
+      "body_points": [
+        "MCP stateless spec simplifies scaling but exposes tool vulnerabilities.",
+        "CVE-2026-27825 allows unauthenticated remote code execution via path traversal.",
+        "Localhost servers risk DNS rebinding attacks using Go MCP SDK.",
+        "Treat local MCP servers as untrusted third-party entities."
+      ],
+      "call_to_action": "Audit your Cursor and Windsurf MCP endpoints and enforce zero-trust controls."
+    },
+    "metadata": {
+      "tone": "Urgent, cautionary, and deeply technical",
+      "pacing": "Suspenseful, rapid-fire, and critical",
+      "source_references": [
+        "2026-07-28 MCP Specification Release Candidate",
+        "MCP Deep Dive: the Great, the Broken, and the Downright Dangerous"
+      ]
+    },
+    "visual_direction_notes": "Edgy, cyber-security neon aesthetic. Cyberpunk-inspired terminal with electric violet and deep crimson tones. Glitch transitions and scrolling vulnerability scanner outputs. Moody, dark studio setting with soft backlighting on a multi-monitor desk setup showcasing data packet flows."
+  }
+]

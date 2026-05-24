@@ -1,0 +1,105 @@
+{
+  "profile": "Rajat Bansal",
+  "date": "2026-05-23",
+  "sources": [
+    {
+      "title": "Attention Is All You Need",
+      "uri": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "title": "Kyle Mistele's Twitter Profile",
+      "uri": "https://x.com/0xblacklight/article/2055000745251070368/media/2054987130074812416"
+    },
+    {
+      "title": "Scott Manley's Starship Flight 12 Video Breakdown",
+      "uri": "https://youtu.be/2kxanBYTAaY?si=Dgi2v5SlHA_mhvb9"
+    },
+    {
+      "title": "Starship Flight Test 12 - Wikipedia",
+      "uri": "https://en.wikipedia.org/wiki/Starship_flight_test_12"
+    },
+    {
+      "title": "Starship's Twelfth Flight Test - SpaceX",
+      "uri": "https://www.spacex.com/launches/starship-flight-12"
+    },
+    {
+      "title": "The Full Story of SpaceX's Starship Flight 12 - Teslarati",
+      "uri": "https://www.teslarati.com/spacex-starship-v3-flight-12/"
+    },
+    {
+      "title": "The 2026-07-28 MCP Specification Release Candidate",
+      "uri": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+    },
+    {
+      "title": "[AINews] All Model Labs are now Agent Labs - Latent.Space",
+      "uri": "https://www.latent.space/p/ainews-all-model-labs-are-now-agent"
+    },
+    {
+      "title": "Why Everybody is so Excited about MCP | Kyle's Blog",
+      "uri": "https://www.blacklight.sh/blog/thoughts-on-mcp"
+    },
+    {
+      "title": "MCP Deep Dive: the Great, the Broken, and the Downright Dangerous",
+      "uri": "https://www.blacklight.sh/blog/mcp-deep-dive-great-broken-dangerous"
+    },
+    {
+      "title": "Information about CVE-2026-27825 & CVE-2026-27826 - GitHub",
+      "uri": "https://github.com/plutosecurity/MCPwnfluence"
+    },
+    {
+      "title": "CVE-2026-27825: MCP Atlassian Server RCE Vulnerability - SentinelOne",
+      "uri": "https://www.sentinelone.com/vulnerability-database/cve-2026-27825/"
+    },
+    {
+      "title": "CVE-2026-34742: Go MCP SDK Auth Bypass Vulnerability - SentinelOne",
+      "uri": "https://www.sentinelone.com/vulnerability-database/cve-2026-34742/"
+    },
+    {
+      "title": "CVE-2026-34742 Detail - NVD",
+      "uri": "https://nvd.nist.gov/vuln/detail/CVE-2026-34742"
+    },
+    {
+      "title": "Transformer-Based Time-Series Forecasting for Telemetry Data in Spacecraft - MDPI",
+      "uri": "https://www.mdpi.com/2079-9292/14/3/459"
+    },
+    {
+      "title": "Anomaly Detection in Spacecraft Telemetry Data Based on Transformer-LSTM - ResearchGate",
+      "uri": "https://www.researchgate.net/publication/378159071_Anomaly_Detection_in_Spacecraft_Telemetry_Data_Based_on_Transformer-LSTM"
+    }
+  ],
+  "searchQueries": [
+    "Starship Flight 12 SpaceX launch date 2026",
+    "Starship Flight 12 Booster 19 Ship 39",
+    "Flight 12 SpaceX Indian Ocean splashdown OR catch",
+    "Starship Flight 12 V3 payload Starlink",
+    "transformer telemetry aerospace OR rocket OR spacecraft",
+    "transformer heat shield OR TPS anomaly detection",
+    "machine learning attention mechanism satellite imagery 2026",
+    "attention is all you need applied to aerospace engineering OR rocket telemetry",
+    "2026-07-28 MCP OR Model Context Protocol OR Specification",
+    "site:blog.modelcontextprotocol.io 2026 OR 2026-07-28 OR release candidate",
+    "Model Context Protocol specification 2026-07-28",
+    "MCP Specification 2026 OR Model Context Protocol news May 2026",
+    "CVE-2026-27825 OR MCPwnfluence OR CVE-2026-34742",
+    "MCPwnfluence OR CVE-2026 MCP security",
+    "CVE-2026 Model Context Protocol OR MCP",
+    "Kyle Mistele MCP OR Model Context Protocol OR 0xblacklight"
+  ],
+  "seeds": [
+    {
+      "reel_id": "reel_20260523_xml_prompts",
+      "category": "Goal Motivation",
+      "topic_focus": "Prompt structural efficiency with XML tags"
+    },
+    {
+      "reel_id": "reel_20260523_starship_f12",
+      "category": "Hobby News",
+      "topic_focus": "Starship Flight 12 structural upgrades and telemetry innovations"
+    },
+    {
+      "reel_id": "reel_20260523_mcp_security",
+      "category": "Exploratory Discovery",
+      "topic_focus": "Zero-trust security and statelessness in Model Context Protocol"
+    }
+  ]
+}

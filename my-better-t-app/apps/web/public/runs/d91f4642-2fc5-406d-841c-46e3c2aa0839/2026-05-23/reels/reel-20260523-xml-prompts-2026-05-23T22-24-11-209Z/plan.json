@@ -1,0 +1,73 @@
+{
+  "topic": "reel_20260523_xml_prompts",
+  "plan": {
+    "title": "Optimizing LLM Context Engineering with XML Tags",
+    "styleGuide": "Dark palette with neon accents, continuous rightward pan, cinematic vertical 9:16.",
+    "music": "Ambient electronic, low BPM, building energy.",
+    "segments": [
+      {
+        "index": 0,
+        "timeRange": "0:00-0:08",
+        "title": "Segment 1",
+        "visual": "A cinematic macro shot of a sleek developer workspace with warm accent lighting. The screen displays a high-contrast dark mode IDE with a complex, tangled JSON structure glowing in dim amber brackets. Overlaid on the code is a semi-transparent 3D attention-map infographic, displaying bright white lines representing model attention scattered and wasted on syntax quotes and braces. A continuous rightward camera pan begins.",
+        "onScreenText": "",
+        "voiceover": "Is your LLM's attention being wasted on JSON syntax? Let's fix your context engineering right now.",
+        "transitionInCue": "Fade in from black",
+        "transitionOutCue": "Continuous rightward camera pan transition"
+      },
+      {
+        "index": 1,
+        "timeRange": "0:08-0:16",
+        "title": "Segment 2",
+        "visual": "Continuing the fluid rightward camera pan across the high-contrast screens. On the left, an animated 3D bar chart rises, demonstrating high attentional overhead for JSON vs low overhead for XML. On the right, the camera pans to reveal clean XML tags in glowing emerald green wrapping text blocks, with bright, focused bounding boxes of light enclosing the content to visualize localized self-attention.",
+        "onScreenText": "",
+        "voiceover": "JSON syntax overloads the self attention mechanism, while XML tags create clean, localized attentional bounding boxes.",
+        "transitionInCue": "Continuous rightward camera pan transition",
+        "transitionOutCue": "Continuous rightward camera pan transition"
+      },
+      {
+        "index": 2,
+        "timeRange": "0:16-0:24",
+        "title": "Segment 3",
+        "visual": "Continuing the rightward camera pan onto a split-screen analytics dashboard. On the left, a line graph rises and falls, showing a sharp decline in output variance and hallucination rate. On the right, a dynamic, pulsing network diagram representing the KV cache shows high-chaos amber nodes collapsing into highly structured, clean emerald nodes representing low-entropy context engineering.",
+        "onScreenText": "",
+        "voiceover": "Refactoring to XML reduces output variance and hallucinations. Save token costs and lower KV cache entropy.",
+        "transitionInCue": "Continuous rightward camera pan transition",
+        "transitionOutCue": "Continuous rightward camera pan transition"
+      },
+      {
+        "index": 3,
+        "timeRange": "0:24-0:32",
+        "title": "Segment 4",
+        "visual": "The continuous rightward camera pan resolves onto a polished physics-based desk setup with warm, glowing ambient lighting. Floating in front of a sleek desk monitor is a side-by-side prompt transformation infographic: a chaotic unstructured text block on the left is swept over by an emerald light beam, converting it instantly into a structured block with self-closing XML tags, accompanied by a glowing badge reading '+25% Attention Focus'.",
+        "onScreenText": "",
+        "voiceover": "Refactor one unstructured prompt to self closing XML tags today, and instantly unlock superior model performance.",
+        "transitionInCue": "Continuous rightward camera pan transition",
+        "transitionOutCue": "Fade out to black"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Attention Is All You Need",
+      "uri": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "title": "Prompt- and Context-Engineer with XML, not JSON | Kyle's Blog",
+      "uri": "https://blacklight.sh/blog/prompting-wrong-xml-json"
+    },
+    {
+      "title": "Effective Prompt Engineering: Mastering XML Tags for Clarity, Precision, and Security in LLMs | Medium",
+      "uri": "https://medium.com/@TechforHumans/effective-prompt-engineering-mastering-xml-tags-for-clarity-precision-and-security-in-llms-992cae203fdc"
+    },
+    {
+      "title": "Trapping LLM Hallucinations Using Tagged Context Prompts | arXiv",
+      "uri": "https://arxiv.org/abs/2306.06085"
+    }
+  ],
+  "searchQueries": [
+    "\"XML\" \"JSON\" \"context engineering\" LLM",
+    "XML tags LLM attention hallucination context engineering"
+  ],
+  "rawText": "```json\n{\n  \"title\": \"Optimizing LLM Context Engineering with XML Tags\",\n  \"styleGuide\": {\n    \"colorPalette\": [\n      \"#00FF87\",\n      \"#D4AF37\",\n      \"#0D0E15\",\n      \"#1E1F29\"\n    ],\n    \"colorPaletteNotes\": \"High-contrast dark mode palette. Dominant dark charcoal/navy backdrop, glowing emerald green (#00FF87) for XML tags and clean structure, dim amber (#D4AF37) for complex/overloaded JSON syntax.\",\n    \"typography\": {\n      \"primaryFont\": \"Fira Code\",\n      \"secondaryFont\": \"Inter\"\n    },\n    \"visualStyle\": \"Cinematic tech-minimalist aesthetic. High-contrast dark mode IDE screens featuring glowing emerald XML tags and dim amber JSON brackets. Fluid, continuous rightward macro camera pans tracking across sleek desk setups with warm ambient lighting.\",\n    \"pacing\": \"Fast, precise, and authoritative\",\n    \"tone\": \"Insightful, analytical, and action-oriented\",\n    \"visualDirectionNotes\": \"Cinematic tech-minimalist aesthetic. High-contrast dark mode IDE with glowing emerald XML tags contrasting against dim amber JSON brackets. Fluid, macro camera pans showing mathematical equations transforming into clean, bounded code blocks. Warm accent lighting in a clean workspace environment.\"\n  },\n  \"music\": {\n    \"trackName\": \"Analytical Ambient Beats\",\n    \"style\": \"Minimalist electronic with rhythmic synth pulses and low-entropy soundscapes\",\n    \"pacing\": \"Fast and precise to match the authoritative voiceover cadence\"\n  },\n  \"segments\": [\n    {\n      \"id\": 0,\n      \"start\": \"0:00\",\n      \"end\": \"0:08\",\n      \"duration\": 8,\n      \"voiceover\": \"Is your LLM's attention being wasted on JSON syntax? Let's fix your context engineering right now.\",\n      \"visual\": \"A cinematic macro shot of a sleek developer workspace with warm accent lighting. The screen displays a high-contrast dark mode IDE with a complex, tangled JSON structure glowing in dim amber brackets. Overlaid on the code is a semi-transparent 3D attention-map infographic, displaying bright white lines representing model attention scattered and wasted on syntax quotes and braces. A continuous rightward camera pan begins.\",\n      \"transitionInCue\": \"Fade in from black\",\n      \"transitionOutCue\": \"Continuous rightward camera pan transition\"\n    },\n    {\n      \"id\": 1,\n      \"start\": \"0:08\",\n      \"end\": \"0:16\",\n      \"duration\": 8,\n      \"voiceover\": \"JSON syntax overloads the self attention mechanism, while XML tags create clean, localized attentional bounding boxes.\",\n      \"visual\": \"Continuing the fluid rightward camera pan across the high-contrast screens. On the left, an animated 3D bar chart rises, demonstrating high attentional overhead for JSON vs low overhead for XML. On the right, the camera pans to reveal clean XML tags in glowing emerald green wrapping text blocks, with bright, focused bounding boxes of light enclosing the content to visualize localized self-attention.\",\n      \"transitionInCue\": \"Continuous rightward camera pan transition\",\n      \"transitionOutCue\": \"Continuous rightward camera pan transition\"\n    },\n    {\n      \"id\": 2,\n      \"start\": \"0:16\",\n      \"end\": \"0:24\",\n      \"duration\": 8,\n      \"voiceover\": \"Refactoring to XML reduces output variance and hallucinations. Save token costs and lower KV cache entropy.\",\n      \"visual\": \"Continuing the rightward camera pan onto a split-screen analytics dashboard. On the left, a line graph rises and falls, showing a sharp decline in output variance and hallucination rate. On the right, a dynamic, pulsing network diagram representing the KV cache shows high-chaos amber nodes collapsing into highly structured, clean emerald nodes representing low-entropy context engineering.\",\n      \"transitionInCue\": \"Continuous rightward camera pan transition\",\n      \"transitionOutCue\": \"Continuous rightward camera pan transition\"\n    },\n    {\n      \"id\": 3,\n      \"start\": \"0:24\",\n      \"end\": \"0:32\",\n      \"duration\": 8,\n      \"voiceover\": \"Refactor one unstructured prompt to self closing XML tags today, and instantly unlock superior model performance.\",\n      \"visual\": \"The continuous rightward camera pan resolves onto a polished physics-based desk setup with warm, glowing ambient lighting. Floating in front of a sleek desk monitor is a side-by-side prompt transformation infographic: a chaotic unstructured text block on the left is swept over by an emerald light beam, converting it instantly into a structured block with self-closing XML tags, accompanied by a glowing badge reading '+25% Attention Focus'.\",\n      \"transitionInCue\": \"Continuous rightward camera pan transition\",\n      \"transitionOutCue\": \"Fade out to black\"\n    }\n  ]\n}\n```\n\n```json\n{\n  \"sources\": [\n    {\n      \"title\": \"Attention Is All You Need\",\n      \"uri\": \"https://arxiv.org/abs/1706.03762\"\n    },\n    {\n      \"title\": \"Prompt- and Context-Engineer with XML, not JSON | Kyle's Blog\",\n      \"uri\": \"https://blacklight.sh/blog/prompting-wrong-xml-json\"\n    },\n    {\n      \"title\": \"Effective Prompt Engineering: Mastering XML Tags for Clarity, Precision, and Security in LLMs | Medium\",\n      \"uri\": \"https://medium.com/@TechforHumans/effective-prompt-engineering-mastering-xml-tags-for-clarity-precision-and-security-in-llms-992cae203fdc\"\n    },\n    {\n      \"title\": \"Trapping LLM Hallucinations Using Tagged Context Prompts | arXiv\",\n      \"uri\": \"https://arxiv.org/abs/2306.06085\"\n    }\n  ],\n  \"searchQueries\": [\n    \"\\\"XML\\\" \\\"JSON\\\" \\\"context engineering\\\" LLM\",\n    \"XML tags LLM attention hallucination context engineering\"\n  ]\n}\n```"
+}
